@@ -7,70 +7,128 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0d0d0d;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(180deg, #003840, #001f24);
             color: #ffffff;
             text-align: center;
-            padding: 40px;
+            overflow-x: hidden;
+        }
+
+        /* Subtle math pattern overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255,255,255,0.06) 2px, transparent 2px),
+                radial-gradient(circle at 80% 40%, rgba(255,255,255,0.05) 1.5px, transparent 2px),
+                radial-gradient(circle at 50% 70%, rgba(255,255,255,0.04) 1.2px, transparent 2px);
+            background-size: 240px 240px;
+            pointer-events: none;
+            opacity: 0.6;
         }
 
         header {
-            margin-top: 60px;
+            padding: 80px 20px 40px;
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 60px;
+            font-weight: bold;
+            color: #00d7ff;
+            text-shadow: 0 0 16px rgba(0, 215, 255, 0.5);
             margin-bottom: 10px;
-            color: #00c8ff;
         }
 
-        p {
-            font-size: 18px;
-            opacity: 0.8;
+        p.subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 50px;
         }
 
+        /* App Card */
         .card {
-            margin: 40px auto;
-            background: #1b1b1b;
-            padding: 30px;
-            border-radius: 16px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(0, 215, 255, 0.15);
+            padding: 40px;
+            border-radius: 20px;
             width: 90%;
-            max-width: 600px;
-            box-shadow: 0 0 12px rgba(0, 200, 255, 0.25);
+            max-width: 650px;
+            box-shadow: 0 4px 24px rgba(0, 255, 255, 0.15);
+            backdrop-filter: blur(6px);
+        }
+
+        .card h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .card p {
+            font-size: 18px;
+            opacity: 0.85;
+            line-height: 1.5;
         }
 
         .button {
             display: inline-block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            font-size: 18px;
+            margin-top: 25px;
+            padding: 14px 32px;
+            font-size: 20px;
             background: #00c8ff;
             color: #000;
-            text-decoration: none;
-            border-radius: 10px;
+            border-radius: 12px;
             font-weight: bold;
-            transition: 0.2s;
+            text-decoration: none;
+            transition: 0.2s ease;
+            box-shadow: 0 0 14px rgba(0, 200, 255, 0.5);
         }
 
         .button:hover {
-            background: #009ec7;
+            background: #00a1cc;
+            transform: scale(1.04);
+            box-shadow: 0 0 22px rgba(0, 200, 255, 0.75);
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-bottom: 40px;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 42px;
+            }
+            .card {
+                padding: 30px;
+            }
         }
     </style>
 </head>
+
 <body>
 
 <header>
     <h1>PlayTechCorner</h1>
-    <p>Mobile Tools, Apps, Utilities — Powered by Joms Lans.</p>
+    <p class="subtitle">Mobile Tools, Apps, Utilities — Powered by Joms Lans.</p>
 </header>
 
 <div class="card">
     <h2>Crazy Dragon App</h2>
-    <p>A powerful helper tool for gamers. Track, compare, and explore.</p>
+    <p>A powerful helper tool for gamers. Track, compare, and explore your in-game progress like never before.</p>
+
     <a class="button" href="#" target="_blank">Download Soon</a>
 </div>
 
-<p>© 2025 PlayTechCorner. All Rights Reserved.</p>
+<footer>
+    © 2025 PlayTechCorner. All Rights Reserved.
+</footer>
 
 </body>
 </html>
