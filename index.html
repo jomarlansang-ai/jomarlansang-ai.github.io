@@ -1,80 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PlayTechCorner</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlayTechCorner — Math‑Tech Tools</title>
+  <style>
+    :root {
+      --bg1: #01343a;
+      --bg2: #001f23;
+      --text: #e8f6f6;
+      --muted: #aac5c5;
+      --teal: #23c3b6;
+      --line: rgba(255,255,255,0.06);
+      --radius: 14px;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+
+    body {
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height:100vh;
+      padding:32px;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      position:relative;
+      overflow-x:hidden;
+    }
+
+    /* math line-art background */
+    body::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url('assets/math-lines.svg');
+      background-size:cover;
+      background-repeat:no-repeat;
+      opacity:0.14;
+      pointer-events:none;
+    }
+
+    .wrap { max-width:1200px; margin:0 auto; position:relative; z-index:10; }
+
+    /* Header */
+    header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding-bottom:16px;
+      margin-bottom:36px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .logo {
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .logo img { width:56px; height:56px; }
+
+    .brand {
+      font-size:26px;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    nav { display:flex; gap:22px; }
+
+    nav a {
+      text-decoration:none;
+      color:var(--muted);
+      font-size:15px;
+      padding:6px 10px;
+      border-radius:8px;
+    }
+
+    nav a:hover {
+      color:var(--teal);
+      background:rgba(35,195,182,0.1);
+    }
+
+    /* Hero */
+    .hero {
+      display:grid;
+      grid-template-columns:1fr 400px;
+      gap:48px;
+      margin-bottom:70px;
+      align-items:center;
+    }
+
+    h1 {
+      font-size:46px;
+      line-height:1.1;
+      margin-bottom:16px;
+      font-weight:700;
+    }
+
+    .muted { color:var(--muted); font-size:17px; margin-bottom:24px; }
+
+    .cta {
+      display:inline-block;
+      padding:12px 22px;
+      background:var(--teal);
+      color:#003433;
+      font-weight:700;
+      text-decoration:none;
+      border-radius:var(--radius);
+      font-size:16px;
+    }
+
+    .device {
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+
+    .screen {
+      height:340px;
+      border-radius:12px;
+      background:rgba(255,255,255,0.06);
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .screen img { width:100%; height:auto; }
+
+    /* Features */
+    .section-title {
+      font-size:26px;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+      gap:22px;
+      margin-bottom:70px;
+    }
+
+    .card {
+      background:rgba(255,255,255,0.03);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+    }
+
+    .card h4 { margin-bottom:10px; font-size:18px; }
+    .card p { color:var(--muted); font-size:15px; line-height:1.5; }
+
+    /* Footer */
+    footer {
+      margin-top:50px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media(max-width:900px){
+      .hero { grid-template-columns:1fr; }
+    }
+  </style>
 </head>
-
 <body>
-  <!-- NAVIGATION -->
-  <header>
-    <div class="logo">
-      <img src="assets/logo.png" alt="logo">
-      <span>PLAYTECHCORNER</span>
-    </div>
+  <div class="wrap">
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#tools">Tools</a>
-      <a href="#download">Download</a>
-      <a href="#privacy">Privacy</a>
-    </nav>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <div class="hero-text">
-      <h1>Smart Tools for Gamers.</h1>
-      <p>Compare NFTs, calculate stats, and unlock powerful game insights.</p>
-
-      <button onclick="scrollToDownload()">Download App</button>
-    </div>
-
-    <div class="hero-img">
-      <img src="assets/phone_mockup.png">
-    </div>
-  </section>
-
-  <!-- TOOLS SECTION -->
-  <section id="tools" class="tools-section">
-    <h2>Interactive Tools</h2>
-
-    <div class="tool-grid">
-      <div class="tool-card" onclick="openTool('nft_compare')">
-        <h3>NFT Compare</h3>
-        <p>Compare two MIR4/XDRACO NFTs instantly.</p>
+    <header>
+      <div class="logo">
+        <img src="assets/controller-teal.png" alt="logo">
+        <div class="brand">PLAYTECHCORNER</div>
       </div>
 
-      <div class="tool-card" onclick="openTool('stat_calc')">
-        <h3>Stat Calculator</h3>
-        <p>Calculate stats, combat power, and growth.</p>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#tools">Tools</a>
+        <a href="#download">Download</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Smart Math & Gaming Tools<br> for Everyone</h1>
+        <p class="muted">Beautifully simplified math-tech interface designed for quick calculations, clean visuals, and a smooth modern experience.</p>
+        <a class="cta" href="#tools">Explore Tools</a>
       </div>
 
-      <div class="tool-card" onclick="openTool('xp_calc')">
-        <h3>XP Calculator</h3>
-        <p>Know how many tasks or missions you need.</p>
+      <aside class="device">
+        <div class="screen">
+          <img src="assets/preview.png" alt="preview">
+        </div>
+      </aside>
+    </section>
+
+    <h2 id="features" class="section-title">Why PlayTechCorner?</h2>
+    <section class="grid">
+      <div class="card">
+        <h4>Clean Math‑Tech Look</h4>
+        <p>Teal gradients, precise line art, and a calm interface inspired by educational and gaming visuals.</p>
       </div>
 
-      <div class="tool-card">
-        <h3>More Tools Coming</h3>
-        <p>We will add more soon.</p>
+      <div class="card">
+        <h4>Fast & Lightweight</h4>
+        <p>Minimal files, optimized layout, and instant interactions for all devices.</p>
       </div>
-    </div>
-  </section>
 
-  <!-- DOWNLOAD SECTION -->
-  <section id="download" class="download">
-    <h2>Download Crazy Dragon App</h2>
-    <button class="googleplay">Google Play</button>
-  </section>
+      <div class="card">
+        <h4>Mobile Friendly</h4>
+        <p>Designed mobile‑first. Everything scales perfectly from phones to desktops.</p>
+      </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 PlayTechCorner · All Rights Reserved.</p>
-  </footer>
+      <div class="card">
+        <h4>Easy Integration</h4>
+        <p>Drop tools, calculators, or guides into the layout seamlessly.</p>
+      </div>
+    </section>
 
-  <script src="app.js"></script>
+    <footer>
+      <div>© 2025 PlayTechCorner</div>
+      <div>Math‑Tech Brand Edition</div>
+    </footer>
+
+  </div>
 </body>
 </html>
