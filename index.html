@@ -2,231 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PlayTechCorner — Math‑Tech Tools</title>
-  <style>
-    :root {
-      --bg1: #01343a;
-      --bg2: #001f23;
-      --text: #e8f6f6;
-      --muted: #aac5c5;
-      --teal: #23c3b6;
-      --line: rgba(255,255,255,0.06);
-      --radius: 14px;
-      font-family: "Inter", system-ui, sans-serif;
-    }
-
-    * { box-sizing:border-box; margin:0; padding:0; }
-
-    body {
-      background: linear-gradient(180deg, var(--bg1), var(--bg2));
-      min-height:100vh;
-      padding:32px;
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-      position:relative;
-      overflow-x:hidden;
-    }
-
-    /* math line-art background */
-    body::before {
-      content:"";
-      position:absolute;
-      inset:0;
-      background:url('assets/math-lines.svg');
-      background-size:cover;
-      background-repeat:no-repeat;
-      opacity:0.14;
-      pointer-events:none;
-    }
-
-    .wrap { max-width:1200px; margin:0 auto; position:relative; z-index:10; }
-
-    /* Header */
-    header {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding-bottom:16px;
-      margin-bottom:36px;
-      border-bottom:1px solid var(--line);
-    }
-
-    .logo {
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
-
-    .logo img { width:56px; height:56px; }
-
-    .brand {
-      font-size:26px;
-      font-weight:700;
-      letter-spacing:1px;
-    }
-
-    nav { display:flex; gap:22px; }
-
-    nav a {
-      text-decoration:none;
-      color:var(--muted);
-      font-size:15px;
-      padding:6px 10px;
-      border-radius:8px;
-    }
-
-    nav a:hover {
-      color:var(--teal);
-      background:rgba(35,195,182,0.1);
-    }
-
-    /* Hero */
-    .hero {
-      display:grid;
-      grid-template-columns:1fr 400px;
-      gap:48px;
-      margin-bottom:70px;
-      align-items:center;
-    }
-
-    h1 {
-      font-size:46px;
-      line-height:1.1;
-      margin-bottom:16px;
-      font-weight:700;
-    }
-
-    .muted { color:var(--muted); font-size:17px; margin-bottom:24px; }
-
-    .cta {
-      display:inline-block;
-      padding:12px 22px;
-      background:var(--teal);
-      color:#003433;
-      font-weight:700;
-      text-decoration:none;
-      border-radius:var(--radius);
-      font-size:16px;
-    }
-
-    .device {
-      background:rgba(255,255,255,0.04);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:18px;
-    }
-
-    .screen {
-      height:340px;
-      border-radius:12px;
-      background:rgba(255,255,255,0.06);
-      overflow:hidden;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-    .screen img { width:100%; height:auto; }
-
-    /* Features */
-    .section-title {
-      font-size:26px;
-      margin-bottom:20px;
-      font-weight:700;
-    }
-
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-      gap:22px;
-      margin-bottom:70px;
-    }
-
-    .card {
-      background:rgba(255,255,255,0.03);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:22px;
-    }
-
-    .card h4 { margin-bottom:10px; font-size:18px; }
-    .card p { color:var(--muted); font-size:15px; line-height:1.5; }
-
-    /* Footer */
-    footer {
-      margin-top:50px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
-      display:flex;
-      justify-content:space-between;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    @media(max-width:900px){
-      .hero { grid-template-columns:1fr; }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PlayTechCorner — Esports Tools</title>
+  <meta name="description" content="PlayTechCorner — pro esports style tools & calculators for gamers." />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrap">
-
-    <header>
-      <div class="logo">
-        <img src="assets/controller-teal.png" alt="logo">
-        <div class="brand">PLAYTECHCORNER</div>
+  <div class="site">
+    <header class="site-header">
+      <div class="brand">
+        <img class="logo" src="assets/logo.png" alt="PlayTechCorner logo" />
+        <div class="brand-text">
+          <span class="brand-title">PLAYTECHCORNER</span>
+          <span class="brand-sub">Tools. Calculators. Edge.</span>
+        </div>
       </div>
 
-      <nav>
+      <nav class="nav">
         <a href="#features">Features</a>
         <a href="#tools">Tools</a>
         <a href="#download">Download</a>
       </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
     </header>
 
-    <section class="hero">
-      <div>
-        <h1>Smart Math & Gaming Tools<br> for Everyone</h1>
-        <p class="muted">Beautifully simplified math-tech interface designed for quick calculations, clean visuals, and a smooth modern experience.</p>
-        <a class="cta" href="#tools">Explore Tools</a>
-      </div>
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <h1 class="hero-title">
+            Pro esports tools — <span class="accent">fast</span>, <span class="accent">accurate</span>, <span class="accent">built for gamers</span>
+          </h1>
+          <p class="hero-desc">PlayTechCorner gives you lightweight calculators, match analyzers, and in-game planners with a clean competitive UI.</p>
 
-      <aside class="device">
-        <div class="screen">
-          <img src="assets/preview.png" alt="preview">
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#tools">Open Tools</a>
+            <a class="btn btn-ghost" href="#features">Why PlayTechCorner</a>
+          </div>
+
+          <ul class="hero-stats">
+            <li><strong>120+</strong><span>tools</span></li>
+            <li><strong>50k+</strong><span>monthly users</span></li>
+            <li><strong>4.8★</strong><span>rating</span></li>
+          </ul>
         </div>
-      </aside>
-    </section>
 
-    <h2 id="features" class="section-title">Why PlayTechCorner?</h2>
-    <section class="grid">
-      <div class="card">
-        <h4>Clean Math‑Tech Look</h4>
-        <p>Teal gradients, precise line art, and a calm interface inspired by educational and gaming visuals.</p>
-      </div>
+        <aside class="hero-right">
+          <div class="device-shell">
+            <div class="device-inner">
+              <img src="assets/preview.png" alt="App preview" />
+            </div>
+          </div>
+        </aside>
+      </section>
 
-      <div class="card">
-        <h4>Fast & Lightweight</h4>
-        <p>Minimal files, optimized layout, and instant interactions for all devices.</p>
-      </div>
+      <section id="features" class="section section-features">
+        <h2 class="section-title">Why pro players choose us</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Esports-grade precision</h3>
+            <p>Ultra-light calculators built for accuracy and speed — validated for competitive use.</p>
+          </article>
 
-      <div class="card">
-        <h4>Mobile Friendly</h4>
-        <p>Designed mobile‑first. Everything scales perfectly from phones to desktops.</p>
-      </div>
+          <article class="card">
+            <h3>Fast & lightweight</h3>
+            <p>Minimal files and instant interactions on mobile and desktop — no lag, no fuss.</p>
+          </article>
 
-      <div class="card">
-        <h4>Easy Integration</h4>
-        <p>Drop tools, calculators, or guides into the layout seamlessly.</p>
-      </div>
-    </section>
+          <article class="card">
+            <h3>Cleaner UI</h3>
+            <p>Sharp typography, bold contrast, and UI patterns used by top esports dashboards.</p>
+          </article>
 
-    <footer>
+          <article class="card">
+            <h3>Customizable</h3>
+            <p>Drop-in calculators and easily theme colors to match your team or app branding.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="tools" class="section section-tools">
+        <h2 class="section-title">Starter tools</h2>
+        <div class="tools-grid">
+          <div class="tool">
+            <div class="tool-head">Projected Earnings</div>
+            <div class="tool-body">
+              <label>Daily active users</label>
+              <input id="dau" type="number" value="50" />
+              <label>ARPU (₱)</label>
+              <input id="arpu" type="number" value="1" />
+              <button class="btn btn-sm" id="calcBtn">Calculate</button>
+              <div class="result" id="earnings">Estimated monthly: ₱0</div>
+            </div>
+          </div>
+
+          <div class="tool">
+            <div class="tool-head">Break-even</div>
+            <div class="tool-body">
+              <label>Target monthly (₱)</label>
+              <input id="target" type="number" value="10000" />
+              <label>ARPU (₱)</label>
+              <input id="arpu2" type="number" value="1" />
+              <button class="btn btn-sm" id="breakevenBtn">Calculate</button>
+              <div class="result" id="breakeven">Users needed: 0</div>
+            </div>
+          </div>
+
+          <div class="tool placeholder">
+            <div class="tool-head">More tools</div>
+            <div class="tool-body small">Add your calculators, match analyzers, and converters here.</div>
+          </div>
+
+          <div class="tool placeholder">
+            <div class="tool-head">Match Planner</div>
+            <div class="tool-body small">Set layouts, map configs, and save presets for quick sessions.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="download" class="section section-download">
+        <h2 class="section-title">Get the app</h2>
+        <p class="muted">Download the PlayTechCorner companion app for mobile and bring tools to your phone.</p>
+        <div class="download-ctas">
+          <a class="btn btn-primary">Download APK</a>
+          <a class="btn btn-outline">Open on Web</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
       <div>© 2025 PlayTechCorner</div>
-      <div>Math‑Tech Brand Edition</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
     </footer>
-
   </div>
+
+  <script>
+    // Simple interactions
+    document.getElementById('calcBtn').addEventListener('click', () => {
+      const dau = Number(document.getElementById('dau').value || 0);
+      const arpu = Number(document.getElementById('arpu').value || 0);
+      const monthly = dau * arpu * 30;
+      document.getElementById('earnings').textContent = 'Estimated monthly: ₱' + monthly.toLocaleString();
+    });
+
+    document.getElementById('breakevenBtn').addEventListener('click', () => {
+      const target = Number(document.getElementById('target').value || 0);
+      const arpu = Number(document.getElementById('arpu2').value || 1);
+      const users = arpu === 0 ? 0 : Math.ceil(target / (arpu * 30));
+      document.getElementById('breakeven').textContent = 'Users needed: ' + users.toLocaleString();
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+          nav.classList.remove('open');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
