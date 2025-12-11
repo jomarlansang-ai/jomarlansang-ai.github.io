@@ -1,231 +1,163 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PlayTechCorner — Esports Tools</title>
-  <meta name="description" content="PlayTechCorner — pro esports style tools & calculators for gamers." />
-  <link rel="icon" href="assets/favicon.png" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlayTechCorner — Crazy Dragon App</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <div class="site">
 
-    <!-- ===============================
-         HEADER
-    =============================== -->
-    <header class="site-header">
-      <div class="brand">
-        <img class="logo" src="assets/logo.png" alt="PlayTechCorner logo" />
-        <div class="brand-text">
-          <span class="brand-title">PLAYTECHCORNER</span>
-          <span class="brand-sub">Tools. Calculators. Edge.</span>
-        </div>
-      </div>
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="nav-container">
+        <img src="assets/logo.png" class="nav-logo" alt="PlayTechCorner Logo">
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#crazydragon">Crazy Dragon</a>
+            <a href="#nft">NFT Tool</a>
+            <a href="#download">Download</a>
+        </nav>
+    </div>
+</header>
 
-      <nav class="nav">
-        <a href="#features">Features</a>
-        <a href="#tools">Tools</a>
-        <a href="#download">Download</a>
-      </nav>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-    </header>
-
-
-    <!-- ===============================
-         HERO SECTION (Improved)
-    =============================== -->
-    <main>
-      <section class="hero">
-        <div class="hero-content">
-
-          <h1 class="hero-title">
-            Pro esports tools — 
-            <span class="accent">fast</span>, 
-            <span class="accent">accurate</span>, 
-            <span class="accent">built for gamers</span>
-          </h1>
-
-          <p class="hero-desc">
-            PlayTechCorner gives you lightweight calculators, match analyzers, 
-            and in-game planners with a clean competitive UI.
-          </p>
-
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="#tools">Open Tools</a>
-            <a class="btn btn-ghost" href="#features">Why PlayTechCorner</a>
-          </div>
-
-          <ul class="hero-stats">
-            <li><strong>120+</strong><span>tools</span></li>
-            <li><strong>50k+</strong><span>monthly users</span></li>
-            <li><strong>4.8★</strong><span>rating</span></li>
-          </ul>
-
-        </div>
-      </section>
-
-
-      <!-- ===============================
-           FEATURES SECTION
-      =============================== -->
-      <section id="features" class="section section-features">
-        <h2 class="section-title">Why pro players choose us</h2>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Esports-grade precision</h3>
-            <p>Ultra-light calculators built for accuracy and speed — validated for competitive use.</p>
-          </article>
-
-          <article class="card">
-            <h3>Fast & lightweight</h3>
-            <p>Minimal files and instant interactions on mobile and desktop — no lag, no fuss.</p>
-          </article>
-
-          <article class="card">
-            <h3>Cleaner UI</h3>
-            <p>Sharp typography, bold contrast, and UI patterns used by top esports dashboards.</p>
-          </article>
-
-          <article class="card">
-            <h3>Customizable</h3>
-            <p>Drop-in calculators and easily theme colors to match your team or app branding.</p>
-          </article>
-        </div>
-      </section>
-
-
-      <!-- ===============================
-           TOOLS SECTION
-      =============================== -->
-      <section id="tools" class="section section-tools">
-        <h2 class="section-title">Starter tools</h2>
-
-        <div class="tools-grid">
-
-          <div class="tool">
-            <div class="tool-head">Projected Earnings</div>
-            <div class="tool-body">
-              <label>Daily active users</label>
-              <input id="dau" type="number" value="50" />
-
-              <label>ARPU (₱)</label>
-              <input id="arpu" type="number" value="1" />
-
-              <button class="btn btn-sm" id="calcBtn">Calculate</button>
-
-              <div class="result" id="earnings">Estimated monthly: ₱0</div>
-            </div>
-          </div>
-
-          <div class="tool">
-            <div class="tool-head">Break-even</div>
-            <div class="tool-body">
-              <label>Target monthly (₱)</label>
-              <input id="target" type="number" value="10000" />
-
-              <label>ARPU (₱)</label>
-              <input id="arpu2" type="number" value="1" />
-
-              <button class="btn btn-sm" id="breakevenBtn">Calculate</button>
-
-              <div class="result" id="breakeven">Users needed: 0</div>
-            </div>
-          </div>
-
-          <div class="tool placeholder">
-            <div class="tool-head">More tools</div>
-            <div class="tool-body small">Add your calculators, match analyzers, and converters here.</div>
-          </div>
-
-          <div class="tool placeholder">
-            <div class="tool-head">Match Planner</div>
-            <div class="tool-body small">Set layouts, map configs, and save presets for quick sessions.</div>
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- ===============================
-           DOWNLOAD SECTION
-      =============================== -->
-      <section id="download" class="section section-download">
-        <h2 class="section-title">Get the app</h2>
-
-        <p class="muted">
-          Download the PlayTechCorner companion app for mobile and bring tools to your phone.
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content fade-up">
+        <h1>Pro gaming tools — fast, accurate, built for players</h1>
+        <p>
+            PlayTechCorner delivers lightweight calculators, dragon analyzers, and in-game planning tools 
+            built for competitive gamers. Simple interface. Instant results. Zero clutter.
         </p>
 
-        <div class="download-ctas">
-          <a class="btn btn-primary">Download APK</a>
-          <a class="btn btn-outline">Open on Web</a>
+        <div class="hero-buttons">
+            <a href="#features" class="btn-primary">Open Tools</a>
+            <a href="#download" class="btn-outline">Download App</a>
         </div>
-      </section>
 
-    </main>
+        <span class="coming-soon">Coming soon to Google Play</span>
 
+        <div class="stats">
+            <div><h3>120+</h3><p>Tools</p></div>
+            <div><h3>50k+</h3><p>Monthly Users</p></div>
+            <div><h3>4.8★</h3><p>Rating</p></div>
+        </div>
+    </div>
 
-    <!-- ===============================
-         FOOTER
-    =============================== -->
-    <footer class="site-footer">
-      <div>© 2025 PlayTechCorner</div>
-      <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
-    </footer>
+    <div class="hero-image fade-in">
+        <div class="logo-card">
+            <img src="assets/logo.png" alt="PTC Logo">
+        </div>
+    </div>
+</section>
 
-  </div>
+<!-- FEATURES SECTION -->
+<section id="features" class="features fade-up">
+    <h2>Why pro players choose us</h2>
 
-  <!-- ===============================
-       JAVASCRIPT (Calculators & Menu)
-  =============================== -->
-  <script>
-    // Projected Earnings
-    document.getElementById('calcBtn').addEventListener('click', () => {
-      const dau = Number(document.getElementById('dau').value || 0);
-      const arpu = Number(document.getElementById('arpu').value || 0);
-      const monthly = dau * arpu * 30;
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>Fast Calculations</h3>
+            <p>Instant output with no loading time.</p>
+        </div>
 
-      document.getElementById('earnings').textContent =
-        'Estimated monthly: ₱' + monthly.toLocaleString();
-    });
+        <div class="feature-card">
+            <h3>Accurate Results</h3>
+            <p>Designed using game-accurate formulas and verified data.</p>
+        </div>
 
-    // Break-even calculator
-    document.getElementById('breakevenBtn').addEventListener('click', () => {
-      const target = Number(document.getElementById('target').value || 0);
-      const arpu = Number(document.getElementById('arpu2').value || 1);
-      const users = arpu === 0 ? 0 : Math.ceil(target / (arpu * 30));
+        <div class="feature-card">
+            <h3>Clean Interface</h3>
+            <p>Minimalist, distraction-free, esports-friendly UI.</p>
+        </div>
 
-      document.getElementById('breakeven').textContent =
-        'Users needed: ' + users.toLocaleString();
-    });
+        <div class="feature-card">
+            <h3>Built for Players</h3>
+            <p>Tools created from real in-game needs, not generic calculators.</p>
+        </div>
+    </div>
+</section>
 
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const nav = document.querySelector('.nav');
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
+<!-- CRAZY DRAGON SECTION -->
+<section id="crazydragon" class="crazy-section fade-up">
+    <div class="crazy-content">
+        <h2>Crazy Dragon — Your Game Companion</h2>
 
-    // Smooth scrolling animation
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
+        <ul class="crazy-list">
+            <li>Dragon stats calculator</li>
+            <li>Resource planner</li>
+            <li>NFT comparison engine</li>
+            <li>Progress tracker</li>
+            <li>Updated every patch</li>
+        </ul>
 
-        if (target) {
-          e.preventDefault();
-          window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
-          nav.classList.remove('open');
-        }
-      });
-    });
-  </script>
+        <a href="#download" class="btn-primary">See Features</a>
+    </div>
+
+    <div class="crazy-image fade-in">
+        <img src="assets/screenshot1.png" alt="App Screenshot">
+    </div>
+</section>
+
+<!-- NFT COMPARISON SECTION -->
+<section id="nft" class="nft-section fade-up">
+    <h2>MIR4 NFT Comparison Tool (Coming Soon)</h2>
+    <p class="nft-desc">
+        Compare two NFT characters side-by-side with power score analysis,
+        attribute breakdown, and build recommendations powered by Crazy Dragon.
+    </p>
+
+    <div class="nft-grid">
+        <div class="nft-card">
+            <h3>NFT A</h3>
+            <p>Sample stats…</p>
+        </div>
+
+        <div class="nft-card">
+            <h3>NFT B</h3>
+            <p>Sample stats…</p>
+        </div>
+    </div>
+
+    <a href="nft-comparison.html" class="btn-outline">View Comparison Tool</a>
+</section>
+
+<!-- DOWNLOAD SECTION -->
+<section id="download" class="download-section fade-up">
+    <h2>Download Crazy Dragon</h2>
+    <p>Lightweight. Fast. Optimized for gamers. Available soon on Google Play.</p>
+
+    <div class="download-buttons">
+        <button class="btn-disabled">Google Play · Coming Soon</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div>
+            <img src="assets/logo.png" class="footer-logo">
+            <p>Tools. Calculators. Edge.</p>
+        </div>
+
+        <div>
+            <h4>Tools</h4>
+            <a href="#features">Calculators</a>
+            <a href="#crazydragon">Dragon Tool</a>
+            <a href="#nft">NFT Comparison</a>
+        </div>
+
+        <div>
+            <h4>Support</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">FAQs</a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
