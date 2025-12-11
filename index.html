@@ -8,8 +8,13 @@
   <link rel="icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="site">
+
+    <!-- ===============================
+         HEADER
+    =============================== -->
     <header class="site-header">
       <div class="brand">
         <img class="logo" src="assets/logo.png" alt="PlayTechCorner logo" />
@@ -28,13 +33,25 @@
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
     </header>
 
+
+    <!-- ===============================
+         HERO SECTION (Improved)
+    =============================== -->
     <main>
       <section class="hero">
-        <div class="hero-left">
+        <div class="hero-content">
+
           <h1 class="hero-title">
-            Pro esports tools — <span class="accent">fast</span>, <span class="accent">accurate</span>, <span class="accent">built for gamers</span>
+            Pro esports tools — 
+            <span class="accent">fast</span>, 
+            <span class="accent">accurate</span>, 
+            <span class="accent">built for gamers</span>
           </h1>
-          <p class="hero-desc">PlayTechCorner gives you lightweight calculators, match analyzers, and in-game planners with a clean competitive UI.</p>
+
+          <p class="hero-desc">
+            PlayTechCorner gives you lightweight calculators, match analyzers, 
+            and in-game planners with a clean competitive UI.
+          </p>
 
           <div class="hero-ctas">
             <a class="btn btn-primary" href="#tools">Open Tools</a>
@@ -46,19 +63,17 @@
             <li><strong>50k+</strong><span>monthly users</span></li>
             <li><strong>4.8★</strong><span>rating</span></li>
           </ul>
-        </div>
 
-        <aside class="hero-right">
-          <div class="device-shell">
-            <div class="device-inner">
-              <img src="assets/preview.png" alt="App preview" />
-            </div>
-          </div>
-        </aside>
+        </div>
       </section>
 
+
+      <!-- ===============================
+           FEATURES SECTION
+      =============================== -->
       <section id="features" class="section section-features">
         <h2 class="section-title">Why pro players choose us</h2>
+
         <div class="cards">
           <article class="card">
             <h3>Esports-grade precision</h3>
@@ -82,17 +97,26 @@
         </div>
       </section>
 
+
+      <!-- ===============================
+           TOOLS SECTION
+      =============================== -->
       <section id="tools" class="section section-tools">
         <h2 class="section-title">Starter tools</h2>
+
         <div class="tools-grid">
+
           <div class="tool">
             <div class="tool-head">Projected Earnings</div>
             <div class="tool-body">
               <label>Daily active users</label>
               <input id="dau" type="number" value="50" />
+
               <label>ARPU (₱)</label>
               <input id="arpu" type="number" value="1" />
+
               <button class="btn btn-sm" id="calcBtn">Calculate</button>
+
               <div class="result" id="earnings">Estimated monthly: ₱0</div>
             </div>
           </div>
@@ -102,9 +126,12 @@
             <div class="tool-body">
               <label>Target monthly (₱)</label>
               <input id="target" type="number" value="10000" />
+
               <label>ARPU (₱)</label>
               <input id="arpu2" type="number" value="1" />
+
               <button class="btn btn-sm" id="breakevenBtn">Calculate</button>
+
               <div class="result" id="breakeven">Users needed: 0</div>
             </div>
           </div>
@@ -118,19 +145,33 @@
             <div class="tool-head">Match Planner</div>
             <div class="tool-body small">Set layouts, map configs, and save presets for quick sessions.</div>
           </div>
+
         </div>
       </section>
 
+
+      <!-- ===============================
+           DOWNLOAD SECTION
+      =============================== -->
       <section id="download" class="section section-download">
         <h2 class="section-title">Get the app</h2>
-        <p class="muted">Download the PlayTechCorner companion app for mobile and bring tools to your phone.</p>
+
+        <p class="muted">
+          Download the PlayTechCorner companion app for mobile and bring tools to your phone.
+        </p>
+
         <div class="download-ctas">
           <a class="btn btn-primary">Download APK</a>
           <a class="btn btn-outline">Open on Web</a>
         </div>
       </section>
+
     </main>
 
+
+    <!-- ===============================
+         FOOTER
+    =============================== -->
     <footer class="site-footer">
       <div>© 2025 PlayTechCorner</div>
       <div class="footer-links">
@@ -138,22 +179,31 @@
         <a href="#">Terms</a>
       </div>
     </footer>
+
   </div>
 
+  <!-- ===============================
+       JAVASCRIPT (Calculators & Menu)
+  =============================== -->
   <script>
-    // Simple interactions
+    // Projected Earnings
     document.getElementById('calcBtn').addEventListener('click', () => {
       const dau = Number(document.getElementById('dau').value || 0);
       const arpu = Number(document.getElementById('arpu').value || 0);
       const monthly = dau * arpu * 30;
-      document.getElementById('earnings').textContent = 'Estimated monthly: ₱' + monthly.toLocaleString();
+
+      document.getElementById('earnings').textContent =
+        'Estimated monthly: ₱' + monthly.toLocaleString();
     });
 
+    // Break-even calculator
     document.getElementById('breakevenBtn').addEventListener('click', () => {
       const target = Number(document.getElementById('target').value || 0);
       const arpu = Number(document.getElementById('arpu2').value || 1);
       const users = arpu === 0 ? 0 : Math.ceil(target / (arpu * 30));
-      document.getElementById('breakeven').textContent = 'Users needed: ' + users.toLocaleString();
+
+      document.getElementById('breakeven').textContent =
+        'Users needed: ' + users.toLocaleString();
     });
 
     // Mobile menu toggle
@@ -163,10 +213,11 @@
       nav.classList.toggle('open');
     });
 
-    // Smooth anchor scroll
+    // Smooth scrolling animation
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const target = document.querySelector(a.getAttribute('href'));
+
         if (target) {
           e.preventDefault();
           window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
@@ -175,5 +226,6 @@
       });
     });
   </script>
+
 </body>
 </html>
