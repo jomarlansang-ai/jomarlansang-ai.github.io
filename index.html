@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PlayTechCorner — Smart Gaming Tools</title>
 
+  <meta name="description" content="PlayTechCorner builds smart tools, calculators, and utilities for gamers." />
+  <link rel="icon" href="assets/logo.png" />
+
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +15,9 @@
 </head>
 <body>
 
-<!-- SIDE MENU -->
+<button class="menu-toggle" aria-label="Open menu">☰</button>
+
+<!-- SIDEBAR -->
 <aside class="sidebar">
   <div class="logo">
     <img src="assets/logo.png" alt="PlayTechCorner logo" />
@@ -24,58 +29,85 @@
     <a href="#tools">Tools</a>
     <a href="#download">Download</a>
     <a href="#about">About</a>
-    <a href="#privacy">Privacy</a>
+    <a href="privacy.html">Privacy</a>
   </nav>
 </aside>
 
-<!-- MAIN CONTENT -->
+<!-- MAIN -->
 <main>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero-overlay"></div>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
 
-    <div class="hero-content">
-      <img src="assets/logo.png" alt="PlayTechCorner" class="hero-logo">
+  <div class="hero-content">
+    <img src="assets/logo.png" class="hero-logo" alt="PlayTechCorner" />
+    <h1>Smart Tools for Gamers</h1>
+    <p>Calculators, AI-powered utilities, and game tools built for performance.</p>
+    <a href="#tools" class="btn-primary">Explore Tools</a>
+  </div>
+</section>
 
-      <h1>Smart Tools for Gamers</h1>
-      <p>Calculators, AI-powered utilities, and game tools built for performance.</p>
+<!-- TOOLS -->
+<section id="tools" class="tools">
+  <header class="section-header">
+    <h2>Tools & Utilities</h2>
+    <p>Built to optimize gameplay and decision-making</p>
+  </header>
 
-      <a href="#tools" class="btn-primary">Explore Tools</a>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <h3>Crazy Dragon — MIR4 Toolkit</h3>
+      <p>Calculators and clan tools designed for MIR4 players.</p>
+      <span>Open Tool →</span>
     </div>
-  </section>
 
-  <!-- TOOLS -->
-  <section id="tools" class="tools">
-    <header class="section-header">
-      <h2>Tools & Utilities</h2>
-      <p>Built to optimize gameplay and decision-making</p>
-    </header>
-
-    <div class="tools-grid">
-
-      <div class="tool-card">
-        <h3>Crazy Dragon — MIR4 Toolkit</h3>
-        <p>Calculators and clan tools designed for MIR4 players.</p>
-        <span>Open Tool →</span>
-      </div>
-
-      <div class="tool-card">
-        <h3>NFT Account Comparison</h3>
-        <p>Compare stats and performance between game accounts.</p>
-        <span>Coming Soon</span>
-      </div>
-
-      <div class="tool-card">
-        <h3>Damage & Stat Calculator</h3>
-        <p>Analyze builds and optimize combat performance.</p>
-        <span>Coming Soon</span>
-      </div>
-
+    <div class="tool-card">
+      <h3>NFT Account Comparison</h3>
+      <p>Compare stats and performance between game accounts.</p>
+      <span>Coming Soon</span>
     </div>
-  </section>
+
+    <div class="tool-card">
+      <h3>Damage & Stat Calculator</h3>
+      <p>Analyze builds and optimize combat performance.</p>
+      <span>Coming Soon</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 PlayTechCorner. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="#">Terms</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
 
 </main>
+
+<script>
+  const sidebar = document.querySelector('.sidebar');
+  const toggle = document.querySelector('.menu-toggle');
+  let lastScrollY = window.scrollY;
+
+  toggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+
+  window.addEventListener('scroll', () => {
+    if (window.innerWidth <= 1024) return;
+
+    if (window.scrollY > lastScrollY && window.scrollY > 100) {
+      sidebar.classList.add('hidden');
+    } else {
+      sidebar.classList.remove('hidden');
+    }
+    lastScrollY = window.scrollY;
+  });
+</script>
 
 </body>
 </html>
