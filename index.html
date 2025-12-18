@@ -1,163 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PlayTechCorner — Crazy Dragon App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlayTechCorner — Smart Gaming Tools</title>
 
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-    <div class="nav-container">
-        <img src="assets/logo.png" class="nav-logo" alt="PlayTechCorner Logo">
-        <nav>
-            <a href="#features">Features</a>
-            <a href="#crazydragon">Crazy Dragon</a>
-            <a href="#nft">NFT Tool</a>
-            <a href="#download">Download</a>
-        </nav>
+<!-- SIDE MENU -->
+<aside class="sidebar">
+  <div class="logo">
+    <img src="assets/logo.png" alt="PlayTechCorner logo" />
+    <span>PLAYTECH<br>CORNER</span>
+  </div>
+
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#tools">Tools</a>
+    <a href="#download">Download</a>
+    <a href="#about">About</a>
+    <a href="#privacy">Privacy</a>
+  </nav>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <img src="assets/logo.png" alt="PlayTechCorner" class="hero-logo">
+
+      <h1>Smart Tools for Gamers</h1>
+      <p>Calculators, AI-powered utilities, and game tools built for performance.</p>
+
+      <a href="#tools" class="btn-primary">Explore Tools</a>
     </div>
-</header>
+  </section>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="hero-content fade-up">
-        <h1>Pro gaming tools — fast, accurate, built for players</h1>
-        <p>
-            PlayTechCorner delivers lightweight calculators, dragon analyzers, and in-game planning tools 
-            built for competitive gamers. Simple interface. Instant results. Zero clutter.
-        </p>
+  <!-- TOOLS -->
+  <section id="tools" class="tools">
+    <header class="section-header">
+      <h2>Tools & Utilities</h2>
+      <p>Built to optimize gameplay and decision-making</p>
+    </header>
 
-        <div class="hero-buttons">
-            <a href="#features" class="btn-primary">Open Tools</a>
-            <a href="#download" class="btn-outline">Download App</a>
-        </div>
+    <div class="tools-grid">
 
-        <span class="coming-soon">Coming soon to Google Play</span>
+      <div class="tool-card">
+        <h3>Crazy Dragon — MIR4 Toolkit</h3>
+        <p>Calculators and clan tools designed for MIR4 players.</p>
+        <span>Open Tool →</span>
+      </div>
 
-        <div class="stats">
-            <div><h3>120+</h3><p>Tools</p></div>
-            <div><h3>50k+</h3><p>Monthly Users</p></div>
-            <div><h3>4.8★</h3><p>Rating</p></div>
-        </div>
+      <div class="tool-card">
+        <h3>NFT Account Comparison</h3>
+        <p>Compare stats and performance between game accounts.</p>
+        <span>Coming Soon</span>
+      </div>
+
+      <div class="tool-card">
+        <h3>Damage & Stat Calculator</h3>
+        <p>Analyze builds and optimize combat performance.</p>
+        <span>Coming Soon</span>
+      </div>
+
     </div>
+  </section>
 
-    <div class="hero-image fade-in">
-        <div class="logo-card">
-            <img src="assets/logo.png" alt="PTC Logo">
-        </div>
-    </div>
-</section>
-
-<!-- FEATURES SECTION -->
-<section id="features" class="features fade-up">
-    <h2>Why pro players choose us</h2>
-
-    <div class="feature-grid">
-        <div class="feature-card">
-            <h3>Fast Calculations</h3>
-            <p>Instant output with no loading time.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>Accurate Results</h3>
-            <p>Designed using game-accurate formulas and verified data.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>Clean Interface</h3>
-            <p>Minimalist, distraction-free, esports-friendly UI.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>Built for Players</h3>
-            <p>Tools created from real in-game needs, not generic calculators.</p>
-        </div>
-    </div>
-</section>
-
-<!-- CRAZY DRAGON SECTION -->
-<section id="crazydragon" class="crazy-section fade-up">
-    <div class="crazy-content">
-        <h2>Crazy Dragon — Your Game Companion</h2>
-
-        <ul class="crazy-list">
-            <li>Dragon stats calculator</li>
-            <li>Resource planner</li>
-            <li>NFT comparison engine</li>
-            <li>Progress tracker</li>
-            <li>Updated every patch</li>
-        </ul>
-
-        <a href="#download" class="btn-primary">See Features</a>
-    </div>
-
-    <div class="crazy-image fade-in">
-        <img src="assets/screenshot1.png" alt="App Screenshot">
-    </div>
-</section>
-
-<!-- NFT COMPARISON SECTION -->
-<section id="nft" class="nft-section fade-up">
-    <h2>MIR4 NFT Comparison Tool (Coming Soon)</h2>
-    <p class="nft-desc">
-        Compare two NFT characters side-by-side with power score analysis,
-        attribute breakdown, and build recommendations powered by Crazy Dragon.
-    </p>
-
-    <div class="nft-grid">
-        <div class="nft-card">
-            <h3>NFT A</h3>
-            <p>Sample stats…</p>
-        </div>
-
-        <div class="nft-card">
-            <h3>NFT B</h3>
-            <p>Sample stats…</p>
-        </div>
-    </div>
-
-    <a href="nft-comparison.html" class="btn-outline">View Comparison Tool</a>
-</section>
-
-<!-- DOWNLOAD SECTION -->
-<section id="download" class="download-section fade-up">
-    <h2>Download Crazy Dragon</h2>
-    <p>Lightweight. Fast. Optimized for gamers. Available soon on Google Play.</p>
-
-    <div class="download-buttons">
-        <button class="btn-disabled">Google Play · Coming Soon</button>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-grid">
-        <div>
-            <img src="assets/logo.png" class="footer-logo">
-            <p>Tools. Calculators. Edge.</p>
-        </div>
-
-        <div>
-            <h4>Tools</h4>
-            <a href="#features">Calculators</a>
-            <a href="#crazydragon">Dragon Tool</a>
-            <a href="#nft">NFT Comparison</a>
-        </div>
-
-        <div>
-            <h4>Support</h4>
-            <a href="#">Contact Us</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">FAQs</a>
-        </div>
-    </div>
-</footer>
-
-<script src="js/main.js"></script>
+</main>
 
 </body>
 </html>
