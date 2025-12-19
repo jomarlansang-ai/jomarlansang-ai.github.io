@@ -2,112 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>PlayTechCorner — Tools. Calculators. Edge.</title>
+
+  <!-- SEO -->
+  <meta name="description" content="PlayTechCorner builds smart gaming tools and calculators. Crazy Dragon is a MIR4 companion app for stat analysis, NFT comparison, and progress planning." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PlayTechCorner — Smart Gaming Tools</title>
 
-  <meta name="description" content="PlayTechCorner builds smart tools, calculators, and utilities for gamers." />
-  <link rel="icon" href="assets/logo.png" />
+  <!-- OpenGraph -->
+  <meta property="og:title" content="PlayTechCorner — Pro Gaming Tools" />
+  <meta property="og:description" content="Smart tools for competitive gamers. MIR4 calculators, NFT comparison, and progress trackers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://playtechcorner.com" />
 
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.png" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
 
-<button class="menu-toggle" aria-label="Open menu">☰</button>
+<body>
 
 <!-- SIDEBAR -->
 <aside class="sidebar">
   <div class="logo">
-    <img src="assets/logo.png" alt="PlayTechCorner logo" />
-    <span>PLAYTECH<br>CORNER</span>
+    <img src="assets/logo.png" alt="PlayTechCorner Logo" />
+    <span>PLAYTECHCORNER</span>
   </div>
 
   <nav>
-    <a href="#home" class="active">Home</a>
+    <a href="#home">Home</a>
     <a href="#tools">Tools</a>
+    <a href="#features">Why Us</a>
     <a href="#download">Download</a>
-    <a href="#about">About</a>
-    <a href="privacy.html">Privacy</a>
   </nav>
 </aside>
 
 <!-- MAIN -->
-<main>
+<main class="main">
 
 <!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-overlay"></div>
-
   <div class="hero-content">
-    <img src="assets/logo.png" class="hero-logo" alt="PlayTechCorner" />
-    <h1>Smart Tools for Gamers</h1>
-    <p>Calculators, AI-powered utilities, and game tools built for performance.</p>
-    <a href="#tools" class="btn-primary">Explore Tools</a>
+    <h1>Smart Tools for<br>Competitive Gamers</h1>
+    <p>
+      Crazy Dragon is a MIR4 companion app built to analyze stats,
+      compare NFTs, and plan your progress — faster and smarter.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#download" class="btn primary">Download App</a>
+      <a href="#tools" class="btn secondary">Open Tools</a>
+    </div>
   </div>
 </section>
 
 <!-- TOOLS -->
-<section id="tools" class="tools">
-  <header class="section-header">
-    <h2>Tools & Utilities</h2>
-    <p>Built to optimize gameplay and decision-making</p>
-  </header>
+<section id="tools" class="section">
+  <h2>Our Tools</h2>
 
-  <div class="tools-grid">
-    <div class="tool-card">
-      <h3>Crazy Dragon — MIR4 Toolkit</h3>
-      <p>Calculators and clan tools designed for MIR4 players.</p>
-      <span>Open Tool →</span>
+  <div class="card-grid">
+    <div class="card">
+      <h3>🐉 Crazy Dragon Calculator</h3>
+      <p>Accurate stat calculations using MIR4-verified formulas.</p>
     </div>
 
-    <div class="tool-card">
-      <h3>NFT Account Comparison</h3>
-      <p>Compare stats and performance between game accounts.</p>
-      <span>Coming Soon</span>
+    <div class="card">
+      <h3>📊 NFT Comparison Tool</h3>
+      <p>Compare two NFT characters side-by-side (BETA).</p>
     </div>
 
-    <div class="tool-card">
-      <h3>Damage & Stat Calculator</h3>
-      <p>Analyze builds and optimize combat performance.</p>
-      <span>Coming Soon</span>
+    <div class="card">
+      <h3>📈 Progress Tracker</h3>
+      <p>Plan upgrades, resources, and growth efficiently.</p>
     </div>
+
+    <div class="card">
+      <h3>🧮 Resource Planner</h3>
+      <p>Optimize materials, time, and in-game currency.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="section dark">
+  <h2>Why Pro Players Choose Us</h2>
+
+  <div class="card-grid">
+    <div class="card small">
+      <h3>⚡ Fast</h3>
+      <p>Instant results with zero loading delay.</p>
+    </div>
+
+    <div class="card small">
+      <h3>🎯 Accurate</h3>
+      <p>Game-accurate formulas and verified data.</p>
+    </div>
+
+    <div class="card small">
+      <h3>🧼 Clean UI</h3>
+      <p>Minimalist, esports-friendly interface.</p>
+    </div>
+
+    <div class="card small">
+      <h3>🧠 Built for Players</h3>
+      <p>Created from real gameplay needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" class="section">
+  <h2>Download Crazy Dragon</h2>
+  <p class="center">
+    Lightweight. Fast. Optimized for gamers.<br>
+    Available soon on Google Play.
+  </p>
+
+  <div class="download-box">
+    <span>📱 Google Play — Coming Soon</span>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>© 2025 PlayTechCorner. All rights reserved.</p>
-  <div class="footer-links">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="#">Terms</a>
-    <a href="#">Contact</a>
-  </div>
+  <p><strong>PlayTechCorner</strong></p>
+  <p>Tools. Calculators. Edge.</p>
+  <p class="small">© 2025 PlayTechCorner. All rights reserved.</p>
 </footer>
 
 </main>
-
-<script>
-  const sidebar = document.querySelector('.sidebar');
-  const toggle = document.querySelector('.menu-toggle');
-  let lastScrollY = window.scrollY;
-
-  toggle.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-  });
-
-  window.addEventListener('scroll', () => {
-    if (window.innerWidth <= 1024) return;
-
-    if (window.scrollY > lastScrollY && window.scrollY > 100) {
-      sidebar.classList.add('hidden');
-    } else {
-      sidebar.classList.remove('hidden');
-    }
-    lastScrollY = window.scrollY;
-  });
-</script>
 
 </body>
 </html>
