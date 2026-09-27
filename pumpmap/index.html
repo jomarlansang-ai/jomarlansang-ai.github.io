@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PumpMap PH — Gas stations and EV chargers in the Philippines</title>
+  <meta name="description" content="PumpMap PH is an Android app in development: gas stations, EV chargers, and fuel prices across the Philippines, even offline. Early Android testers wanted.">
+  <link rel="canonical" href="https://playtechcorner.com/pumpmap/">
+  <meta name="theme-color" content="#071312">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PlayTechCorner">
+  <meta property="og:title" content="PumpMap PH — Gas stations and EV chargers in the Philippines">
+  <meta property="og:description" content="PumpMap PH is an Android app in development: gas stations, EV chargers, and fuel prices across the Philippines, even offline. Early Android testers wanted.">
+  <meta property="og:url" content="https://playtechcorner.com/pumpmap/">
+  <meta property="og:image" content="https://playtechcorner.com/assets/apple-touch-icon.png">
+  <meta property="og:image:width" content="180">
+  <meta property="og:image:height" content="180">
+  <meta property="og:image:alt" content="PlayTechCorner logo">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PumpMap PH — Gas stations and EV chargers in the Philippines">
+  <meta name="twitter:description" content="PumpMap PH is an Android app in development: gas stations, EV chargers, and fuel prices across the Philippines, even offline. Early Android testers wanted.">
+  <meta name="twitter:image" content="https://playtechcorner.com/assets/apple-touch-icon.png">
+  <meta name="twitter:image:alt" content="PlayTechCorner logo">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <noscript>
+    <style>
+      @media (max-width: 1023px) {
+        .nav-button { display: none !important; }
+        .shell { display: flex; flex-direction: column; }
+        .sidebar { display: flex !important; position: static !important; width: auto !important; height: auto !important; box-shadow: none !important; }
+      }
+    </style>
+  </noscript>
+</head>
+<body class="page-pumpmap">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
+    <aside class="sidebar" id="site-nav">
+      <a class="sidebar-brand" href="/">
+        <img src="/assets/logo.webp" alt="" width="640" height="586">
+        <span>PlayTechCorner</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="/">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z"/></svg>
+          Home
+        </a>
+        <a href="/#my-apps">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="6.5" height="6.5" rx="1.4"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.4"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.4"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.4"/></svg>
+          My Apps
+        </a>
+        <a href="/crazy-dragon/">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c2 3 2 5 0 7 3-1 6-1 8 2-3 0-5 2-5 5 0-3-2-5-5-5 2-3 2-5 2-9z"/></svg>
+          Crazy Dragon
+        </a>
+        <a href="/pumpmap/" aria-current="page">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
+          <span>PumpMap PH <span class="nav-note">(in development)</span></span>
+        </a>
+        <a href="/#testers">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.2"/><path d="M4 19c.6-2.6 2.6-4 5-4s4.4 1.4 5 4"/><path d="M14 19c.3-1.6 1.4-2.8 3-3.2 1.2.3 2.1 1.2 2.5 3.2"/></svg>
+          Testers
+        </a>
+        <a href="/support/">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.2c-.7.4-1.1.9-1.1 1.8V14"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/></svg>
+          Support
+        </a>
+      </nav>
+      <a class="sidebar-privacy" href="https://playtechcorner.com/playtechcorner-privacy/privacy-policy.html">Privacy Policy</a>
+    </aside>
+    <div class="shell-main">
+      <header class="site-header">
+        <div class="topbar" aria-hidden="true"></div>
+        <div class="wrap header-inner">
+          <a class="brand" href="/">
+            <img src="/assets/logo.webp" alt="" width="640" height="586">
+            <span>PlayTechCorner</span>
+          </a>
+          <button class="nav-button" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span class="sr-only">Menu</span>
+            <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
+        </div>
+      </header>
+      <main id="main" tabindex="-1">
+        <section class="pm-hero">
+          <div class="wrap pm-hero-grid">
+            <div class="reveal">
+              <div class="title-row pm-title-row">
+                <span class="pm-glyph pm-glyph-sm" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 44s14-12.4 14-22a14 14 0 1 0-28 0c0 9.6 14 22 14 22z"/><path d="M24 12.5c3.6 4.6 5.4 7.6 5.4 10a5.4 5.4 0 0 1-10.8 0c0-2.4 1.8-5.4 5.4-10z"/></svg>
+                </span>
+                <h1>PumpMap PH</h1>
+              </div>
+              <p class="pm-status"><span class="pm-status-dot" aria-hidden="true"></span>In development. Early Android testers wanted.</p>
+              <p class="lede">Gas stations, EV chargers, and fuel prices across the Philippines, even offline.</p>
+              <div class="get-actions">
+                <a class="button" href="mailto:playtechcorner@gmail.com?subject=Tester%20sign-up%3A%20PumpMap%20PH&amp;body=Phone%20model%3A%0AAndroid%20version%3A%0A%0AI%20would%20like%20to%20test%20PumpMap%20PH.">Become a tester</a>
+                <a class="button button-secondary" href="#planned">See what’s planned</a>
+              </div>
+              <p class="fineprint">Not on Google Play yet. Email us to join the tester list.</p>
+            </div>
+            <figure class="pm-art reveal" aria-labelledby="pm-art-caption">
+              <div class="pm-art-frame" aria-hidden="true">
+                <svg class="pm-art-grid" viewBox="0 0 320 240" preserveAspectRatio="xMidYMid slice">
+                  <g fill="none" stroke="#00E5D4" stroke-width="1" opacity="0.22">
+                    <path d="M0 60h320M0 120h320M0 180h320M80 0v240M160 0v240M240 0v240"/>
+                  </g>
+                  <g fill="none" stroke="#00E5D4" stroke-width="2" opacity="0.45" stroke-linecap="round">
+                    <path d="M20 210c40-30 70-40 110-90s90-70 170-90"/>
+                  </g>
+                </svg>
+                <span class="pm-glyph pm-glyph-lg">
+                  <svg viewBox="0 0 48 48" width="88" height="88" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 44s14-12.4 14-22a14 14 0 1 0-28 0c0 9.6 14 22 14 22z"/><path d="M24 12.5c3.6 4.6 5.4 7.6 5.4 10a5.4 5.4 0 0 1-10.8 0c0-2.4 1.8-5.4 5.4-10z"/></svg>
+                </span>
+              </div>
+              <figcaption id="pm-art-caption">Placeholder artwork. The app icon and screenshots are not ready yet.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section reveal" id="planned" aria-labelledby="planned-title">
+          <div class="wrap">
+            <h2 id="planned-title">Planned for the first release</h2>
+            <p class="muted pm-note">In development. These features are not built yet.</p>
+            <ul class="pm-list">
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4z"/><path d="M9 4v14M15 6v14"/></svg></span>
+                <div><h3>Map of stations and chargers</h3><p>Gas stations and EV chargers across the Philippines on one map.</p></div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M5 12.8a10 10 0 0 1 4.2-2.5"/><path d="M14.8 10.3A10 10 0 0 1 19 12.8"/><path d="M2 9.3a15 15 0 0 1 4-2.4"/><path d="M11 5.1A15 15 0 0 1 22 9.3"/><circle cx="12" cy="20" r="0.8" fill="currentColor"/></svg></span>
+                <div><h3>Works offline</h3><p>Use the map without a signal.</p></div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16l-6 7.5V19l-4 1.5v-8L4 5z"/></svg></span>
+                <div><h3>Filters</h3><p>Filter by brand, 24-hour, expressway stations (NLEX, SLEX, TPLEX and others), and EV plug type.</p></div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 21.5 12 12 21.5 2.5 12 12 2.5z"/><path d="M9 14v-2.5a1.5 1.5 0 0 1 1.5-1.5H15"/><path d="m13 8 2 2-2 2"/></svg></span>
+                <div><h3>Directions</h3><p>Get directions through Google Maps or Waze.</p></div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section reveal" id="later" aria-labelledby="later-title">
+          <div class="wrap">
+            <h2 id="later-title">Later updates</h2>
+            <ul class="pm-list pm-list-later">
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="m7 15 4-4 3 3 5-6"/></svg></span>
+                <div>
+                  <p class="pm-tag">Planned · v2</p>
+                  <h3>Weekly fuel prices</h3>
+                  <p>Weekly DOE fuel prices by city and brand, plus a weekly price increase or rollback alert.</p>
+                </div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 6 13h5l-1 8 7-10h-5l1-8z"/></svg></span>
+                <div>
+                  <p class="pm-tag">Planned · v3</p>
+                  <h3>Richer EV charger details</h3>
+                  <p>Plug type, charging speed, cost, and when a charger was last confirmed working, plus driver reports.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section reveal" id="testers" aria-labelledby="testers-title">
+          <div class="wrap">
+            <div class="tester-panel">
+              <h2 id="testers-title">Become a tester</h2>
+              <div class="tester-layout">
+                <ol class="steps">
+                  <li><strong>Email us</strong> with your phone model and Android version.</li>
+                  <li><strong>Get an invite</strong> to the test build.</li>
+                  <li><strong>Send feedback</strong> about what you tried.</li>
+                </ol>
+                <p>
+                  <a class="button" href="mailto:playtechcorner@gmail.com?subject=Tester%20sign-up%3A%20PumpMap%20PH&amp;body=Phone%20model%3A%0AAndroid%20version%3A%0A%0AI%20would%20like%20to%20test%20PumpMap%20PH.">Become a tester</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal" id="credits" aria-labelledby="credits-title">
+          <div class="wrap">
+            <h2 id="credits-title">Data credits</h2>
+            <ul class="pm-credits">
+              <li><a href="https://www.openstreetmap.org/copyright">Map data © OpenStreetMap contributors (ODbL)</a></li>
+              <li><a href="https://openchargemap.org">EV charger data from Open Charge Map (CC BY 4.0)</a></li>
+              <li class="muted">DOE fuel price data will be credited here once prices ship.</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/crazy-dragon/">Crazy Dragon</a>
+        <a href="/app/">Web app</a>
+        <a href="/support/">Support</a>
+        <a href="https://playtechcorner.com/playtechcorner-privacy/privacy-policy.html">Privacy</a>
+      </nav>
+      <div>
+        <p><a href="mailto:playtechcorner@gmail.com">playtechcorner@gmail.com</a></p>
+        <p class="muted">© PlayTechCorner</p>
+      </div>
+    </div>
+  </footer>
+    </div>
+  </div>
+  <script src="/js/nav.js"></script>
+  <script src="/js/site.js"></script>
+</body>
+</html>
