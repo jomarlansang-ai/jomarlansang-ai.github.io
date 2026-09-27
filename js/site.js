@@ -76,6 +76,7 @@
           bar.remove();
         });
       }
+      watchPageCtas(bar);
     }
   }
 
@@ -149,3 +150,58 @@
 
   show(0);
 })();
+
+function watchPageCtas(bar) {
+  var ctas = Array.prototype.slice.call(document.querySelectorAll("[data-page-cta]"));
+  var footer = document.querySelector(".site-footer");
+  var barBlock = 96;
+
+  function inViewport(el) {
+    var r = el.getBoundingClientRect();
+    if (r.width < 1 || r.height < 1) return false;
+    var style = window.getComputedStyle(el);
+    if (style.display === "none" || style.visibility === "hidden") return false;
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var vw = window.innerWidth || document.documentElement.clientWidth;
+    return r.bottom > 0 && r.right > 0 && r.top < vh && r.left < vw;
+  }
+
+  function footerHitsBar() {
+    if (!footer) return false;
+    var r = footer.getBoundingClientRect();
+    if (r.width < 1 || r.height < 1) return false;
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    return r.top < vh && r.bottom > vh - barBlock;
+  }
+
+  function measureBar() {
+    if (window.innerWidth > 799) return;
+    var hidden = bar.classList.contains("is-suppressed");
+    if (hidden) bar.classList.remove("is-suppressed");
+    var rect = bar.getBoundingClientRect();
+    var bottom = parseFloat(window.getComputedStyle(bar).bottom) || 0;
+    if (rect.height > 0) barBlock = rect.height + bottom + 8;
+    if (hidden) bar.classList.add("is-suppressed");
+  }
+
+  function sync() {
+    if (!bar.isConnected) return;
+    var narrow = window.matchMedia("(max-width: 799px)").matches;
+    var hide = narrow && (ctas.some(inViewport) || footerHitsBar());
+    bar.classList.toggle("is-suppressed", hide);
+    bar.setAttribute("aria-hidden", hide ? "true" : "false");
+  }
+
+  measureBar();
+  sync();
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(sync, { threshold: [0, 0.01, 0.5, 1] });
+    ctas.forEach(function (el) { observer.observe(el); });
+    if (footer) observer.observe(footer);
+  }
+  window.addEventListener("scroll", sync, { passive: true });
+  window.addEventListener("resize", function () {
+    measureBar();
+    sync();
+  });
+}

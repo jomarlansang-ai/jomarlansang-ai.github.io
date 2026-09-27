@@ -929,6 +929,10 @@ p {
     font-size: 1.3rem;
     cursor: pointer;
   }
+
+  .get-bar.is-suppressed {
+    display: none;
+  }
 }
 
 @media (min-width: 800px) {
