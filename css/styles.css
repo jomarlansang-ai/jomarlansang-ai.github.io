@@ -600,7 +600,357 @@ p {
     scroll-behavior: auto;
   }
 
-  .bars span {
+  .bars span,
+  .button,
+  .app-card,
+  .feature-toggle,
+  .phone-screen img,
+  .reveal {
     transition: none;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .button:hover,
+  .button:active,
+  .app-card:hover,
+  .feature-toggle:hover,
+  .feature-toggle:active {
+    transform: none;
+  }
+}
+
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 520ms ease, transform 520ms ease;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.button,
+.app-card,
+.feature-toggle,
+.faq-item button,
+.get-bar a {
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.button:hover,
+.app-card:hover,
+.feature-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.button:active,
+.feature-toggle:active,
+.faq-item button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.app-card:hover {
+  border-color: rgba(0, 229, 212, 0.55);
+}
+
+.get-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1rem;
+}
+
+.get-actions .button {
+  margin-top: 0;
+}
+
+.features {
+  gap: 0.75rem;
+}
+
+.features li {
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  overflow: hidden;
+}
+
+.feature-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
+  padding: 1rem 1.1rem;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.feature-toggle:hover {
+  background: rgba(0, 229, 212, 0.08);
+}
+
+.feature-chevron {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid var(--teal);
+  border-bottom: 2px solid var(--teal);
+  transform: rotate(45deg);
+  flex: none;
+  margin-top: -0.2rem;
+}
+
+.feature-toggle[aria-expanded="true"] .feature-chevron {
+  transform: rotate(225deg);
+  margin-top: 0.2rem;
+}
+
+.feature-panel {
+  padding: 0 1.1rem 1rem;
+  color: var(--muted);
+}
+
+.feature-panel p {
+  margin: 0;
+}
+
+.showcase {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.phone {
+  width: min(280px, 78vw);
+  margin-inline: auto;
+  padding: 12px;
+  border-radius: 36px;
+  background: linear-gradient(180deg, #0c2421, #04120f);
+  border: 2px solid rgba(0, 229, 212, 0.45);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4);
+}
+
+.phone-notch {
+  width: 92px;
+  height: 8px;
+  margin: 2px auto 10px;
+  border-radius: 999px;
+  background: rgba(234, 250, 247, 0.2);
+}
+
+.phone-screen {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #071312;
+  aspect-ratio: 390 / 844;
+  touch-action: none;
+}
+
+.phone-screen img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 0;
+  transition: opacity 280ms ease;
+}
+
+.phone-screen img.is-active {
+  opacity: 1;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.carousel-controls button {
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 229, 212, 0.45);
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover {
+  background: rgba(0, 229, 212, 0.14);
+}
+
+.dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.dots button {
+  width: 12px;
+  min-width: 12px;
+  height: 12px;
+  min-height: 12px;
+  padding: 0;
+  border-radius: 999px;
+  background: rgba(234, 250, 247, 0.28);
+}
+
+.dots button[aria-selected="true"] {
+  background: var(--teal);
+  width: 28px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+}
+
+.faq-item button {
+  width: 100%;
+  text-align: left;
+  padding: 0.95rem 1rem;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.faq-item button:hover {
+  background: rgba(0, 229, 212, 0.08);
+}
+
+.faq-item .faq-panel {
+  padding: 0 1rem 1rem;
+  color: var(--muted);
+}
+
+.faq-item .faq-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.copy-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.copy-row .button {
+  margin-top: 0;
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.copy-status {
+  min-height: 1.4em;
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.get-bar {
+  display: none;
+}
+
+@media (max-width: 799px) {
+  body.has-get-bar {
+    padding-bottom: 5.4rem;
+  }
+
+  .get-bar {
+    display: flex;
+    position: fixed;
+    left: 0.6rem;
+    right: 0.6rem;
+    bottom: 0.6rem;
+    z-index: 18;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0.55rem 0.55rem 0.85rem;
+    border-radius: 16px;
+    background: rgba(15, 42, 39, 0.96);
+    border: 1px solid rgba(0, 229, 212, 0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  .get-bar p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.92rem;
+    flex: 1;
+  }
+
+  .get-bar a.button,
+  .get-bar a.button-secondary {
+    min-height: 40px;
+    padding: 0.45rem 0.7rem;
+    margin: 0;
+    font-size: 0.85rem;
+  }
+
+  .get-bar .dismiss {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text);
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 800px) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .showcase {
+    grid-template-columns: auto 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal,
+  .phone-screen img {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .phone-screen img:not(.is-active) {
+    opacity: 0;
   }
 }

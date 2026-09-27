@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PlayTechCorner</title>
+  <title>PlayTechCorner — Crazy Dragon for MIR4 clans</title>
   <meta name="description" content="PlayTechCorner publishes Crazy Dragon, a free fan-made MIR4 clan management app for donations, expeditions, and members.">
   <link rel="canonical" href="https://playtechcorner.com/">
   <meta name="theme-color" content="#071312">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PlayTechCorner">
-  <meta property="og:title" content="PlayTechCorner">
+  <meta property="og:title" content="PlayTechCorner — Crazy Dragon for MIR4 clans">
   <meta property="og:description" content="PlayTechCorner publishes Crazy Dragon, a free fan-made MIR4 clan management app for donations, expeditions, and members.">
   <meta property="og:url" content="https://playtechcorner.com/">
   <meta property="og:image" content="https://playtechcorner.com/assets/og.jpg">
@@ -17,14 +17,16 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="PlayTechCorner logo beside the words PlayTechCorner and Crazy Dragon">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PlayTechCorner">
+  <meta name="twitter:title" content="PlayTechCorner — Crazy Dragon for MIR4 clans">
   <meta name="twitter:description" content="PlayTechCorner publishes Crazy Dragon, a free fan-made MIR4 clan management app for donations, expeditions, and members.">
   <meta name="twitter:image" content="https://playtechcorner.com/assets/og.jpg">
   <meta name="twitter:image:alt" content="PlayTechCorner logo beside the words PlayTechCorner and Crazy Dragon">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
   <noscript>
     <style>
       @media (max-width: 799px) {
@@ -34,7 +36,7 @@
     </style>
   </noscript>
 </head>
-<body>
+<body class="has-get-bar">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="topbar" aria-hidden="true"></div>
@@ -56,13 +58,13 @@
     </div>
   </header>
   <main id="main" tabindex="-1">
-    <section class="hero">
+    <section class="hero reveal">
       <div class="wrap hero-grid">
         <div>
           <h1>PlayTechCorner</h1>
           <p class="lede">PlayTechCorner publishes Crazy Dragon, a free fan-made app for MIR4 clan leaders and members. It is not affiliated with Wemade.</p>
         </div>
-        <article class="app-card">
+        <article class="app-card reveal">
           <div class="identity">
             <img src="/assets/crazy-dragon-icon.webp" alt="Crazy Dragon app icon" width="256" height="256">
             <div>
@@ -100,6 +102,13 @@
       </div>
     </div>
   </footer>
+  <aside class="get-bar" id="get-bar">
+    <p>Get the app</p>
+    <a class="button" href="https://play.google.com/store/apps/details?id=com.playtechcorner.crazydragon">Google Play</a>
+    <a class="button button-secondary" href="/app/">Web app</a>
+    <button class="dismiss" type="button" data-dismiss-bar aria-label="Dismiss get the app bar">×</button>
+  </aside>
   <script src="/js/nav.js"></script>
+  <script src="/js/site.js"></script>
 </body>
 </html>

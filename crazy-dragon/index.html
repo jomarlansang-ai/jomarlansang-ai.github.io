@@ -21,10 +21,12 @@
   <meta name="twitter:description" content="Crazy Dragon is a free, ad-supported MIR4 clan app for donation tracking, members, expeditions, and copy-ready reports. Not affiliated with Wemade.">
   <meta name="twitter:image" content="https://playtechcorner.com/assets/og.jpg">
   <meta name="twitter:image:alt" content="PlayTechCorner logo beside the words PlayTechCorner and Crazy Dragon">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
   <noscript>
     <style>
       @media (max-width: 799px) {
@@ -34,7 +36,7 @@
     </style>
   </noscript>
 </head>
-<body>
+<body class="has-get-bar">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="topbar" aria-hidden="true"></div>
@@ -56,7 +58,7 @@
     </div>
   </header>
   <main id="main" tabindex="-1">
-    <div class="wrap page-intro">
+    <div class="wrap page-intro reveal">
       <div class="title-row">
         <img src="/assets/crazy-dragon-icon.webp" alt="Crazy Dragon app icon" width="256" height="256">
         <h1>Crazy Dragon</h1>
@@ -73,74 +75,112 @@
       </div>
     </div>
 
-    <section class="section">
+    <section class="section reveal">
       <div class="wrap">
         <h2>Features</h2>
-        <ol class="features">
+        <ul class="features">
           <li>
-            <h3>Daily Donation Tracker</h3>
-            <p>Record and monitor member donations.</p>
+            <button class="feature-toggle" type="button" data-expand aria-expanded="false" aria-controls="feat-daily" id="feat-daily-btn">
+              <span>Daily Donation Tracker</span>
+              <span class="feature-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="feature-panel" id="feat-daily" role="region" aria-labelledby="feat-daily-btn" hidden>
+              <p>Record which members donated today. The list shows who has and has not donated, and you can copy a report for Discord or Messenger.</p>
+            </div>
           </li>
           <li>
-            <h3>Gold Donation Tracker</h3>
-            <p>Track gold contributions accurately.</p>
+            <button class="feature-toggle" type="button" data-expand aria-expanded="false" aria-controls="feat-gold" id="feat-gold-btn">
+              <span>Gold Donation Tracker</span>
+              <span class="feature-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="feature-panel" id="feat-gold" role="region" aria-labelledby="feat-gold-btn" hidden>
+              <p>Track gold contributions separately from the daily donation list, and copy a gold donation report.</p>
+            </div>
           </li>
           <li>
-            <h3>Clan Member Management</h3>
-            <p>Organize member lists and activity.</p>
+            <button class="feature-toggle" type="button" data-expand aria-expanded="false" aria-controls="feat-members" id="feat-members-btn">
+              <span>Clan Member Management</span>
+              <span class="feature-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="feature-panel" id="feat-members" role="region" aria-labelledby="feat-members-btn" hidden>
+              <p>Organize the member list by name, class, and role. Search and filter the list. Scanning members from a photo is available in the Android app.</p>
+            </div>
           </li>
           <li>
-            <h3>Expedition Tracking</h3>
-            <p>Monitor clan expedition participation.</p>
+            <button class="feature-toggle" type="button" data-expand aria-expanded="false" aria-controls="feat-expedition" id="feat-expedition-btn">
+              <span>Expedition Tracking</span>
+              <span class="feature-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="feature-panel" id="feat-expedition" role="region" aria-labelledby="feat-expedition-btn" hidden>
+              <p>Record which expedition bosses the clan will run and compare the cost with clan resources in the expedition calculator.</p>
+            </div>
           </li>
           <li>
-            <h3>Ready-to-Copy Reports</h3>
-            <p>Generate shareable text for Discord, Messenger, or group chats.</p>
+            <button class="feature-toggle" type="button" data-expand aria-expanded="false" aria-controls="feat-reports" id="feat-reports-btn">
+              <span>Ready-to-Copy Reports</span>
+              <span class="feature-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="feature-panel" id="feat-reports" role="region" aria-labelledby="feat-reports-btn" hidden>
+              <p>Copy donation and expedition summaries for Discord, Messenger, or group chats.</p>
+            </div>
           </li>
           <li>
-            <h3>No Member Login Required</h3>
-            <p>Easy for clans to use without a registration system.</p>
+            <button class="feature-toggle" type="button" data-expand aria-expanded="false" aria-controls="feat-login" id="feat-login-btn">
+              <span>No Member Login Required</span>
+              <span class="feature-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="feature-panel" id="feat-login" role="region" aria-labelledby="feat-login-btn" hidden>
+              <p>Clan members do not create accounts. Records stay on the device, or in this browser for the web app.</p>
+            </div>
           </li>
           <li>
-            <h3>Lightweight &amp; Fast</h3>
-            <p>Simple interface with smooth performance.</p>
+            <button class="feature-toggle" type="button" data-expand aria-expanded="false" aria-controls="feat-light" id="feat-light-btn">
+              <span>Lightweight &amp; Fast</span>
+              <span class="feature-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="feature-panel" id="feat-light" role="region" aria-labelledby="feat-light-btn" hidden>
+              <p>A simple clan tracker without a member registration system.</p>
+            </div>
           </li>
-        </ol>
+        </ul>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section reveal">
       <div class="wrap">
-        <h2>Screenshots</h2>
-        <figure class="shots">
-          <ul class="shot-row">
-            <li>
-              <img src="/assets/screenshots/01.webp" width="720" height="1560" alt="Crazy Dragon leader and elder panel showing the clan name, member count, and today's donations." loading="lazy">
-            </li>
-            <li>
-              <img src="/assets/screenshots/02.webp" width="720" height="1560" alt="Crazy Dragon tools screen listing Clan Member Manager, Daily Donation, Gold Donation, and Expedition Calculator." loading="lazy">
-            </li>
-            <li>
-              <img src="/assets/screenshots/03.webp" width="720" height="1560" alt="Crazy Dragon expedition calculator showing clan resources and boss run costs." loading="lazy">
-            </li>
-            <li>
-              <img src="/assets/screenshots/04.webp" width="720" height="1560" alt="Crazy Dragon expedition calculator listing more bosses and the resources each run uses." loading="lazy">
-            </li>
-          </ul>
-          <figcaption>Screenshots from the Google Play listing.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <h2>Get Crazy Dragon</h2>
-        <p>Free on Google Play. Contains ads. Rated Everyone.</p>
-        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.playtechcorner.crazydragon">
-          <img src="/assets/google-play-badge.png" alt="Get it on Google Play" width="646" height="250">
-        </a>
-        <a class="button button-secondary" href="/app/">Open web app</a>
-        <p class="fineprint">Data is saved in this browser only and does not sync with the phone app.</p>
+        <h2>See the web app</h2>
+        <div class="showcase" data-carousel>
+          <div class="phone">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <div class="phone-screen" tabindex="0" aria-label="App screenshots. Use arrow keys to change the screen.">
+              <img data-slide class="is-active" src="/assets/app-screens/dashboard.webp" width="390" height="844" alt="Crazy Dragon web dashboard for clan Crazy Dragon, level 1, with member, donation, and resource cards.">
+              <img data-slide src="/assets/app-screens/members.webp" width="390" height="844" alt="Clan Member Manager with search and a member named Aria." aria-hidden="true">
+              <img data-slide src="/assets/app-screens/daily.webp" width="390" height="844" alt="Daily Donation screen with share report and mark all donated." aria-hidden="true">
+              <img data-slide src="/assets/app-screens/expedition.webp" width="390" height="844" alt="Expedition calculator listing Fox Spirit Beast and other bosses." aria-hidden="true">
+            </div>
+          </div>
+          <div>
+            <p>These screens are from the Crazy Dragon web app. Swipe the phone, or use the arrows and dots.</p>
+            <p class="sr-only" id="carousel-status" aria-live="polite"></p>
+            <div class="carousel-controls">
+              <button type="button" data-prev aria-label="Previous screenshot">‹</button>
+              <div class="dots" role="tablist" aria-label="Screenshots">
+                <button type="button" role="tab" data-dot aria-selected="true" aria-label="Dashboard"></button>
+                <button type="button" role="tab" data-dot aria-selected="false" tabindex="-1" aria-label="Members"></button>
+                <button type="button" role="tab" data-dot aria-selected="false" tabindex="-1" aria-label="Daily donations"></button>
+                <button type="button" role="tab" data-dot aria-selected="false" tabindex="-1" aria-label="Expedition calculator"></button>
+              </div>
+              <button type="button" data-next aria-label="Next screenshot">›</button>
+            </div>
+            <div class="get-actions" style="margin-top:1.25rem">
+              <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.playtechcorner.crazydragon">
+                <img src="/assets/google-play-badge.png" alt="Get it on Google Play" width="646" height="250">
+              </a>
+              <a class="button" href="/app/">Try it live</a>
+            </div>
+            <p class="fineprint">Data is saved in this browser only and does not sync with the phone app.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -159,6 +199,13 @@
       </div>
     </div>
   </footer>
+  <aside class="get-bar" id="get-bar">
+    <p>Get the app</p>
+    <a class="button" href="https://play.google.com/store/apps/details?id=com.playtechcorner.crazydragon">Google Play</a>
+    <a class="button button-secondary" href="/app/">Web app</a>
+    <button class="dismiss" type="button" data-dismiss-bar aria-label="Dismiss get the app bar">×</button>
+  </aside>
   <script src="/js/nav.js"></script>
+  <script src="/js/site.js"></script>
 </body>
 </html>
