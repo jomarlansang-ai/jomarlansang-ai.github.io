@@ -7,8 +7,13 @@
   function setOpen(open) {
     button.setAttribute("aria-expanded", open ? "true" : "false");
     nav.classList.toggle("is-open", open);
+    document.body.classList.toggle("nav-open", open);
     label.textContent = open ? "Close menu" : "Menu";
   }
+
+  window.addEventListener("resize", function () {
+    if (window.matchMedia("(min-width: 1024px)").matches) setOpen(false);
+  });
 
   button.addEventListener("click", function () {
     setOpen(button.getAttribute("aria-expanded") !== "true");
