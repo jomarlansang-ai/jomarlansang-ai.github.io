@@ -21,10 +21,12 @@
   <meta name="twitter:description" content="Contact PlayTechCorner at playtechcorner@gmail.com. Questions about Crazy Dragon, ads, Wemade, and the privacy policy.">
   <meta name="twitter:image" content="https://playtechcorner.com/assets/og.jpg">
   <meta name="twitter:image:alt" content="PlayTechCorner logo beside the words PlayTechCorner and Crazy Dragon">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
   <noscript>
     <style>
       @media (max-width: 799px) {
@@ -34,7 +36,7 @@
     </style>
   </noscript>
 </head>
-<body>
+<body class="has-get-bar">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="topbar" aria-hidden="true"></div>
@@ -56,31 +58,89 @@
     </div>
   </header>
   <main id="main" tabindex="-1">
-    <div class="wrap page-intro">
+    <div class="wrap page-intro reveal">
       <h1>Support</h1>
       <p class="lede">Questions about Crazy Dragon go to PlayTechCorner by email.</p>
     </div>
-    <section class="section">
+    <section class="section reveal">
       <div class="wrap">
         <h2>Contact</h2>
-        <p><a class="button" href="mailto:playtechcorner@gmail.com">Email playtechcorner@gmail.com</a></p>
+        <div class="copy-row">
+          <a class="button" href="mailto:playtechcorner@gmail.com">Email playtechcorner@gmail.com</a>
+          <button class="button button-secondary" type="button" data-copy-email="playtechcorner@gmail.com">Copy email</button>
+        </div>
+        <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
       </div>
     </section>
-    <section class="section faq">
+    <section class="section faq reveal">
       <div class="wrap">
         <h2>FAQ</h2>
-        <h3>Is Crazy Dragon free?</h3>
-        <p>Yes. Google Play lists the price as free. The app contains ads.</p>
-        <h3>Does Crazy Dragon contain ads?</h3>
-        <p>Yes. The Google Play listing says Crazy Dragon contains ads.</p>
-        <h3>What is the age rating?</h3>
-        <p>Google Play rates Crazy Dragon Everyone.</p>
-        <h3>Is Crazy Dragon affiliated with Wemade?</h3>
-        <p>No. Crazy Dragon is a fan-made utility. It is not affiliated with, endorsed by, or associated with Wemade or MIR4’s official developers.</p>
-        <h3>Where is the privacy policy?</h3>
-        <p>The privacy policy is at <a href="https://playtechcorner.com/playtechcorner-privacy/privacy-policy.html">https://playtechcorner.com/playtechcorner-privacy/privacy-policy.html</a>.</p>
-        <h3>How do I contact PlayTechCorner?</h3>
-        <p>Email <a href="mailto:playtechcorner@gmail.com">playtechcorner@gmail.com</a>.</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>
+              <button type="button" data-expand aria-expanded="false" aria-controls="faq-free" id="faq-free-btn">Is Crazy Dragon free?</button>
+            </h3>
+            <div class="faq-panel" id="faq-free" role="region" aria-labelledby="faq-free-btn" hidden>
+              <p>Yes. Google Play lists the price as free. The app contains ads.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" data-expand aria-expanded="false" aria-controls="faq-ads" id="faq-ads-btn">Does Crazy Dragon contain ads?</button>
+            </h3>
+            <div class="faq-panel" id="faq-ads" role="region" aria-labelledby="faq-ads-btn" hidden>
+              <p>Yes. The Google Play listing says Crazy Dragon contains ads. The web app does not show ads.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" data-expand aria-expanded="false" aria-controls="faq-age" id="faq-age-btn">What is the age rating?</button>
+            </h3>
+            <div class="faq-panel" id="faq-age" role="region" aria-labelledby="faq-age-btn" hidden>
+              <p>Google Play rates Crazy Dragon Everyone.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" data-expand aria-expanded="false" aria-controls="faq-wemade" id="faq-wemade-btn">Is Crazy Dragon affiliated with Wemade?</button>
+            </h3>
+            <div class="faq-panel" id="faq-wemade" role="region" aria-labelledby="faq-wemade-btn" hidden>
+              <p>No. Crazy Dragon is a fan-made utility. It is not affiliated with, endorsed by, or associated with Wemade or MIR4’s official developers.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" data-expand aria-expanded="true" aria-controls="faq-web" id="faq-web-btn">Where does the web app store data?</button>
+            </h3>
+            <div class="faq-panel" id="faq-web" role="region" aria-labelledby="faq-web-btn">
+              <p>The web app saves clan data in this browser only. It does not sync with the phone app.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" data-expand aria-expanded="false" aria-controls="faq-photo" id="faq-photo-btn">Can I scan members from a photo on the web?</button>
+            </h3>
+            <div class="faq-panel" id="faq-photo" role="region" aria-labelledby="faq-photo-btn" hidden>
+              <p>No. Photo scanning uses on-device text recognition and is available in the Android app.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" data-expand aria-expanded="false" aria-controls="faq-privacy" id="faq-privacy-btn">Where is the privacy policy?</button>
+            </h3>
+            <div class="faq-panel" id="faq-privacy" role="region" aria-labelledby="faq-privacy-btn" hidden>
+              <p>The privacy policy is at <a href="https://playtechcorner.com/playtechcorner-privacy/privacy-policy.html">https://playtechcorner.com/playtechcorner-privacy/privacy-policy.html</a>.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" data-expand aria-expanded="false" aria-controls="faq-contact" id="faq-contact-btn">How do I contact PlayTechCorner?</button>
+            </h3>
+            <div class="faq-panel" id="faq-contact" role="region" aria-labelledby="faq-contact-btn" hidden>
+              <p>Email <a href="mailto:playtechcorner@gmail.com">playtechcorner@gmail.com</a>.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -99,6 +159,13 @@
       </div>
     </div>
   </footer>
+  <aside class="get-bar" id="get-bar">
+    <p>Get the app</p>
+    <a class="button" href="https://play.google.com/store/apps/details?id=com.playtechcorner.crazydragon">Google Play</a>
+    <a class="button button-secondary" href="/app/">Web app</a>
+    <button class="dismiss" type="button" data-dismiss-bar aria-label="Dismiss get the app bar">×</button>
+  </aside>
   <script src="/js/nav.js"></script>
+  <script src="/js/site.js"></script>
 </body>
 </html>
