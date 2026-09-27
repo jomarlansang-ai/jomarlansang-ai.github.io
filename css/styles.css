@@ -394,6 +394,25 @@ p {
   color: #071312;
 }
 
+.button.button-secondary {
+  margin-top: 0.85rem;
+  background: transparent;
+  color: var(--teal);
+  border: 1px solid rgba(0, 229, 212, 0.55);
+}
+
+.button.button-secondary:hover {
+  background: rgba(0, 229, 212, 0.14);
+  color: var(--text);
+}
+
+.fineprint {
+  color: var(--muted);
+  font-size: 0.92rem;
+  max-width: 36rem;
+  margin: 0.7rem 0 0;
+}
+
 .section {
   padding-top: 3.25rem;
 }

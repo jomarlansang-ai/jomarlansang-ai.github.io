@@ -1,0 +1,36 @@
+{
+    "name": "Crazy Dragon Web",
+    "short_name": "Crazy Dragon",
+    "start_url": "/app/",
+    "scope": "/app/",
+    "display": "standalone",
+    "background_color": "#071312",
+    "theme_color": "#071312",
+    "description": "Crazy Dragon Web tracks MIR4 clan donations, members, and expeditions in this browser only. It does not sync with the phone app.",
+    "orientation": "any",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
