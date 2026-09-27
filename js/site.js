@@ -19,13 +19,40 @@
     observer.observe(el);
   });
 
+  var featureDesktop = window.matchMedia("(min-width: 768px)");
+
+  function syncFeatureCards() {
+    var wide = featureDesktop.matches;
+    document.querySelectorAll(".features [data-expand]").forEach(function (button) {
+      var panel = document.getElementById(button.getAttribute("aria-controls"));
+      if (!panel) return;
+      if (wide) {
+        button.setAttribute("aria-expanded", "true");
+        button.disabled = true;
+        panel.hidden = false;
+      } else if (button.disabled || button.getAttribute("data-feature-sync") !== "narrow") {
+        button.disabled = false;
+        button.setAttribute("aria-expanded", "false");
+        panel.hidden = true;
+        button.setAttribute("data-feature-sync", "narrow");
+      }
+    });
+  }
+
+  syncFeatureCards();
+  if (featureDesktop.addEventListener) {
+    featureDesktop.addEventListener("change", syncFeatureCards);
+  }
+
   document.querySelectorAll("[data-expand]").forEach(function (button) {
     button.addEventListener("click", function () {
+      if (button.closest(".features") && featureDesktop.matches) return;
       var panel = document.getElementById(button.getAttribute("aria-controls"));
       if (!panel) return;
       var open = button.getAttribute("aria-expanded") === "true";
       button.setAttribute("aria-expanded", open ? "false" : "true");
       panel.hidden = open;
+      if (button.closest(".features")) button.setAttribute("data-feature-sync", "narrow");
     });
   });
 
