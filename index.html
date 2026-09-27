@@ -29,79 +29,196 @@
   <script>document.documentElement.classList.add("js");</script>
   <noscript>
     <style>
-      @media (max-width: 799px) {
+      @media (max-width: 1023px) {
         .nav-button { display: none !important; }
-        .site-nav { display: flex !important; position: static !important; box-shadow: none !important; }
+        .shell { display: flex; flex-direction: column; }
+        .sidebar { display: flex !important; position: static !important; width: auto !important; height: auto !important; box-shadow: none !important; }
       }
     </style>
   </noscript>
 </head>
 <body class="has-get-bar">
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="topbar" aria-hidden="true"></div>
-    <div class="wrap header-inner">
-      <a class="brand" href="/">
+  <div class="shell">
+    <aside class="sidebar" id="site-nav">
+      <a class="sidebar-brand" href="/">
         <img src="/assets/logo.webp" alt="" width="640" height="586">
         <span>PlayTechCorner</span>
       </a>
-      <button class="nav-button" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Menu</span>
-        <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Primary">
-        <a href="/" aria-current="page">Home</a>
-        <a href="/crazy-dragon/">Crazy Dragon</a>
-        <a href="/app/">Web app</a>
-        <a href="/support/">Support</a>
+      <nav aria-label="Primary">
+        <a href="/" aria-current="page">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z"/></svg>
+          Home
+        </a>
+        <a href="#my-apps">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="6.5" height="6.5" rx="1.4"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.4"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.4"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.4"/></svg>
+          My Apps
+        </a>
+        <a href="/crazy-dragon/">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c2 3 2 5 0 7 3-1 6-1 8 2-3 0-5 2-5 5 0-3-2-5-5-5 2-3 2-5 2-9z"/></svg>
+          Crazy Dragon
+        </a>
+        <a href="#fuel-ev-map">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
+          <span>Fuel &amp; EV Map <span class="nav-note">(in development)</span></span>
+        </a>
+        <a href="#testers">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.2"/><path d="M4 19c.6-2.6 2.6-4 5-4s4.4 1.4 5 4"/><path d="M14 19c.3-1.6 1.4-2.8 3-3.2 1.2.3 2.1 1.2 2.5 3.2"/></svg>
+          Testers
+        </a>
+        <a href="/support/">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.2c-.7.4-1.1.9-1.1 1.8V14"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/></svg>
+          Support
+        </a>
       </nav>
-    </div>
-  </header>
-  <main id="main" tabindex="-1">
-    <section class="hero reveal">
-      <div class="wrap hero-grid">
-        <div>
-          <h1>PlayTechCorner</h1>
-          <p class="lede">PlayTechCorner publishes Crazy Dragon, a free fan-made app for MIR4 clan leaders and members. It is not affiliated with Wemade.</p>
+      <a class="sidebar-privacy" href="https://playtechcorner.com/playtechcorner-privacy/privacy-policy.html">Privacy Policy</a>
+    </aside>
+    <div class="shell-main">
+      <header class="site-header">
+        <div class="topbar" aria-hidden="true"></div>
+        <div class="wrap header-inner">
+          <a class="brand" href="/">
+            <img src="/assets/logo.webp" alt="" width="640" height="586">
+            <span>PlayTechCorner</span>
+          </a>
+          <button class="nav-button" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span class="sr-only">Menu</span>
+            <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
         </div>
-        <article class="app-card reveal">
-          <div class="identity">
-            <img src="/assets/crazy-dragon-icon.webp" alt="Crazy Dragon app icon" width="256" height="256">
-            <div>
-              <h2>Crazy Dragon</h2>
-              <p class="muted">MIR4 clan tracker for donations, expeditions, and member management.</p>
+      </header>
+      <main id="main" tabindex="-1">
+        <section class="dash-hero reveal">
+          <div class="hero-fx" aria-hidden="true">
+            <svg viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice">
+              <g fill="none" stroke="#00E5D4" stroke-width="1.2" opacity="0.28">
+                <path d="M40 80h180l40 40h220"/>
+                <path d="M80 160h120l30-30h160"/>
+                <path d="M900 60h160l40 50h70"/>
+                <path d="M760 140h140l36 36h180"/>
+                <path d="M60 420h200l48-48h140"/>
+                <path d="M820 400h150l40 40h120"/>
+                <circle cx="260" cy="80" r="3" fill="#00E5D4" stroke="none"/>
+                <circle cx="480" cy="120" r="3" fill="#00E5D4" stroke="none"/>
+                <circle cx="1100" cy="110" r="3" fill="#00E5D4" stroke="none"/>
+                <circle cx="308" cy="420" r="3" fill="#00E5D4" stroke="none"/>
+                <circle cx="1010" cy="440" r="3" fill="#00E5D4" stroke="none"/>
+              </g>
+            </svg>
+            <span class="fx-dot" style="top:18%;left:12%"></span>
+            <span class="fx-dot" style="top:28%;left:72%;animation-delay:-1.2s"></span>
+            <span class="fx-dot" style="top:62%;left:22%;animation-delay:-2s"></span>
+            <span class="fx-dot" style="top:70%;left:80%;animation-delay:-3s"></span>
+            <span class="fx-dot" style="top:16%;left:48%;animation-delay:-0.6s"></span>
+          </div>
+          <div class="wrap">
+            <img class="hero-logo" src="/assets/logo.webp" alt="PlayTechCorner logo" width="640" height="586">
+            <h1>Welcome to PlayTechCorner</h1>
+            <p class="lede">PlayTechCorner builds mobile apps. Crazy Dragon, a fan-made MIR4 clan manager, is available now. A map of fuel stations and EV chargers for the Philippines is in development.</p>
+            <a class="button" href="#my-apps">Explore apps</a>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Apps">
+          <div class="wrap dash-grid">
+            <article class="dash-card reveal">
+              <div class="dash-card-head">
+                <img src="/assets/crazy-dragon-icon.webp" alt="Crazy Dragon app icon" width="256" height="256">
+                <h2>Crazy Dragon</h2>
+              </div>
+              <p>Fan-made MIR4 clan manager for donations, members, and expeditions. Not affiliated with Wemade.</p>
+              <div class="card-actions">
+                <a class="store-badge" data-page-cta href="https://play.google.com/store/apps/details?id=com.playtechcorner.crazydragon">
+                  <img src="/assets/google-play-badge.png" alt="Get it on Google Play" width="646" height="250">
+                </a>
+                <a class="button" data-page-cta href="/app/">Try it live</a>
+              </div>
+            </article>
+            <article class="dash-card reveal" id="fuel-ev-map">
+              <div class="dash-card-head">
+                <span class="tile-mark" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
+                </span>
+                <h2>Fuel &amp; EV Map</h2>
+              </div>
+              <p class="badge">In development</p>
+              <p>A map of gas stations and EV chargers across the Philippines.</p>
+              <div class="card-actions">
+                <a class="button" href="mailto:playtechcorner@gmail.com?subject=Tester%20sign-up%3A%20Fuel%20%26%20EV%20Map&amp;body=Phone%20model%3A%0AAndroid%20version%3A%0A%0AI%20would%20like%20to%20test%20Fuel%20%26%20EV%20Map.">Become a tester</a>
+              </div>
+            </article>
+            <article class="dash-card reveal">
+              <div class="dash-card-head">
+                <img src="/assets/crazy-dragon-icon.webp" alt="Crazy Dragon app icon" width="256" height="256">
+                <h2>Crazy Dragon Web App</h2>
+              </div>
+              <p>The clan tools in this browser. Data stays in the browser and does not sync with the phone app.</p>
+              <div class="card-actions">
+                <a class="button" data-page-cta href="/app/">Use it in your browser</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal" id="my-apps">
+          <div class="wrap">
+            <h2>My Apps</h2>
+            <div class="app-row">
+              <a class="app-tile" href="/crazy-dragon/">
+                <img src="/assets/crazy-dragon-icon.webp" alt="Crazy Dragon app icon" width="256" height="256">
+                <span>
+                  <h3>Crazy Dragon</h3>
+                  <p>Fan-made MIR4 clan manager</p>
+                </span>
+              </a>
+              <article class="app-tile">
+                <span class="tile-mark" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
+                </span>
+                <span>
+                  <h3>Fuel &amp; EV Map</h3>
+                  <p class="soon-label">Coming soon</p>
+                </span>
+              </article>
             </div>
           </div>
-          <ul class="facts">
-            <li>Free</li>
-            <li>Contains ads</li>
-            <li>Rated Everyone</li>
-          </ul>
-          <a class="store-badge" data-page-cta href="https://play.google.com/store/apps/details?id=com.playtechcorner.crazydragon">
-            <img src="/assets/google-play-badge.png" alt="Get it on Google Play" width="646" height="250">
-          </a>
-          <a class="button button-secondary" data-page-cta href="/app/">Open web app</a>
-          <p class="fineprint">Data is saved in this browser only and does not sync with the phone app.</p>
-          <a class="text-link" href="/crazy-dragon/">Crazy Dragon details</a>
-        </article>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="/">Home</a>
-        <a href="/crazy-dragon/">Crazy Dragon</a>
-        <a href="/app/">Web app</a>
-        <a href="/support/">Support</a>
-        <a href="https://playtechcorner.com/playtechcorner-privacy/privacy-policy.html">Privacy</a>
-      </nav>
-      <div>
-        <p><a href="mailto:playtechcorner@gmail.com">playtechcorner@gmail.com</a></p>
-        <p class="muted">© PlayTechCorner</p>
-      </div>
+        </section>
+
+        <section class="section reveal" id="testers">
+          <div class="wrap">
+            <div class="tester-panel">
+              <h2>How to become a tester</h2>
+              <div class="tester-layout">
+                <ol class="steps">
+                  <li><strong>Email us</strong> with your phone model and Android version.</li>
+                  <li><strong>Get an invite</strong> to the test build.</li>
+                  <li><strong>Send feedback</strong> about what you tried.</li>
+                </ol>
+                <p>
+                  <a class="button" href="mailto:playtechcorner@gmail.com?subject=Tester%20sign-up%3A%20Fuel%20%26%20EV%20Map&amp;body=Phone%20model%3A%0AAndroid%20version%3A%0A%0AI%20would%20like%20to%20test%20Fuel%20%26%20EV%20Map.">Become a tester</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <div class="wrap footer-grid">
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="/">Home</a>
+            <a href="/crazy-dragon/">Crazy Dragon</a>
+            <a href="/app/">Web app</a>
+            <a href="/support/">Support</a>
+            <a href="https://playtechcorner.com/playtechcorner-privacy/privacy-policy.html">Privacy</a>
+          </nav>
+          <div>
+            <p><a href="mailto:playtechcorner@gmail.com">playtechcorner@gmail.com</a></p>
+            <p class="muted">© PlayTechCorner</p>
+          </div>
+        </div>
+      </footer>
     </div>
-  </footer>
+  </div>
   <aside class="get-bar" id="get-bar">
     <p>Get the app</p>
     <a class="button" href="https://play.google.com/store/apps/details?id=com.playtechcorner.crazydragon">Google Play</a>
