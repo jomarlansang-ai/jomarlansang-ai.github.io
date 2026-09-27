@@ -688,6 +688,7 @@ p {
 
 .features {
   gap: 0.75rem;
+  align-items: start;
 }
 
 .features li {
@@ -696,6 +697,8 @@ p {
   border-radius: 16px;
   background: var(--card);
   overflow: hidden;
+  align-self: start;
+  height: auto;
 }
 
 .feature-toggle {
@@ -731,6 +734,18 @@ p {
 .feature-toggle[aria-expanded="true"] .feature-chevron {
   transform: rotate(225deg);
   margin-top: 0.2rem;
+}
+
+.feature-toggle:disabled {
+  opacity: 1;
+  color: var(--text);
+  cursor: default;
+}
+
+.feature-toggle:disabled:hover,
+.feature-toggle:disabled:active {
+  transform: none;
+  background: transparent;
 }
 
 .feature-panel {
@@ -837,6 +852,7 @@ p {
 .faq-list {
   display: grid;
   gap: 0.65rem;
+  align-items: start;
 }
 
 .faq-item {
@@ -1267,5 +1283,25 @@ a.app-tile:hover {
 @media (min-width: 700px) {
   .app-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .features .feature-chevron {
+    display: none;
+  }
+
+  .features .feature-panel[hidden] {
+    display: block;
+  }
+
+  .features .feature-toggle:focus,
+  .features .feature-toggle:focus-visible {
+    outline: none;
   }
 }
