@@ -1289,7 +1289,12 @@ a.app-tile:hover {
 @media (min-width: 768px) {
   .features {
     grid-template-columns: 1fr 1fr;
-    align-items: start;
+    align-items: stretch;
+  }
+
+  .features li {
+    align-self: stretch;
+    height: auto;
   }
 
   .features .feature-chevron {
