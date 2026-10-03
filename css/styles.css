@@ -1540,3 +1540,30 @@ a.app-tile:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+@media (max-width: 799px) {
+  .page-pumpmap .pm-art {
+    display: none;
+  }
+
+  .page-pumpmap .pm-status {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .page-pumpmap .pm-progress-label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-pumpmap .get-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .page-pumpmap .get-actions .button {
+    width: 100%;
+  }
+}
