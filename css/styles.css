@@ -1484,10 +1484,46 @@ a.app-tile:hover {
   margin: 0 0 0.45rem;
 }
 
-#planned,
+#built,
+#before,
 #later,
 #credits {
   scroll-margin-top: 5.5rem;
+}
+
+.pm-progress {
+  margin: 0.25rem 0 1.25rem;
+  max-width: 36rem;
+}
+
+.pm-progress-label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin: 0 0 0.45rem;
+  font-weight: 700;
+}
+
+.pm-progress-label span:last-child {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.pm-progress-track {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(0, 229, 212, 0.16);
+  border: 1px solid rgba(0, 229, 212, 0.45);
+  overflow: hidden;
+}
+
+.pm-progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--teal), var(--orange));
 }
 
 @media (min-width: 800px) {

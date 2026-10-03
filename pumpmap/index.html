@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PumpMap PH — Gas stations and EV chargers in the Philippines</title>
-  <meta name="description" content="PumpMap PH is an Android app in development: gas stations, EV chargers, and fuel prices across the Philippines, even offline. Early Android testers wanted.">
+  <meta name="description" content="PumpMap PH is an Android app in development: gas stations, EV chargers, and fuel prices across the Philippines, even offline. Progress toward the first tester upload is 75%. Installs are not open yet.">
   <link rel="canonical" href="https://playtechcorner.com/pumpmap/">
   <meta name="theme-color" content="#071312">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PlayTechCorner">
   <meta property="og:title" content="PumpMap PH — Gas stations and EV chargers in the Philippines">
-  <meta property="og:description" content="PumpMap PH is an Android app in development: gas stations, EV chargers, and fuel prices across the Philippines, even offline. Early Android testers wanted.">
+  <meta property="og:description" content="PumpMap PH is an Android app in development: gas stations, EV chargers, and fuel prices across the Philippines, even offline. Progress toward the first tester upload is 75%. Installs are not open yet.">
   <meta property="og:url" content="https://playtechcorner.com/pumpmap/">
   <meta property="og:image" content="https://playtechcorner.com/assets/apple-touch-icon.png">
   <meta property="og:image:width" content="180">
@@ -18,7 +18,7 @@
   <meta property="og:image:alt" content="PlayTechCorner logo">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="PumpMap PH — Gas stations and EV chargers in the Philippines">
-  <meta name="twitter:description" content="PumpMap PH is an Android app in development: gas stations, EV chargers, and fuel prices across the Philippines, even offline. Early Android testers wanted.">
+  <meta name="twitter:description" content="PumpMap PH is an Android app in development: gas stations, EV chargers, and fuel prices across the Philippines, even offline. Progress toward the first tester upload is 75%. Installs are not open yet.">
   <meta name="twitter:image" content="https://playtechcorner.com/assets/apple-touch-icon.png">
   <meta name="twitter:image:alt" content="PlayTechCorner logo">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -97,13 +97,22 @@
                 </span>
                 <h1>PumpMap PH</h1>
               </div>
-              <p class="pm-status"><span class="pm-status-dot" aria-hidden="true"></span>In development. Early Android testers wanted.</p>
+              <p class="pm-status"><span class="pm-status-dot" aria-hidden="true"></span>In development. Tester installs are not open yet.</p>
               <p class="lede">Gas stations, EV chargers, and fuel prices across the Philippines, even offline.</p>
-              <div class="get-actions">
-                <a class="button" href="mailto:playtechcorner@gmail.com?subject=Tester%20sign-up%3A%20PumpMap%20PH&amp;body=Phone%20model%3A%0AAndroid%20version%3A%0A%0AI%20would%20like%20to%20test%20PumpMap%20PH.">Become a tester</a>
-                <a class="button button-secondary" href="#planned">See what’s planned</a>
+              <div class="pm-progress">
+                <p class="pm-progress-label" id="pm-progress-label">
+                  <span>75% toward the first tester upload</span>
+                  <span>This is progress toward the tester build, not a finished app.</span>
+                </p>
+                <div class="pm-progress-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-labelledby="pm-progress-label">
+                  <span class="pm-progress-fill" style="width: 75%"></span>
+                </div>
               </div>
-              <p class="fineprint">Not on Google Play yet. Email us to join the tester list.</p>
+              <div class="get-actions">
+                <a class="button" href="mailto:playtechcorner@gmail.com?subject=Tester%20sign-up%3A%20PumpMap%20PH&amp;body=Phone%20model%3A%0AAndroid%20version%3A%0A%0AI%20would%20like%20to%20test%20PumpMap%20PH.">Join the tester list</a>
+                <a class="button button-secondary" href="#built">See what’s built</a>
+              </div>
+              <p class="fineprint">Not on Google Play yet. Email us to join the tester list. Installs are not open yet.</p>
             </div>
             <figure class="pm-art reveal" aria-labelledby="pm-art-caption">
               <div class="pm-art-frame" aria-hidden="true">
@@ -124,26 +133,79 @@
           </div>
         </section>
 
-        <section class="section reveal" id="planned" aria-labelledby="planned-title">
+        <section class="section reveal" id="built" aria-labelledby="built-title">
           <div class="wrap">
-            <h2 id="planned-title">Planned for the first release</h2>
-            <p class="muted pm-note">In development. These features are not built yet.</p>
+            <h2 id="built-title">Already in the app</h2>
+            <p class="muted pm-note">Built. The app is still in development and is not available to install.</p>
             <ul class="pm-list">
               <li class="pm-item">
                 <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4z"/><path d="M9 4v14M15 6v14"/></svg></span>
-                <div><h3>Map of stations and chargers</h3><p>Gas stations and EV chargers across the Philippines on one map.</p></div>
-              </li>
-              <li class="pm-item">
-                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M5 12.8a10 10 0 0 1 4.2-2.5"/><path d="M14.8 10.3A10 10 0 0 1 19 12.8"/><path d="M2 9.3a15 15 0 0 1 4-2.4"/><path d="M11 5.1A15 15 0 0 1 22 9.3"/><circle cx="12" cy="20" r="0.8" fill="currentColor"/></svg></span>
-                <div><h3>Works offline</h3><p>Use the map without a signal.</p></div>
+                <div><h3>Offline map</h3><p>Offline map of Philippine gas stations and EV chargers.</p></div>
               </li>
               <li class="pm-item">
                 <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16l-6 7.5V19l-4 1.5v-8L4 5z"/></svg></span>
-                <div><h3>Filters</h3><p>Filter by brand, 24-hour, expressway stations (NLEX, SLEX, TPLEX and others), and EV plug type.</p></div>
+                <div><h3>Brand and amenity filters</h3><p>Filter stations by brand and amenities.</p></div>
               </li>
               <li class="pm-item">
                 <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 21.5 12 12 21.5 2.5 12 12 2.5z"/><path d="M9 14v-2.5a1.5 1.5 0 0 1 1.5-1.5H15"/><path d="m13 8 2 2-2 2"/></svg></span>
-                <div><h3>Directions</h3><p>Get directions through Google Maps or Waze.</p></div>
+                <div><h3>Directions</h3><p>Directions through Google Maps or Waze.</p></div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="m20 20-3.5-3.5"/></svg></span>
+                <div><h3>Live Google results</h3><p>Live Google results are in the app.</p></div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3"/><path d="M5 19c.8-2.8 3.2-4 7-4s6.2 1.2 7 4"/></svg></span>
+                <div><h3>Sign-in</h3><p>Sign-in is in the app.</p></div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="m7 15 4-4 3 3 5-6"/></svg></span>
+                <div><h3>Community price reports</h3><p>People can report prices in the app.</p></div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.2"/></svg></span>
+                <div><h3>Admin dashboard</h3><p>An admin dashboard is in the app.</p></div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><path d="m9.2 10.2 1.8 1.8 3.8-3.8"/></svg></span>
+                <div><h3>One pin per station</h3><p>The same station is not drawn twice. This just landed.</p></div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section reveal" id="before" aria-labelledby="before-title">
+          <div class="wrap">
+            <h2 id="before-title">Before a tester can install it</h2>
+            <p class="muted pm-note">Still required. Testers are not open, and there is no Play test link yet.</p>
+            <ul class="pm-list">
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 10h8M8 14h5"/></svg></span>
+                <div>
+                  <p class="pm-tag">In progress</p>
+                  <h3>Map-button layout</h3>
+                  <p>A small map-button layout fix is in progress now.</p>
+                </div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="8" height="18" rx="2"/><path d="M11 18h2"/></svg></span>
+                <div><h3>Map on a phone</h3><p>Confirming the map actually draws on Joms’s phone.</p></div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 16s4-3.4 4-6a4 4 0 1 0-8 0c0 2.6 4 6 4 6z"/></svg></span>
+                <div><h3>App icon</h3><p>An app icon is still required.</p></div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 15 5-4 4 3 3-2 6 4"/></svg></span>
+                <div><h3>Screenshots</h3><p>Screenshots are still required.</p></div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11V8a4 4 0 1 1 8 0v3"/><rect x="5" y="11" width="14" height="9" rx="2"/></svg></span>
+                <div><h3>Play signing and upload</h3><p>A Play signing key and a closed-test upload are still required.</p></div>
+              </li>
+              <li class="pm-item">
+                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.2"/><path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7L12.7 18"/></svg></span>
+                <div><h3>Tester link</h3><p>A real tester link on this page is still required.</p></div>
               </li>
             </ul>
           </div>
@@ -176,15 +238,14 @@
         <section class="section reveal" id="testers" aria-labelledby="testers-title">
           <div class="wrap">
             <div class="tester-panel">
-              <h2 id="testers-title">Become a tester</h2>
+              <h2 id="testers-title">Join the tester list</h2>
               <div class="tester-layout">
                 <ol class="steps">
-                  <li><strong>Email us</strong> with your phone model and Android version.</li>
-                  <li><strong>Get an invite</strong> to the test build.</li>
-                  <li><strong>Send feedback</strong> about what you tried.</li>
+                  <li><strong>Email us</strong> at playtechcorner@gmail.com with your phone model and Android version. That adds you to the list.</li>
+                  <li><strong>Installs are not open yet.</strong> Emailing does not send an install or a test-build invite. There is no Play test link yet.</li>
                 </ol>
                 <p>
-                  <a class="button" href="mailto:playtechcorner@gmail.com?subject=Tester%20sign-up%3A%20PumpMap%20PH&amp;body=Phone%20model%3A%0AAndroid%20version%3A%0A%0AI%20would%20like%20to%20test%20PumpMap%20PH.">Become a tester</a>
+                  <a class="button" href="mailto:playtechcorner@gmail.com?subject=Tester%20sign-up%3A%20PumpMap%20PH&amp;body=Phone%20model%3A%0AAndroid%20version%3A%0A%0AI%20would%20like%20to%20test%20PumpMap%20PH.">Join the tester list</a>
                 </p>
               </div>
             </div>
