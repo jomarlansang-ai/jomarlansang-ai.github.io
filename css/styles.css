@@ -504,7 +504,8 @@ p {
   margin-top: 0;
 }
 
-.faq a {
+.faq a,
+.policy a {
   overflow-wrap: anywhere;
 }
 
