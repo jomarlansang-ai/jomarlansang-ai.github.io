@@ -1484,10 +1484,46 @@ a.app-tile:hover {
   margin: 0 0 0.45rem;
 }
 
-#planned,
+#built,
+#before,
 #later,
 #credits {
   scroll-margin-top: 5.5rem;
+}
+
+.pm-progress {
+  margin: 0.25rem 0 1.25rem;
+  max-width: 36rem;
+}
+
+.pm-progress-label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin: 0 0 0.45rem;
+  font-weight: 700;
+}
+
+.pm-progress-label span:last-child {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.pm-progress-track {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(0, 229, 212, 0.16);
+  border: 1px solid rgba(0, 229, 212, 0.45);
+  overflow: hidden;
+}
+
+.pm-progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--teal), var(--orange));
 }
 
 @media (min-width: 800px) {
@@ -1502,5 +1538,32 @@ a.app-tile:hover {
 
   .pm-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 799px) {
+  .page-pumpmap .pm-art {
+    display: none;
+  }
+
+  .page-pumpmap .pm-status {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .page-pumpmap .pm-progress-label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-pumpmap .get-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .page-pumpmap .get-actions .button {
+    width: 100%;
   }
 }
