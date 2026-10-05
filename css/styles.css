@@ -537,6 +537,20 @@ p {
   text-decoration-thickness: 2px;
 }
 
+.footer-admin {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+}
+
+.footer-admin a {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.footer-admin a:hover {
+  color: var(--teal);
+}
+
 .not-found {
   padding: 5rem 0 3rem;
   max-width: 40rem;
