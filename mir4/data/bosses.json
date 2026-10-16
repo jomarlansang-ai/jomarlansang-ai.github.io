@@ -1,0 +1,1837 @@
+{
+  "checked": "4 Oct 2026",
+  "bosses": [
+    {
+      "id": "krukan",
+      "name": "Krukan",
+      "category": "worldBoss",
+      "categoryLabel": "World Boss",
+      "location": "Shackling Abaddon",
+      "detail": "Weekly. Portal on Bicheon Valley 4F. Spawns on every server. Official special boss.",
+      "layer": null,
+      "world": null,
+      "weekday": 1,
+      "times": [
+        {
+          "hour": 22,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "nerkan",
+      "name": "Nerkan",
+      "category": "worldBoss",
+      "categoryLabel": "World Boss",
+      "location": "Black Flame Abaddon",
+      "detail": "Weekly, when the sealed boss becomes attackable. Portal on Redmoon Valley 4F. May be absent from your server.",
+      "layer": null,
+      "world": null,
+      "weekday": 2,
+      "times": [
+        {
+          "hour": 23,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "helbar",
+      "name": "Helbar",
+      "category": "worldBoss",
+      "categoryLabel": "World Boss",
+      "location": "Redmoon Purgatory 7F",
+      "detail": "Weekly. Official special boss on Redmoon Purgatory 7F. Entry level 155.",
+      "layer": null,
+      "world": null,
+      "weekday": 3,
+      "times": [
+        {
+          "hour": 23,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "turkan",
+      "name": "Turkan",
+      "category": "worldBoss",
+      "categoryLabel": "World Boss",
+      "location": "Violet Abaddon",
+      "detail": "Weekly, when the sealed boss becomes attackable. Portal on Phantasia Valley 4F. May be absent from your server.",
+      "layer": null,
+      "world": null,
+      "weekday": 4,
+      "times": [
+        {
+          "hour": 23,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "utukan",
+      "name": "Utukan",
+      "category": "worldBoss",
+      "categoryLabel": "World Boss",
+      "location": "Crimson Abaddon",
+      "detail": "Weekly. Portal on Snake Valley 4F. Spawns on every server. Official special boss.",
+      "layer": null,
+      "world": null,
+      "weekday": 5,
+      "times": [
+        {
+          "hour": 22,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "labyrinth-bosses",
+      "name": "Labyrinth Bosses",
+      "category": "worldBoss",
+      "categoryLabel": "World Boss",
+      "location": "Labyrinths",
+      "detail": "Twice a day. The labyrinth field bosses share this clock. Sources do not name each monster.",
+      "layer": null,
+      "world": null,
+      "weekday": null,
+      "times": [
+        {
+          "hour": 10,
+          "minute": 0
+        },
+        {
+          "hour": 20,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "valley-bosses",
+      "name": "Valley Bosses",
+      "category": "worldBoss",
+      "categoryLabel": "World Boss",
+      "location": "Bicheon, Snake, and Redmoon Valleys",
+      "detail": "Twice a day. The Hidden Valley field bosses share this clock. Sources do not name each monster.",
+      "layer": null,
+      "world": null,
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 0
+        },
+        {
+          "hour": 22,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "purgatory-quest-bosses",
+      "name": "Purgatory Quest Bosses",
+      "category": "worldBoss",
+      "categoryLabel": "World Boss",
+      "location": "Redmoon Purgatory",
+      "detail": "Each floor has a quest boss on this clock. Official notes leave them up for 5 minutes. That limit is not the alarm. Helbar is a separate weekly boss.",
+      "layer": null,
+      "world": null,
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 0
+        },
+        {
+          "hour": 6,
+          "minute": 0
+        },
+        {
+          "hour": 12,
+          "minute": 0
+        },
+        {
+          "hour": 18,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "secret-peak-lower-red",
+      "name": "Lower Red Boss",
+      "category": "secretPeak",
+      "categoryLabel": "Secret Peak",
+      "location": "Secret Peak",
+      "detail": "Lower-left / bottom red boss. Four windows a day, every 6 hours.",
+      "layer": null,
+      "world": null,
+      "weekday": null,
+      "times": [
+        {
+          "hour": 1,
+          "minute": 0
+        },
+        {
+          "hour": 7,
+          "minute": 0
+        },
+        {
+          "hour": 13,
+          "minute": 0
+        },
+        {
+          "hour": 19,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "secret-peak-upper-red",
+      "name": "Upper Red Boss",
+      "category": "secretPeak",
+      "categoryLabel": "Secret Peak",
+      "location": "Secret Peak",
+      "detail": "Upper-right / top red boss. Four windows a day, every 6 hours.",
+      "layer": null,
+      "world": null,
+      "weekday": null,
+      "times": [
+        {
+          "hour": 4,
+          "minute": 0
+        },
+        {
+          "hour": 10,
+          "minute": 0
+        },
+        {
+          "hour": 16,
+          "minute": 0
+        },
+        {
+          "hour": 22,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "fury-chamber",
+      "name": "Chamber of Fury",
+      "category": "magicSquare",
+      "categoryLabel": "Magic Square",
+      "location": "Magic Square",
+      "detail": "Spawn window every 6 hours.",
+      "layer": null,
+      "world": null,
+      "weekday": null,
+      "times": [
+        {
+          "hour": 5,
+          "minute": 0
+        },
+        {
+          "hour": 11,
+          "minute": 0
+        },
+        {
+          "hour": 17,
+          "minute": 0
+        },
+        {
+          "hour": 23,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "frenzy-chamber",
+      "name": "Chamber of Frenzy",
+      "category": "magicSquare",
+      "categoryLabel": "Magic Square",
+      "location": "Magic Square",
+      "detail": "Spawn window every 6 hours.",
+      "layer": null,
+      "world": null,
+      "weekday": null,
+      "times": [
+        {
+          "hour": 2,
+          "minute": 0
+        },
+        {
+          "hour": 8,
+          "minute": 0
+        },
+        {
+          "hour": 14,
+          "minute": 0
+        },
+        {
+          "hour": 20,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "leaders-chamber-iii",
+      "name": "Leader's Chamber III",
+      "category": "magicSquare",
+      "categoryLabel": "Magic Square",
+      "location": "Magic Square",
+      "detail": "Spawn window every 3 hours, on the hour.",
+      "layer": null,
+      "world": null,
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 0
+        },
+        {
+          "hour": 3,
+          "minute": 0
+        },
+        {
+          "hour": 6,
+          "minute": 0
+        },
+        {
+          "hour": 9,
+          "minute": 0
+        },
+        {
+          "hour": 12,
+          "minute": 0
+        },
+        {
+          "hour": 15,
+          "minute": 0
+        },
+        {
+          "hour": 18,
+          "minute": 0
+        },
+        {
+          "hour": 21,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "mata",
+      "name": "Mata",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Bullface Forest",
+      "detail": "Layer 3 · World 1",
+      "layer": "Layer 3",
+      "world": "World 1",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 0
+        },
+        {
+          "hour": 2,
+          "minute": 0
+        },
+        {
+          "hour": 4,
+          "minute": 0
+        },
+        {
+          "hour": 6,
+          "minute": 0
+        },
+        {
+          "hour": 8,
+          "minute": 0
+        },
+        {
+          "hour": 10,
+          "minute": 0
+        },
+        {
+          "hour": 12,
+          "minute": 0
+        },
+        {
+          "hour": 14,
+          "minute": 0
+        },
+        {
+          "hour": 16,
+          "minute": 0
+        },
+        {
+          "hour": 18,
+          "minute": 0
+        },
+        {
+          "hour": 20,
+          "minute": 0
+        },
+        {
+          "hour": 22,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "boltox",
+      "name": "Boltox",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Demon Bull Temple 1F",
+      "detail": "Layer 3 · World 1",
+      "layer": "Layer 3",
+      "world": "World 1",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 1,
+          "minute": 0
+        },
+        {
+          "hour": 3,
+          "minute": 0
+        },
+        {
+          "hour": 5,
+          "minute": 0
+        },
+        {
+          "hour": 7,
+          "minute": 0
+        },
+        {
+          "hour": 9,
+          "minute": 0
+        },
+        {
+          "hour": 11,
+          "minute": 0
+        },
+        {
+          "hour": 13,
+          "minute": 0
+        },
+        {
+          "hour": 15,
+          "minute": 0
+        },
+        {
+          "hour": 17,
+          "minute": 0
+        },
+        {
+          "hour": 19,
+          "minute": 0
+        },
+        {
+          "hour": 21,
+          "minute": 0
+        },
+        {
+          "hour": 23,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "bullface-fiend-king",
+      "name": "Bullface Fiend King",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Bullface Fiend King's Sanctuary",
+      "detail": "Layer 3 · World 1",
+      "layer": "Layer 3",
+      "world": "World 1",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 0
+        },
+        {
+          "hour": 3,
+          "minute": 0
+        },
+        {
+          "hour": 6,
+          "minute": 0
+        },
+        {
+          "hour": 9,
+          "minute": 0
+        },
+        {
+          "hour": 12,
+          "minute": 0
+        },
+        {
+          "hour": 15,
+          "minute": 0
+        },
+        {
+          "hour": 18,
+          "minute": 0
+        },
+        {
+          "hour": 21,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "yeo-wihuang",
+      "name": "Yeo Wihuang",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Whitemaur Sealing Circle",
+      "detail": "Layer 3 · World 8 · also called Frost Whitemaur Revenant Yeo Wihuang",
+      "layer": "Layer 3",
+      "world": "World 8",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 1,
+          "minute": 0
+        },
+        {
+          "hour": 5,
+          "minute": 0
+        },
+        {
+          "hour": 9,
+          "minute": 0
+        },
+        {
+          "hour": 13,
+          "minute": 0
+        },
+        {
+          "hour": 17,
+          "minute": 0
+        },
+        {
+          "hour": 21,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "taehyul",
+      "name": "Taehyul",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Taehyul's Garden",
+      "detail": "Layer 3 · World 7",
+      "layer": "Layer 3",
+      "world": "World 7",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 1,
+          "minute": 0
+        },
+        {
+          "hour": 3,
+          "minute": 0
+        },
+        {
+          "hour": 5,
+          "minute": 0
+        },
+        {
+          "hour": 7,
+          "minute": 0
+        },
+        {
+          "hour": 9,
+          "minute": 0
+        },
+        {
+          "hour": 11,
+          "minute": 0
+        },
+        {
+          "hour": 13,
+          "minute": 0
+        },
+        {
+          "hour": 15,
+          "minute": 0
+        },
+        {
+          "hour": 17,
+          "minute": 0
+        },
+        {
+          "hour": 19,
+          "minute": 0
+        },
+        {
+          "hour": 21,
+          "minute": 0
+        },
+        {
+          "hour": 23,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "transformed-yuin",
+      "name": "Transformed Yuin",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Demonic Cult Main Hall",
+      "detail": "Layer 3 · World 7 · also listed as Yiun",
+      "layer": "Layer 3",
+      "world": "World 7",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 2,
+          "minute": 0
+        },
+        {
+          "hour": 5,
+          "minute": 0
+        },
+        {
+          "hour": 8,
+          "minute": 0
+        },
+        {
+          "hour": 11,
+          "minute": 0
+        },
+        {
+          "hour": 14,
+          "minute": 0
+        },
+        {
+          "hour": 17,
+          "minute": 0
+        },
+        {
+          "hour": 20,
+          "minute": 0
+        },
+        {
+          "hour": 23,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "nefariox-obdurate-zenith",
+      "name": "Nefariox Obdurate Zenith",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Phantasia Desert",
+      "detail": "Layer 3 · World 4",
+      "layer": "Layer 3",
+      "world": "World 4",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 0
+        },
+        {
+          "hour": 2,
+          "minute": 0
+        },
+        {
+          "hour": 4,
+          "minute": 0
+        },
+        {
+          "hour": 6,
+          "minute": 0
+        },
+        {
+          "hour": 8,
+          "minute": 0
+        },
+        {
+          "hour": 10,
+          "minute": 0
+        },
+        {
+          "hour": 12,
+          "minute": 0
+        },
+        {
+          "hour": 14,
+          "minute": 0
+        },
+        {
+          "hour": 16,
+          "minute": 0
+        },
+        {
+          "hour": 18,
+          "minute": 0
+        },
+        {
+          "hour": 20,
+          "minute": 0
+        },
+        {
+          "hour": 22,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "kurilaca",
+      "name": "Kurilaca",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Overlord Sealing Circle",
+      "detail": "Layer 3 · World 4 · also spelled Kurilaica and Kurilaika",
+      "layer": "Layer 3",
+      "world": "World 4",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 0
+        },
+        {
+          "hour": 3,
+          "minute": 0
+        },
+        {
+          "hour": 6,
+          "minute": 0
+        },
+        {
+          "hour": 9,
+          "minute": 0
+        },
+        {
+          "hour": 12,
+          "minute": 0
+        },
+        {
+          "hour": 15,
+          "minute": 0
+        },
+        {
+          "hour": 18,
+          "minute": 0
+        },
+        {
+          "hour": 21,
+          "minute": 0
+        }
+      ]
+    },
+    {
+      "id": "juhui",
+      "name": "Juhui",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Redmoon Mountain",
+      "detail": "Layer 3 · World 2",
+      "layer": "Layer 3",
+      "world": "World 2",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 2,
+          "minute": 30
+        },
+        {
+          "hour": 5,
+          "minute": 30
+        },
+        {
+          "hour": 8,
+          "minute": 30
+        },
+        {
+          "hour": 11,
+          "minute": 30
+        },
+        {
+          "hour": 14,
+          "minute": 30
+        },
+        {
+          "hour": 17,
+          "minute": 30
+        },
+        {
+          "hour": 20,
+          "minute": 30
+        },
+        {
+          "hour": 23,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "faluk",
+      "name": "Faluk",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Sabuk Great Wall",
+      "detail": "Layer 3 · World 5",
+      "layer": "Layer 3",
+      "world": "World 5",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 30
+        },
+        {
+          "hour": 3,
+          "minute": 30
+        },
+        {
+          "hour": 6,
+          "minute": 30
+        },
+        {
+          "hour": 9,
+          "minute": 30
+        },
+        {
+          "hour": 12,
+          "minute": 30
+        },
+        {
+          "hour": 15,
+          "minute": 30
+        },
+        {
+          "hour": 18,
+          "minute": 30
+        },
+        {
+          "hour": 21,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "tale-warper-fiend",
+      "name": "Tale Warper Fiend",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Illusion Temple",
+      "detail": "Layer 3 · World 5",
+      "layer": "Layer 3",
+      "world": "World 5",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 1,
+          "minute": 30
+        },
+        {
+          "hour": 4,
+          "minute": 30
+        },
+        {
+          "hour": 7,
+          "minute": 30
+        },
+        {
+          "hour": 10,
+          "minute": 30
+        },
+        {
+          "hour": 13,
+          "minute": 30
+        },
+        {
+          "hour": 16,
+          "minute": 30
+        },
+        {
+          "hour": 19,
+          "minute": 30
+        },
+        {
+          "hour": 22,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "tombbeast-gyo",
+      "name": "Tombbeast Gyo",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Nefariox Necropolis",
+      "detail": "Layer 3 · World 3 · also listed as Gyo",
+      "layer": "Layer 3",
+      "world": "World 3",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 2,
+          "minute": 30
+        },
+        {
+          "hour": 8,
+          "minute": 30
+        },
+        {
+          "hour": 14,
+          "minute": 30
+        },
+        {
+          "hour": 20,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "dusk-armado-emperor",
+      "name": "Dusk Armado Emperor",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Viperbeast Plain",
+      "detail": "Layer 3 · World 3",
+      "layer": "Layer 3",
+      "world": "World 3",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 1,
+          "minute": 30
+        },
+        {
+          "hour": 3,
+          "minute": 30
+        },
+        {
+          "hour": 5,
+          "minute": 30
+        },
+        {
+          "hour": 7,
+          "minute": 30
+        },
+        {
+          "hour": 9,
+          "minute": 30
+        },
+        {
+          "hour": 11,
+          "minute": 30
+        },
+        {
+          "hour": 13,
+          "minute": 30
+        },
+        {
+          "hour": 15,
+          "minute": 30
+        },
+        {
+          "hour": 17,
+          "minute": 30
+        },
+        {
+          "hour": 19,
+          "minute": 30
+        },
+        {
+          "hour": 21,
+          "minute": 30
+        },
+        {
+          "hour": 23,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "boodo",
+      "name": "Boodo",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Rockcut Tomb",
+      "detail": "Layer 3 · World 3 · also listed as Budu",
+      "layer": "Layer 3",
+      "world": "World 3",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 3,
+          "minute": 30
+        },
+        {
+          "hour": 9,
+          "minute": 30
+        },
+        {
+          "hour": 15,
+          "minute": 30
+        },
+        {
+          "hour": 21,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "mara",
+      "name": "Mara",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Rockcut Tomb",
+      "detail": "Layer 3 · World 3",
+      "layer": "Layer 3",
+      "world": "World 3",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 2,
+          "minute": 30
+        },
+        {
+          "hour": 5,
+          "minute": 30
+        },
+        {
+          "hour": 8,
+          "minute": 30
+        },
+        {
+          "hour": 11,
+          "minute": 30
+        },
+        {
+          "hour": 14,
+          "minute": 30
+        },
+        {
+          "hour": 17,
+          "minute": 30
+        },
+        {
+          "hour": 20,
+          "minute": 30
+        },
+        {
+          "hour": 23,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "bicheon-sura",
+      "name": "Bicheon Sura",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Bicheon Town",
+      "detail": "Layer 3 · World 6 · also listed as Sura or Asura",
+      "layer": "Layer 3",
+      "world": "World 6",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 4,
+          "minute": 30
+        },
+        {
+          "hour": 10,
+          "minute": 30
+        },
+        {
+          "hour": 16,
+          "minute": 30
+        },
+        {
+          "hour": 22,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "cheol-mokgang",
+      "name": "Cheol Mokgang",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Bicheon Town",
+      "detail": "Layer 3 · World 6",
+      "layer": "Layer 3",
+      "world": "World 6",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 30
+        },
+        {
+          "hour": 2,
+          "minute": 30
+        },
+        {
+          "hour": 4,
+          "minute": 30
+        },
+        {
+          "hour": 6,
+          "minute": 30
+        },
+        {
+          "hour": 8,
+          "minute": 30
+        },
+        {
+          "hour": 10,
+          "minute": 30
+        },
+        {
+          "hour": 12,
+          "minute": 30
+        },
+        {
+          "hour": 14,
+          "minute": 30
+        },
+        {
+          "hour": 16,
+          "minute": 30
+        },
+        {
+          "hour": 18,
+          "minute": 30
+        },
+        {
+          "hour": 20,
+          "minute": 30
+        },
+        {
+          "hour": 22,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "wuihan",
+      "name": "Wuihan",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Phantom Woods",
+      "detail": "Layer 3 · World 6",
+      "layer": "Layer 3",
+      "world": "World 6",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 5,
+          "minute": 30
+        },
+        {
+          "hour": 11,
+          "minute": 30
+        },
+        {
+          "hour": 17,
+          "minute": 30
+        },
+        {
+          "hour": 23,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "obscene-yeticlops",
+      "name": "Obscene Yeticlops",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Bicheon Labyrinth",
+      "detail": "Layer 3 · World 6",
+      "layer": "Layer 3",
+      "world": "World 6",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 30
+        },
+        {
+          "hour": 6,
+          "minute": 30
+        },
+        {
+          "hour": 12,
+          "minute": 30
+        },
+        {
+          "hour": 18,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "transformed-hong-yeom",
+      "name": "Transformed Hong Yeom",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Demoniac Mine Depths",
+      "detail": "Layer 3 · World 6",
+      "layer": "Layer 3",
+      "world": "World 6",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 1,
+          "minute": 30
+        },
+        {
+          "hour": 3,
+          "minute": 30
+        },
+        {
+          "hour": 5,
+          "minute": 30
+        },
+        {
+          "hour": 7,
+          "minute": 30
+        },
+        {
+          "hour": 9,
+          "minute": 30
+        },
+        {
+          "hour": 11,
+          "minute": 30
+        },
+        {
+          "hour": 13,
+          "minute": 30
+        },
+        {
+          "hour": 15,
+          "minute": 30
+        },
+        {
+          "hour": 17,
+          "minute": 30
+        },
+        {
+          "hour": 19,
+          "minute": 30
+        },
+        {
+          "hour": 21,
+          "minute": 30
+        },
+        {
+          "hour": 23,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "jihwa",
+      "name": "Jihwa",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Unseo Town",
+      "detail": "Layer 1 · World 1",
+      "layer": "Layer 1",
+      "world": "World 1",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 2,
+          "minute": 30
+        },
+        {
+          "hour": 5,
+          "minute": 30
+        },
+        {
+          "hour": 8,
+          "minute": 30
+        },
+        {
+          "hour": 11,
+          "minute": 30
+        },
+        {
+          "hour": 14,
+          "minute": 30
+        },
+        {
+          "hour": 17,
+          "minute": 30
+        },
+        {
+          "hour": 20,
+          "minute": 30
+        },
+        {
+          "hour": 23,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "nighteyes-yaksha",
+      "name": "Nighteyes Yaksha",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Seven Valleys Mountain",
+      "detail": "Layer 1 · World 1",
+      "layer": "Layer 1",
+      "world": "World 1",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 3,
+          "minute": 30
+        },
+        {
+          "hour": 9,
+          "minute": 30
+        },
+        {
+          "hour": 15,
+          "minute": 30
+        },
+        {
+          "hour": 21,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "black-carapace-dusk-armado",
+      "name": "Black Carapace Dusk Armado",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Seven Valleys Mountain",
+      "detail": "Layer 1 · World 1",
+      "layer": "Layer 1",
+      "world": "World 1",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 30
+        },
+        {
+          "hour": 3,
+          "minute": 30
+        },
+        {
+          "hour": 6,
+          "minute": 30
+        },
+        {
+          "hour": 9,
+          "minute": 30
+        },
+        {
+          "hour": 12,
+          "minute": 30
+        },
+        {
+          "hour": 15,
+          "minute": 30
+        },
+        {
+          "hour": 18,
+          "minute": 30
+        },
+        {
+          "hour": 21,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "bulhu",
+      "name": "Bulhu",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Roaring Flame Island",
+      "detail": "Layer 1 · World 1",
+      "layer": "Layer 1",
+      "world": "World 1",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 4,
+          "minute": 30
+        },
+        {
+          "hour": 10,
+          "minute": 30
+        },
+        {
+          "hour": 16,
+          "minute": 30
+        },
+        {
+          "hour": 22,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "guemugwang",
+      "name": "Guemugwang",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Nine Dragon Ice Field",
+      "detail": "Layer 1 · World 2 · also listed as Gwe Mukang. This is not Illusory Dream.",
+      "layer": "Layer 1",
+      "world": "World 2",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 5,
+          "minute": 30
+        },
+        {
+          "hour": 11,
+          "minute": 30
+        },
+        {
+          "hour": 17,
+          "minute": 30
+        },
+        {
+          "hour": 23,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "do-maeongryong",
+      "name": "Do Maeongryong",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Underground Jail",
+      "detail": "Layer 1 · World 2 · also spelled Do Maengryong",
+      "layer": "Layer 1",
+      "world": "World 2",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 30
+        },
+        {
+          "hour": 6,
+          "minute": 30
+        },
+        {
+          "hour": 12,
+          "minute": 30
+        },
+        {
+          "hour": 18,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "molgrash",
+      "name": "Molgrash",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Underground Jail",
+      "detail": "Layer 1 · World 2",
+      "layer": "Layer 1",
+      "world": "World 2",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 1,
+          "minute": 30
+        },
+        {
+          "hour": 4,
+          "minute": 30
+        },
+        {
+          "hour": 7,
+          "minute": 30
+        },
+        {
+          "hour": 10,
+          "minute": 30
+        },
+        {
+          "hour": 13,
+          "minute": 30
+        },
+        {
+          "hour": 16,
+          "minute": 30
+        },
+        {
+          "hour": 19,
+          "minute": 30
+        },
+        {
+          "hour": 22,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "wi-gwangryeong",
+      "name": "Wi Gwangryeong",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Nine Dragon Palace",
+      "detail": "Layer 1 · World 2 · also spelled Wi Kwangryeong",
+      "layer": "Layer 1",
+      "world": "World 2",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 2,
+          "minute": 30
+        },
+        {
+          "hour": 5,
+          "minute": 30
+        },
+        {
+          "hour": 8,
+          "minute": 30
+        },
+        {
+          "hour": 11,
+          "minute": 30
+        },
+        {
+          "hour": 14,
+          "minute": 30
+        },
+        {
+          "hour": 17,
+          "minute": 30
+        },
+        {
+          "hour": 20,
+          "minute": 30
+        },
+        {
+          "hour": 23,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "krog",
+      "name": "Krog",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Primal Nefariox Ruins",
+      "detail": "Layer 1 · World 3",
+      "layer": "Layer 1",
+      "world": "World 3",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 1,
+          "minute": 30
+        },
+        {
+          "hour": 7,
+          "minute": 30
+        },
+        {
+          "hour": 13,
+          "minute": 30
+        },
+        {
+          "hour": 19,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "kelis",
+      "name": "Kelis",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Frozen Gorge",
+      "detail": "Layer 1 · World 3",
+      "layer": "Layer 1",
+      "world": "World 3",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 2,
+          "minute": 30
+        },
+        {
+          "hour": 8,
+          "minute": 30
+        },
+        {
+          "hour": 14,
+          "minute": 30
+        },
+        {
+          "hour": 20,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "talasa",
+      "name": "Talasa",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Frozen Gorge",
+      "detail": "Layer 1 · World 3",
+      "layer": "Layer 1",
+      "world": "World 3",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 2,
+          "minute": 30
+        },
+        {
+          "hour": 5,
+          "minute": 30
+        },
+        {
+          "hour": 8,
+          "minute": 30
+        },
+        {
+          "hour": 11,
+          "minute": 30
+        },
+        {
+          "hour": 14,
+          "minute": 30
+        },
+        {
+          "hour": 17,
+          "minute": 30
+        },
+        {
+          "hour": 20,
+          "minute": 30
+        },
+        {
+          "hour": 23,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "barkas",
+      "name": "Barkas",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Ancient One's Old Castle",
+      "detail": "Layer 1 · World 3",
+      "layer": "Layer 1",
+      "world": "World 3",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 3,
+          "minute": 30
+        },
+        {
+          "hour": 9,
+          "minute": 30
+        },
+        {
+          "hour": 15,
+          "minute": 30
+        },
+        {
+          "hour": 21,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "bargan",
+      "name": "Bargan",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Hydra's Temple",
+      "detail": "Layer 1 · World 3",
+      "layer": "Layer 1",
+      "world": "World 3",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 4,
+          "minute": 30
+        },
+        {
+          "hour": 10,
+          "minute": 30
+        },
+        {
+          "hour": 16,
+          "minute": 30
+        },
+        {
+          "hour": 22,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "morg",
+      "name": "Morg",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Hydra's Temple",
+      "detail": "Layer 1 · World 3",
+      "layer": "Layer 1",
+      "world": "World 3",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 0,
+          "minute": 30
+        },
+        {
+          "hour": 3,
+          "minute": 30
+        },
+        {
+          "hour": 6,
+          "minute": 30
+        },
+        {
+          "hour": 9,
+          "minute": 30
+        },
+        {
+          "hour": 12,
+          "minute": 30
+        },
+        {
+          "hour": 15,
+          "minute": 30
+        },
+        {
+          "hour": 18,
+          "minute": 30
+        },
+        {
+          "hour": 21,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "bordo",
+      "name": "Bordo",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Hydra's Depths",
+      "detail": "Layer 1 · World 3",
+      "layer": "Layer 1",
+      "world": "World 3",
+      "weekday": null,
+      "times": [
+        {
+          "hour": 5,
+          "minute": 30
+        },
+        {
+          "hour": 11,
+          "minute": 30
+        },
+        {
+          "hour": 17,
+          "minute": 30
+        },
+        {
+          "hour": 23,
+          "minute": 30
+        }
+      ]
+    },
+    {
+      "id": "ma-wonwi",
+      "name": "Ma Wonwi",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Seochon Trading Post",
+      "detail": "Spawns after a kill count, not on a clock. Player notes put the threshold around 7,000–8,000 kills. No official count was found, and there is no timer.",
+      "layer": "Layer 3",
+      "world": "World 2",
+      "weekday": null,
+      "times": []
+    },
+    {
+      "id": "illusory-dream",
+      "name": "Illusory Dream",
+      "category": "layerBoss",
+      "categoryLabel": "Layer Boss",
+      "location": "Nine Dragon Ice Field",
+      "detail": "Spawns after a kill count, not on a clock. Player notes put the threshold around 7,000–8,000 kills. No official count was found, and there is no timer.",
+      "layer": "Layer 3",
+      "world": "World 5",
+      "weekday": null,
+      "times": []
+    },
+    {
+      "id": "drakazan",
+      "name": "Drakazan",
+      "category": "worldBoss",
+      "categoryLabel": "World Boss",
+      "location": "Domination Server",
+      "detail": "Spawns after a kill count, not on a clock. Left off the countdown.",
+      "layer": null,
+      "world": null,
+      "weekday": null,
+      "times": []
+    },
+    {
+      "id": "leaders-chamber-i",
+      "name": "Leader's Chamber I",
+      "category": "magicSquare",
+      "categoryLabel": "Magic Square",
+      "location": "Magic Square",
+      "detail": "Spawns after a kill count, not on a clock. Left off the countdown.",
+      "layer": null,
+      "world": null,
+      "weekday": null,
+      "times": []
+    },
+    {
+      "id": "leaders-chamber-ii",
+      "name": "Leader's Chamber II",
+      "category": "magicSquare",
+      "categoryLabel": "Magic Square",
+      "location": "Magic Square",
+      "detail": "Spawns after a kill count, not on a clock. Left off the countdown.",
+      "layer": null,
+      "world": null,
+      "weekday": null,
+      "times": []
+    }
+  ]
+}

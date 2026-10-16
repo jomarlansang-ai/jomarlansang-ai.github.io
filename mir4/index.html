@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MIR4 Helper — checklist, clock, and planner | PlayTechCorner</title>
-  <meta name="description" content="Unofficial MIR4 helper for a daily checklist, a Philippine Time boss clock, a weekly planner, official notice links, and the Crazy Dragon clan board.">
+  <title>Crazy Dragon Web — bosses, checklist, and clan tools | PlayTechCorner</title>
+  <meta name="description" content="Unofficial Crazy Dragon companion for MIR4 players. Boss timers for five server regions, a daily checklist, an expedition calculator, and a clan board stored in this browser.">
   <link rel="canonical" href="https://playtechcorner.com/mir4/">
   <meta name="theme-color" content="#071312">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PlayTechCorner">
-  <meta property="og:title" content="MIR4 Helper — checklist, clock, and planner | PlayTechCorner">
-  <meta property="og:description" content="Unofficial MIR4 helper for a daily checklist, a Philippine Time boss clock, a weekly planner, official notice links, and the Crazy Dragon clan board.">
+  <meta property="og:title" content="Crazy Dragon Web — bosses, checklist, and clan tools | PlayTechCorner">
+  <meta property="og:description" content="Unofficial Crazy Dragon companion for MIR4 players. Boss timers, a daily checklist, an expedition calculator, and a clan board stored in this browser.">
   <meta property="og:url" content="https://playtechcorner.com/mir4/">
   <meta property="og:image" content="https://playtechcorner.com/assets/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="PlayTechCorner logo beside the words PlayTechCorner and Crazy Dragon">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MIR4 Helper — checklist, clock, and planner | PlayTechCorner">
-  <meta name="twitter:description" content="Unofficial MIR4 helper for a daily checklist, a Philippine Time boss clock, a weekly planner, official notice links, and the Crazy Dragon clan board.">
+  <meta name="twitter:title" content="Crazy Dragon Web — bosses, checklist, and clan tools | PlayTechCorner">
+  <meta name="twitter:description" content="Unofficial Crazy Dragon companion for MIR4 players. Boss timers, a daily checklist, an expedition calculator, and a clan board stored in this browser.">
   <meta name="twitter:image" content="https://playtechcorner.com/assets/og.jpg">
   <meta name="twitter:image:alt" content="PlayTechCorner logo beside the words PlayTechCorner and Crazy Dragon">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -34,15 +34,15 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is MIR4 Helper?",
+      "name": "What is Crazy Dragon Web?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "MIR4 Helper is an unofficial day-to-day section of PlayTechCorner. It has a daily checklist, an event and boss clock in Philippine Time, a weekly planner, a hand-written digest of official notice links, and a clan board that links to the Crazy Dragon app."
+        "text": "Crazy Dragon Web is an unofficial companion for MIR4 players on PlayTechCorner. It has today's bosses, a 53-boss schedule, a daily checklist, character compare, an expedition calculator, and a clan board."
       }
     },
     {
       "@type": "Question",
-      "name": "Is MIR4 Helper affiliated with Wemade?",
+      "name": "Is Crazy Dragon Web affiliated with Wemade?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "No. This is an unofficial fan site, not affiliated with Wemade. MIR4 is a trademark of Wemade."
@@ -50,10 +50,18 @@
     },
     {
       "@type": "Question",
-      "name": "What does MIR4 Helper store?",
+      "name": "What does Crazy Dragon Web store?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ticks, planner notes, and clan notes stay in this browser localStorage. The site does not take accounts, and it does not scrape the game."
+        "text": "Favorites, checklist ticks, clan records, expedition runs, planner notes, and comparison entries stay in this browser. You can export or import that data as JSON. The site does not take accounts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do the boss timers track live spawns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Timers are schedule estimates from a table checked 4 Oct 2026. Boss presence is not tracked. A row is marked spawning soon 30 minutes before the scheduled time, and the live window is 10 minutes, or 5 minutes for Purgatory Quest Bosses."
       }
     },
     {
@@ -78,7 +86,7 @@
     </style>
   </noscript>
 </head>
-<body class="mir4-page" data-mir4="home">
+<body class="mir4-page">
   <a class="skip" href="#main">Skip to content</a>
   <div class="shell">
     <aside class="sidebar" id="site-nav">
@@ -101,7 +109,7 @@
         </a>
         <a href="/mir4/" aria-current="page">
           <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13" r="7"/><path d="M12 10v3.5l2 1.5"/><path d="M8 3h8"/><path d="M12 3v2"/></svg>
-          MIR4 Helper
+          Crazy Dragon Web
         </a>
         <a href="/pumpmap/">
           <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
@@ -134,61 +142,96 @@
       </header>
       <main id="main" tabindex="-1">
         <div class="wrap page-intro">
-          <h1>MIR4 Helper</h1>
-      <div class="notice mir4-disclaimer">
-        <p>Unofficial fan site, not affiliated with Wemade. MIR4 is a trademark of Wemade.</p>
-      </div>
-          <p class="lede">A day-to-day helper for MIR4 in Philippine Time. Tick dailies, watch the clock, plan the week, open official notices, and jump to Crazy Dragon. Ticks and notes stay in this browser.</p>
-      <p class="fineprint"><a href="mailto:playtechcorner@gmail.com?subject=MIR4%20Helper%20feedback">Send feedback</a></p>
-      <ul class="mir4-nav">
-        <li><a href="/mir4/" aria-current="page">Overview</a></li>
-        <li><a href="/mir4/checklist.html">Checklist</a></li>
-        <li><a href="/mir4/clock.html">Clock</a></li>
-        <li><a href="/mir4/planner.html">Planner</a></li>
-        <li><a href="/mir4/notices.html">Notices</a></li>
-        <li><a href="/mir4/clan.html">Clan board</a></li>
-      </ul>
+          <div class="cd-hero">
+            <img src="/mir4/app-icon.webp" alt="" width="1024" height="1024">
+            <div>
+              <h1>Crazy Dragon Web</h1>
+              <p>An unofficial companion for MIR4 players.</p>
+            </div>
+          </div>
+          <div class="notice">
+            <p>Unofficial, not affiliated with Wemade. MIR4 is a trademark of Wemade.</p>
+          </div>
+          <p id="cd-status" class="cd-status" role="status"></p>
         </div>
-        <section class="section" aria-label="Tools">
-          <div class="wrap mir4-hub">
-            <a class="mir4-card" href="/mir4/checklist.html">
-              <p class="mir4-kicker">Daily</p>
-              <h2>Checklist</h2>
-              <p>Tick the official daily tasks, plus a few common habits. The list resets at 00:00 PHT.</p>
-            </a>
-            <a class="mir4-card" href="/mir4/clock.html">
-              <p class="mir4-kicker">PHT</p>
-              <h2>Event and boss clock</h2>
-              <p>Countdowns from a hand-written schedule. Unverified times are marked to confirm.</p>
-            </a>
-            <a class="mir4-card" href="/mir4/planner.html">
-              <p class="mir4-kicker">Week</p>
-              <h2>Weekly planner</h2>
-              <p>A Monday-to-Sunday board for bosses, Domination, and your own notes.</p>
-            </a>
-            <a class="mir4-card" href="/mir4/notices.html">
-              <p class="mir4-kicker">Official links</p>
-              <h2>Notice digest</h2>
-              <p>A short list of links to official MIR4 notices. Nothing is scraped.</p>
-            </a>
-            <a class="mir4-card" href="/mir4/clan.html">
-              <p class="mir4-kicker">Clan</p>
-              <h2>Crazy Dragon clan board</h2>
-              <p>Open the Crazy Dragon app or web app. This page does not list members or stats.</p>
-            </a>
+        <div class="wrap">
+          <nav class="cd-nav" aria-label="On this page">
+            <a href="#today">Today</a>
+            <a href="#bosses">Bosses</a>
+            <a href="#tools">Tools</a>
+            <a href="#clan">Clan</a>
+            <a href="#planner">Planner</a>
+            <a href="#notices">Notices</a>
+            <a href="#settings">Settings</a>
+          </nav>
+        </div>
+        <section class="section cd-section" id="today">
+          <div class="wrap">
+            <h2>Your adventure today</h2>
+            <div id="today-mount"></div>
+          </div>
+        </section>
+        <section class="section cd-section" id="bosses">
+          <div class="wrap">
+            <h2>Bosses</h2>
+            <div id="boss-mount"></div>
+          </div>
+        </section>
+        <section class="section cd-section" id="tools">
+          <div class="wrap cd-stack">
+            <h2>Tools</h2>
+            <div>
+              <h3>Character Compare</h3>
+              <p>Enter two characters by hand and compare combat stats, equipment, skills, training, buildings, codex, potential, and spirits. Nothing is fetched.</p>
+              <div id="compare-mount"></div>
+            </div>
+            <div id="expedition">
+              <h3>Expedition planner</h3>
+              <p>The first run spends Copper, Darksteel, and Energy. The second run spends Gold, and it is available only while the first run is selected.</p>
+              <div id="expedition-mount"></div>
+            </div>
+          </div>
+        </section>
+        <section class="section cd-section" id="clan">
+          <div class="wrap">
+            <h2>Clan</h2>
+            <div id="clan-mount"></div>
+          </div>
+        </section>
+        <section class="section cd-section" id="planner">
+          <div class="wrap">
+            <h2>Weekly planner</h2>
+            <p>The five weekly world bosses from the schedule, plus notes kept in this browser.</p>
+            <div id="planner-mount"></div>
+          </div>
+        </section>
+        <section class="section cd-section" id="notices">
+          <div class="wrap">
+            <h2>Official notices</h2>
+            <p>Hand-written links. This page does not fetch or copy the forum.</p>
+            <div id="notices-mount"></div>
+          </div>
+        </section>
+        <section class="section cd-section" id="settings">
+          <div class="wrap">
+            <h2>Settings</h2>
+            <p>Reminders, clan records, and comparison entries stay on this device. <a href="mailto:playtechcorner@gmail.com?subject=Crazy%20Dragon%20Web%20feedback">Email feedback</a>.</p>
+            <div id="settings-mount"></div>
           </div>
         </section>
         <section class="section faq">
           <div class="wrap">
             <h2>Questions</h2>
-        <h3>What is MIR4 Helper?</h3>
-        <p>MIR4 Helper is an unofficial day-to-day section of PlayTechCorner. It has a daily checklist, an event and boss clock in Philippine Time, a weekly planner, a hand-written digest of official notice links, and a clan board that links to the Crazy Dragon app.</p>
-        <h3>Is MIR4 Helper affiliated with Wemade?</h3>
-        <p>No. This is an unofficial fan site, not affiliated with Wemade. MIR4 is a trademark of Wemade.</p>
-        <h3>What does MIR4 Helper store?</h3>
-        <p>Ticks, planner notes, and clan notes stay in this browser localStorage. The site does not take accounts, and it does not scrape the game.</p>
-        <h3>How do I send feedback?</h3>
-        <p>Email playtechcorner@gmail.com. There is no third-party form.</p>
+            <h3>What is Crazy Dragon Web?</h3>
+            <p>Crazy Dragon Web is an unofficial companion for MIR4 players on PlayTechCorner. It has today's bosses, a 53-boss schedule, a daily checklist, character compare, an expedition calculator, and a clan board.</p>
+            <h3>Is Crazy Dragon Web affiliated with Wemade?</h3>
+            <p>No. This is an unofficial fan site, not affiliated with Wemade. MIR4 is a trademark of Wemade.</p>
+            <h3>What does Crazy Dragon Web store?</h3>
+            <p>Favorites, checklist ticks, clan records, expedition runs, planner notes, and comparison entries stay in this browser. You can export or import that data as JSON. The site does not take accounts.</p>
+            <h3>Do the boss timers track live spawns?</h3>
+            <p>No. Timers are schedule estimates from a table checked 4 Oct 2026. Boss presence is not tracked. A row is marked spawning soon 30 minutes before the scheduled time, and the live window is 10 minutes, or 5 minutes for Purgatory Quest Bosses.</p>
+            <h3>How do I send feedback?</h3>
+            <p>Email playtechcorner@gmail.com. There is no third-party form.</p>
           </div>
         </section>
       </main>
@@ -196,10 +239,9 @@
         <div class="wrap footer-grid">
           <nav class="footer-nav" aria-label="Footer">
             <a href="/">Home</a>
-            <a href="/mir4/">MIR4 Helper</a>
+            <a href="/mir4/">Crazy Dragon Web</a>
             <a href="/crazy-dragon/">Crazy Dragon</a>
-            <a href="/app/">Web app</a>
-            <a href="mailto:playtechcorner@gmail.com?subject=MIR4%20Helper%20feedback">Send feedback</a>
+            <a href="mailto:playtechcorner@gmail.com?subject=Crazy%20Dragon%20Web%20feedback">Send feedback</a>
           </nav>
           <div>
             <p><a href="mailto:playtechcorner@gmail.com">playtechcorner@gmail.com</a></p>
@@ -209,7 +251,16 @@
       </footer>
     </div>
   </div>
+  <dialog class="cd-dialog" id="cd-deduct">
+    <h2>Apply resource deduction?</h2>
+    <p id="deduct-copy"></p>
+    <div class="cd-row">
+      <button type="button" class="cd-btn cd-btn-quiet" id="deduct-cancel">Cancel</button>
+      <button type="button" class="cd-btn" id="deduct-apply">Apply deduction</button>
+    </div>
+  </dialog>
   <script src="/js/nav.js"></script>
-  <script src="/mir4/mir4.js"></script>
+  <script src="/mir4/cd-core.js"></script>
+  <script src="/mir4/cd-ui.js"></script>
 </body>
 </html>
