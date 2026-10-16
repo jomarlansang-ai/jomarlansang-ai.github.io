@@ -1325,6 +1325,15 @@
     reader.readAsText(file);
   }
 
+  function revealHash() {
+    var id = (location.hash || "").replace("#", "");
+    var node = id && document.getElementById(id);
+    if (!node || !node.classList.contains("cd-section")) return;
+    window.requestAnimationFrame(function () {
+      node.scrollIntoView({ block: "start" });
+    });
+  }
+
   function boot() {
     loadState();
     renderSettings();
@@ -1341,6 +1350,7 @@
       notices = (parts[1] && parts[1].items) || [];
       if (bosses.length !== 53) status("The boss table did not load completely.");
       renderAll();
+      revealHash();
       setInterval(tick, 1000);
     }).catch(function () {
       status("The schedule could not be loaded.");
