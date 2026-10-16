@@ -1,0 +1,274 @@
+.mir4-page h1 {
+  font-size: clamp(2rem, 4.4vw, 3.15rem);
+}
+
+.mir4-disclaimer {
+  margin-top: 1rem;
+}
+
+.mir4-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mir4-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 229, 212, 0.4);
+  background: rgba(0, 229, 212, 0.08);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.mir4-nav a:hover {
+  color: var(--text);
+  background: rgba(0, 229, 212, 0.16);
+}
+
+.mir4-nav a[aria-current="page"] {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #071312;
+}
+
+.mir4-nav a[aria-current="page"]:hover {
+  background: var(--orange-hover);
+  color: #071312;
+}
+
+.mir4-hub,
+.mir4-cards,
+.mir4-week {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.mir4-card {
+  background: var(--card);
+  border: 1px solid rgba(0, 229, 212, 0.22);
+  border-radius: 18px;
+  padding: 1.05rem 1.1rem 1.1rem;
+}
+
+.mir4-card h2,
+.mir4-card h3 {
+  margin: 0;
+}
+
+.mir4-hub a.mir4-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.mir4-hub a.mir4-card:hover {
+  border-color: var(--orange);
+}
+
+.mir4-hub a.mir4-card p:last-child {
+  margin-bottom: 0;
+}
+
+.mir4-kicker {
+  margin: 0 0 0.35rem;
+  color: var(--orange);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mir4-card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem 0.75rem;
+  margin-bottom: 0.45rem;
+}
+
+.mir4-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.mir4-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.7rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.mir4-badge-verified {
+  color: #071312;
+  background: var(--teal);
+}
+
+.mir4-badge-confirm {
+  color: #071312;
+  background: var(--orange);
+}
+
+.mir4-when,
+.mir4-now {
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.mir4-count-label {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.mir4-count {
+  margin: 0;
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--teal);
+}
+
+.mir4-card.is-open {
+  border-color: rgba(252, 129, 32, 0.7);
+}
+
+.mir4-card.is-open .mir4-count {
+  color: var(--orange);
+}
+
+.mir4-card p:last-child {
+  margin-bottom: 0;
+}
+
+.mir4-group {
+  margin-top: 1.35rem;
+}
+
+.mir4-group h2 {
+  font-size: 1.35rem;
+}
+
+.mir4-tasks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mir4-task {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.72rem 0;
+  border-bottom: 1px solid var(--line);
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.mir4-task input {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.2rem;
+  accent-color: var(--orange);
+  flex: none;
+}
+
+.mir4-task input:checked + span {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.mir4-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(234, 250, 247, 0.12);
+  overflow: hidden;
+  margin: 0.35rem 0 0.8rem;
+}
+
+.mir4-bar > span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--orange), var(--teal));
+}
+
+.mir4-save {
+  min-height: 1.4em;
+  margin: 0.4rem 0 0;
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.mir4-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0 0 0.9rem;
+  font-weight: 700;
+}
+
+.mir4-field input,
+.mir4-field textarea,
+.mir4-note {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #071312;
+  color: var(--text);
+  font: inherit;
+  font-weight: 500;
+  padding: 0.65rem 0.75rem;
+}
+
+.mir4-note {
+  min-height: 5.5rem;
+  resize: vertical;
+}
+
+.mir4-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.4rem;
+}
+
+.mir4-actions .button.button-secondary {
+  margin-top: 0;
+}
+
+.mir4-static {
+  margin: 0.2rem 0 0;
+}
+
+.mir4-static li {
+  margin: 0 0 0.85rem;
+}
+
+@media (min-width: 800px) {
+  .mir4-hub,
+  .mir4-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mir4-week {
+    grid-template-columns: 1fr 1fr;
+  }
+}
