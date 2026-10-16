@@ -72,36 +72,49 @@
     return sectionIds.indexOf(id) >= 0 ? id : "";
   }
 
-  var lockToHash = false;
-  var lockTimer = 0;
-
-  function holdActive() {
-    lockToHash = true;
-    window.clearTimeout(lockTimer);
-    lockTimer = window.setTimeout(function () { lockToHash = false; }, 700);
+  function currentId() {
+    return idFromHash() || "today";
   }
 
-  var hashed = idFromHash();
-  mark(hashed || "today");
-  if (hashed) holdActive();
+  function pinTop() {
+    var root = document.documentElement;
+    var previous = root.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    root.style.scrollBehavior = previous;
+  }
 
-  window.addEventListener("hashchange", function () {
-    var id = idFromHash();
-    if (!id) return;
-    mark(id);
-    holdActive();
-  });
-
-  if ("IntersectionObserver" in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      if (lockToHash) return;
-      var visible = entries.filter(function (entry) { return entry.isIntersecting; })
-        .sort(function (a, b) { return b.intersectionRatio - a.intersectionRatio; })[0];
-      if (visible) mark(visible.target.id);
-    }, { rootMargin: "-15% 0px -55% 0px", threshold: [0.1, 0.25, 0.5] });
-    sectionIds.forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) observer.observe(el);
+  function pinSoon() {
+    pinTop();
+    window.requestAnimationFrame(function () {
+      pinTop();
+      window.requestAnimationFrame(pinTop);
     });
   }
+
+  function showCurrent(scrollTop) {
+    var raw = location.hash.replace("#", "");
+    if (raw === "main") return;
+    document.documentElement.setAttribute("data-section", currentId());
+    mark(currentId());
+    if (scrollTop) pinSoon();
+  }
+
+  showCurrent(false);
+  if (idFromHash()) {
+    pinSoon();
+    window.addEventListener("load", pinSoon);
+  }
+
+  window.addEventListener("hashchange", function () {
+    var raw = location.hash.replace("#", "");
+    showCurrent(raw !== "main");
+  });
+
+  links.forEach(function (link) {
+    link.addEventListener("click", function () {
+      var hash = (link.getAttribute("href") || "").split("#")[1];
+      if (hash && hash === location.hash.replace("#", "")) pinSoon();
+    });
+  });
 })();
