@@ -27,6 +27,9 @@
   z-index: 18;
   display: flex;
   gap: 0.4rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   overflow-x: auto;
   padding: 0.55rem 0;
   margin: 0 0 1.25rem;
@@ -66,6 +69,8 @@
 .cd-stack {
   display: grid;
   gap: 0.8rem;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .cd-card {
@@ -148,6 +153,17 @@
 .cd-grid-2 {
   display: grid;
   gap: 0.75rem;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.cd-grid-2 > *,
+.cd-stack > *,
+.cd-card,
+.cd-sub,
+.cd-section .wrap {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .cd-field {
@@ -257,12 +273,14 @@
 
 .cd-table-wrap {
   overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .cd-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 28rem;
+  min-width: 22rem;
 }
 
 .cd-table th,
@@ -311,6 +329,10 @@
 
 #boss-search {
   margin-bottom: 0.2rem;
+}
+
+@media (min-width: 1024px) {
+  .cd-nav { top: 0; }
 }
 
 @media (min-width: 800px) {

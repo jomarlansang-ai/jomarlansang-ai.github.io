@@ -253,6 +253,7 @@
       card.appendChild(el("h3", { class: "cd-next-name", id: "today-next-name", text: next.boss.name }));
       card.appendChild(el("p", { class: "cd-count", id: "today-next-count", "data-cd": "countdown", text: next.live ? "Spawn window" : CD.formatCountdown(next.spawnUtc - now) }));
       card.appendChild(el("p", { id: "today-next-where", text: next.boss.location }));
+      card.appendChild(el("p", { class: "cd-fine", id: "today-next-server", text: CD.formatOffsetInstant(next.spawnUtc, region().offsetHours) + " · " + region().name }));
       card.appendChild(el("p", { class: "cd-fine", id: "today-next-when", text: CD.formatLocalInstant(next.spawnUtc) + " · phone time" }));
       card.appendChild(el("a", { class: "cd-btn", href: "#bosses", text: "Choose bosses & reminders" }));
     }
@@ -431,6 +432,7 @@
       el("p", { class: "cd-count", "data-spawn": String(slot.spawnUtc), "data-live": slot.live ? "1" : "0", text: slot.live ? "Spawn window" : CD.formatCountdown(slot.spawnUtc - now) }),
       el("p", { text: boss.location }),
       el("p", { class: "cd-fine", text: CD.cadenceLabel(boss) + " · " + CD.asiaScheduleLabel(boss) }),
+      el("p", { class: "cd-fine", text: CD.formatOffsetInstant(slot.spawnUtc, region().offsetHours) + " · " + region().name }),
       el("p", { class: "cd-fine", "data-local": String(slot.spawnUtc), text: CD.formatLocalInstant(slot.spawnUtc) + " · phone time" }),
       el("p", { text: boss.detail })
     ]);
@@ -1255,7 +1257,7 @@
         var slot = CD.currentSlot(boss, now, offset);
         mount.appendChild(el("p", {}, [
           el("strong", { text: boss.name }),
-          document.createTextNode(" · " + boss.location + " · " + CD.asiaScheduleLabel(boss))
+          document.createTextNode(" · " + boss.location + " · " + CD.asiaScheduleLabel(boss) + " · " + CD.formatOffsetInstant(slot.spawnUtc, offset) + " " + region().name)
         ]));
         if (slot) {
           mount.appendChild(el("p", { class: "cd-fine", "data-spawn": String(slot.spawnUtc), "data-live": slot.live ? "1" : "0", text: (slot.live ? "Spawn window" : CD.formatCountdown(slot.spawnUtc - now)) + " · " + CD.formatLocalInstant(slot.spawnUtc) }));

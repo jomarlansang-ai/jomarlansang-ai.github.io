@@ -132,6 +132,13 @@
     return weekdayName(dart) + " " + formatClock(local.getHours(), local.getMinutes());
   }
 
+  function formatOffsetInstant(utcMs, offsetHours) {
+    var wall = new Date(utcMs + offsetHours * 3600000);
+    var day = wall.getUTCDay();
+    var dart = day === 0 ? 7 : day;
+    return weekdayName(dart) + " " + formatClock(wall.getUTCHours(), wall.getUTCMinutes());
+  }
+
   function gapLabel(minutes) {
     var hours = Math.floor(minutes / 60);
     var mins = minutes % 60;
@@ -630,6 +637,7 @@
     weekdayName: weekdayName,
     formatCountdown: formatCountdown,
     formatLocalInstant: formatLocalInstant,
+    formatOffsetInstant: formatOffsetInstant,
     cadenceLabel: cadenceLabel,
     asiaScheduleLabel: asiaScheduleLabel,
     liveWindow: liveWindow,
