@@ -76,6 +76,13 @@
 }
   </script>
   <script>document.documentElement.classList.add("js");</script>
+  <script>
+    (function () {
+      var allowed = { today: 1, bosses: 1, tools: 1, clan: 1, planner: 1, notices: 1, settings: 1 };
+      var id = location.hash.slice(1);
+      document.documentElement.setAttribute("data-section", allowed[id] ? id : "today");
+    })();
+  </script>
   <noscript>
     <style>
       @media (max-width: 1023px) {

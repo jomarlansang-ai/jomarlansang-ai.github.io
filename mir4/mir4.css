@@ -22,8 +22,24 @@
 }
 
 .cd-section {
+  display: none;
   scroll-margin-top: 5.75rem;
   margin-bottom: 2.5rem;
+}
+
+html:not([data-section]) #today,
+html[data-section="today"] #today,
+html[data-section="bosses"] #bosses,
+html[data-section="tools"] #tools,
+html[data-section="clan"] #clan,
+html[data-section="planner"] #planner,
+html[data-section="notices"] #notices,
+html[data-section="settings"] #settings {
+  display: block;
+}
+
+html[data-section]:not([data-section="today"]) .faq {
+  display: none;
 }
 
 .cd-section > h2 {
