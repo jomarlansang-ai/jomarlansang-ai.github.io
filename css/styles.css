@@ -289,6 +289,55 @@ p {
   color: var(--teal-ink);
 }
 
+.nav-tool {
+  display: flex;
+  align-items: stretch;
+  gap: 0.15rem;
+}
+
+.nav-tool > a {
+  flex: 1;
+  min-width: 0;
+}
+
+.nav-sections-toggle {
+  flex: none;
+  width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.nav-sections-toggle:hover,
+.nav-sections-toggle:focus-visible {
+  color: var(--teal);
+  background: rgba(0, 229, 212, 0.1);
+}
+
+.nav-sections.is-open .nav-chevron {
+  transform: rotate(180deg);
+}
+
+html.js .nav-sections:not(.is-open) {
+  display: none;
+}
+
+.nav-sections a {
+  padding-left: 2.35rem;
+  font-size: 0.95rem;
+}
+
+.nav-sections a[aria-current="true"] {
+  background: rgba(0, 229, 212, 0.16);
+  color: var(--teal);
+}
+
 .hero {
   padding: 4.5rem 0 1rem;
 }
