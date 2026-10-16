@@ -1,0 +1,23 @@
+# PlayTechCorner
+
+> PlayTechCorner publishes fan-made player tools. Crazy Dragon is a MIR4 clan manager. PumpMap PH is a Philippines gas-station and EV-charger map, and it is in development. MIR4 Helper is an unofficial day-to-day checklist, clock, and planner.
+
+This is an unofficial fan site, not affiliated with Wemade. MIR4 is a trademark of Wemade. MIR4 Helper does not scrape the game, does not use Wemade art, and does not cover real-money trading or crypto. Schedule times that are not verified are marked "to confirm". Checklist ticks, planner notes, and clan notes stay in the browser.
+
+## Pages
+
+- [Home](https://playtechcorner.com/): PlayTechCorner apps, including Crazy Dragon and PumpMap PH.
+- [Crazy Dragon](https://playtechcorner.com/crazy-dragon/): Fan-made MIR4 clan app for donations, members, and expeditions.
+- [Crazy Dragon web app](https://playtechcorner.com/app/): The clan tools in the browser. Data stays in the browser and does not sync with the phone app.
+- [PumpMap PH](https://playtechcorner.com/pumpmap/): Map of gas stations and EV chargers in the Philippines. In development, with a closed test.
+- [Support](https://playtechcorner.com/support/): Email contact for PlayTechCorner.
+- [MIR4 Helper](https://playtechcorner.com/mir4/): Unofficial daily checklist, PHT event clock, weekly planner, official notice links, and Crazy Dragon clan board.
+- [MIR4 daily checklist](https://playtechcorner.com/mir4/checklist.html): Tickable daily tasks. Resets at 00:00 Philippine Time.
+- [MIR4 event and boss clock](https://playtechcorner.com/mir4/clock.html): Countdowns in Philippine Time from a hand-written schedule. Unverified times are marked to confirm.
+- [MIR4 weekly planner](https://playtechcorner.com/mir4/planner.html): Week view with notes saved in the browser. The week starts Monday at 00:00 PHT.
+- [MIR4 notice digest](https://playtechcorner.com/mir4/notices.html): Hand-written links to official MIR4 notices. Nothing is scraped.
+- [Crazy Dragon clan board](https://playtechcorner.com/mir4/clan.html): Links to the Crazy Dragon app and web app. No member list or stats are published here.
+
+## Contact
+
+- Feedback: mailto:playtechcorner@gmail.com
