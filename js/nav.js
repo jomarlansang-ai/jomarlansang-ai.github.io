@@ -1,62 +1,55 @@
 (function () {
-  var button = document.querySelector(".nav-button");
-  var nav = document.getElementById("site-nav");
-  var label = button ? button.querySelector(".sr-only") : null;
-  if (!button || !nav || !label) return;
+  function bindMenu(button, panel) {
+    var label = button.querySelector(".sr-only");
+    if (!label) return;
 
-  function setOpen(open) {
-    button.setAttribute("aria-expanded", open ? "true" : "false");
-    nav.classList.toggle("is-open", open);
-    document.body.classList.toggle("nav-open", open);
-    label.textContent = open ? "Close menu" : "Menu";
-  }
-
-  window.addEventListener("resize", function () {
-    if (window.matchMedia("(min-width: 1024px)").matches) setOpen(false);
-  });
-
-  button.addEventListener("click", function () {
-    setOpen(button.getAttribute("aria-expanded") !== "true");
-  });
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && button.getAttribute("aria-expanded") === "true") {
-      setOpen(false);
-      button.focus();
+    function setOpen(open) {
+      button.setAttribute("aria-expanded", open ? "true" : "false");
+      panel.classList.toggle("is-open", open);
+      document.body.classList.toggle("nav-open", open);
+      label.textContent = open ? "Close menu" : "Menu";
     }
-  });
 
-  document.addEventListener("click", function (event) {
-    if (button.getAttribute("aria-expanded") !== "true") return;
-    if (button.contains(event.target) || nav.contains(event.target)) return;
-    setOpen(false);
-  });
+    window.addEventListener("resize", function () {
+      if (window.matchMedia("(min-width: 1024px)").matches) setOpen(false);
+    });
 
-  nav.addEventListener("click", function (event) {
-    if (event.target.closest("a")) setOpen(false);
-  });
+    button.addEventListener("click", function () {
+      setOpen(button.getAttribute("aria-expanded") !== "true");
+    });
 
-  var sections = document.getElementById("mir4-sections");
-  var toggle = document.querySelector(".nav-sections-toggle");
-  if (!sections || !toggle) return;
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && button.getAttribute("aria-expanded") === "true") {
+        setOpen(false);
+        button.focus();
+      }
+    });
 
-  var sectionIds = ["today", "bosses", "tools", "clan", "planner", "notices", "settings"];
+    document.addEventListener("click", function (event) {
+      if (button.getAttribute("aria-expanded") !== "true") return;
+      if (button.contains(event.target) || panel.contains(event.target)) return;
+      setOpen(false);
+    });
 
-  function setSections(open) {
-    sections.classList.toggle("is-open", open);
-    toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    var label = toggle.querySelector(".sr-only");
-    if (label) label.textContent = (open ? "Hide" : "Show") + " Mir4 Manager Tool sections";
+    panel.addEventListener("click", function (event) {
+      if (event.target.closest("a")) setOpen(false);
+    });
   }
 
-  toggle.addEventListener("click", function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    setSections(!sections.classList.contains("is-open"));
-  });
+  var siteButton = document.querySelector(".nav-button:not(.cd-menu-button)");
+  var siteNav = document.getElementById("site-nav");
+  if (siteButton && siteNav) bindMenu(siteButton, siteNav);
+
+  var appButton = document.querySelector(".cd-menu-button");
+  var drawer = document.getElementById("cd-drawer");
+  if (appButton && drawer) bindMenu(appButton, drawer);
 
   if (!document.getElementById("today")) return;
 
+  var sections = document.getElementById("cd-sections");
+  if (!sections) return;
+
+  var sectionIds = ["today", "bosses", "tools", "clan", "planner", "notices", "settings"];
   var links = sections.querySelectorAll("a");
 
   function mark(id) {

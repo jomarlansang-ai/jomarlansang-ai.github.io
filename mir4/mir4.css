@@ -332,3 +332,116 @@ html[data-section]:not([data-section="today"]) .faq {
   .cd-count { font-size: 1.6rem; }
   .cd-hero img { width: 64px; height: 64px; }
 }
+
+.cd-drawer {
+  display: none;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: #0a1c1a;
+  border-right: 1px solid var(--line);
+}
+
+.cd-drawer.is-open {
+  display: flex;
+}
+
+.cd-drawer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.35rem 0.4rem 0.85rem;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.cd-drawer-brand img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  flex: none;
+}
+
+.cd-drawer-brand p {
+  margin: 0;
+}
+
+.cd-drawer nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cd-drawer nav a,
+.cd-home-link {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 0.75rem;
+  border-radius: 12px;
+}
+
+.cd-drawer nav a:hover,
+.cd-home-link:hover {
+  color: var(--teal);
+  background: rgba(0, 229, 212, 0.1);
+}
+
+.cd-drawer nav a[aria-current="true"] {
+  background: rgba(0, 229, 212, 0.16);
+  color: var(--teal);
+}
+
+.cd-home-link {
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.cd-app-bar-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+@media (max-width: 1023px) {
+  .cd-drawer {
+    position: fixed;
+    z-index: 19;
+    top: calc(var(--header) + 3px);
+    left: 0;
+    bottom: 0;
+    width: min(300px, 86vw);
+    padding: 0.85rem 0.75rem 1.25rem;
+    background: #0c2421;
+    box-shadow: 18px 0 40px rgba(0, 0, 0, 0.35);
+    overflow: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cd-drawer {
+    display: flex;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 272px;
+    padding: 1.1rem 0.85rem 1.25rem;
+    overflow: auto;
+  }
+
+  .cd-drawer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange), var(--teal));
+  }
+}
