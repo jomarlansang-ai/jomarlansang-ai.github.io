@@ -49,7 +49,7 @@
   var sections = document.getElementById("cd-sections");
   if (!sections) return;
 
-  var sectionIds = ["today", "bosses", "tools", "clan", "planner", "notices", "settings"];
+  var sectionIds = ["today", "bosses", "tools", "clan", "planner", "notices", "settings", "feedback"];
   var links = sections.querySelectorAll("a");
 
   function mark(id) {

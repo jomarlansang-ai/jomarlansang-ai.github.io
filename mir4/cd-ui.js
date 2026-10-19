@@ -434,7 +434,8 @@
       el("p", { class: "cd-fine", text: CD.cadenceLabel(boss) + " · " + CD.asiaScheduleLabel(boss) }),
       el("p", { class: "cd-fine", text: CD.formatOffsetInstant(slot.spawnUtc, region().offsetHours) + " · " + region().name }),
       el("p", { class: "cd-fine", "data-local": String(slot.spawnUtc), text: CD.formatLocalInstant(slot.spawnUtc) + " · phone time" }),
-      el("p", { text: boss.detail })
+      el("p", { text: boss.detail }),
+      reportBossButton(boss)
     ]);
   }
 
@@ -447,8 +448,140 @@
       el("p", { class: "cd-meta", text: "No countdown" }),
       el("p", { text: boss.location }),
       el("p", { class: "cd-fine", text: [boss.categoryLabel, boss.layer, boss.world].filter(Boolean).join(" · ") }),
-      el("p", { text: boss.detail })
+      el("p", { text: boss.detail }),
+      reportBossButton(boss)
     ]);
+  }
+
+  function reportBossButton(boss) {
+    return button("Report wrong boss time", "cd-btn cd-btn-quiet cd-report", function () {
+      openBossReport(boss);
+    });
+  }
+
+  function openBossReport(boss) {
+    var form = $("cd-feedback");
+    if (!form) return;
+    form.elements.namedItem("type").value = "Wrong boss time";
+    form.elements.namedItem("boss").value = boss.name;
+    form.elements.namedItem("time").value = CD.asiaScheduleLabel(boss);
+    form.elements.namedItem("location").value = boss.location || "";
+    form.elements.namedItem("region").value = region().name;
+    var note = $("feedback-status");
+    if (note) note.textContent = "";
+    if (location.hash === "#feedback") {
+      document.documentElement.setAttribute("data-section", "feedback");
+    } else {
+      location.hash = "feedback";
+    }
+    window.requestAnimationFrame(function () {
+      var message = form.elements.namedItem("message");
+      if (message) message.focus();
+    });
+  }
+
+  function fieldValue(form, name) {
+    var node = form.elements.namedItem(name);
+    return node ? String(node.value || "") : "";
+  }
+
+  function feedbackPayload(form) {
+    return {
+      type: fieldValue(form, "type").trim(),
+      boss: fieldValue(form, "boss").trim(),
+      time: fieldValue(form, "time").trim(),
+      location: fieldValue(form, "location").trim(),
+      region: fieldValue(form, "region").trim(),
+      message: fieldValue(form, "message").trim(),
+      email: fieldValue(form, "email").trim(),
+      _gotcha: fieldValue(form, "_gotcha")
+    };
+  }
+
+  function feedbackProblem(data) {
+    var types = ["General", "Wrong boss time", "Bug", "Idea"];
+    if (types.indexOf(data.type) < 0) return "Choose a feedback type.";
+    if (data.type === "Wrong boss time") {
+      if (!data.boss) return "Enter the boss name.";
+      if (!data.time) return "Enter the listed time.";
+      if (!data.region) return "Choose the server region.";
+    }
+    if (!data.message) return "Enter a message.";
+    if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return "Enter a valid reply email, or leave it blank.";
+    return "";
+  }
+
+  function feedbackNote(message) {
+    var note = $("feedback-status");
+    if (note) note.textContent = message;
+  }
+
+  function bindFeedback() {
+    var form = $("cd-feedback");
+    if (!form) return;
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var data = feedbackPayload(form);
+      var problem = feedbackProblem(data);
+      if (problem) {
+        feedbackNote(problem);
+        return;
+      }
+      if (data._gotcha) {
+        form.reset();
+        feedbackNote("Thanks. The feedback was sent.");
+        return;
+      }
+      var endpoint = (window.FEEDBACK_ENDPOINT || "").trim();
+      var submit = form.querySelector("[type=submit]");
+      if (!endpoint) {
+        var body = [
+          "Type: " + data.type,
+          "Boss: " + data.boss,
+          "Time: " + data.time,
+          "Location: " + data.location,
+          "Server region: " + data.region,
+          "Reply email: " + data.email,
+          "",
+          data.message
+        ].join("\n");
+        window.location.href = "mailto:playtechcorner@gmail.com?subject=" +
+          encodeURIComponent("Crazy Dragon Control Center feedback") +
+          "&body=" + encodeURIComponent(body);
+        feedbackNote("Your email app should open with this feedback filled in.");
+        return;
+      }
+      if (submit) submit.disabled = true;
+      feedbackNote("Sending…");
+      var payload = {
+        type: data.type,
+        boss: data.boss,
+        time: data.time,
+        location: data.location,
+        region: data.region,
+        message: data.message,
+        email: data.email,
+        _replyto: data.email,
+        _subject: "Crazy Dragon Control Center: " + data.type,
+        _gotcha: data._gotcha
+      };
+      fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      }).then(function (response) {
+        if (!response.ok) throw new Error("status");
+        form.reset();
+        feedbackNote("Thanks. The feedback was sent.");
+      }).catch(function () {
+        feedbackNote("The feedback could not be sent. Try again, or email playtechcorner@gmail.com.");
+      }).then(function () {
+        if (submit) submit.disabled = false;
+      });
+    });
   }
 
   function iconButton(label, aria, onClick, pressed) {
@@ -1327,6 +1460,7 @@
 
   function boot() {
     loadState();
+    bindFeedback();
     renderSettings();
     $("deduct-cancel").addEventListener("click", function () {
       var dialog = $("cd-deduct");

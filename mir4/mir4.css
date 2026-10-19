@@ -34,7 +34,8 @@ html[data-section="tools"] #tools,
 html[data-section="clan"] #clan,
 html[data-section="planner"] #planner,
 html[data-section="notices"] #notices,
-html[data-section="settings"] #settings {
+html[data-section="settings"] #settings,
+html[data-section="feedback"] #feedback {
   display: block;
 }
 
@@ -288,6 +289,14 @@ html[data-section]:not([data-section="today"]) .faq {
   min-height: 1.4em;
   color: var(--orange);
   font-weight: 700;
+}
+
+.cd-hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .cd-dialog {
