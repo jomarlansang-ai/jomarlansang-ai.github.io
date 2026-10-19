@@ -69,16 +69,17 @@
       "name": "How do I send feedback?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Email playtechcorner@gmail.com. There is no third-party form."
+        "text": "Open Feedback in Crazy Dragon Control Center. It emails playtechcorner@gmail.com unless a form endpoint is configured."
       }
     }
   ]
 }
   </script>
   <script>document.documentElement.classList.add("js");</script>
+  <script src="/js/site-config.js"></script>
   <script>
     (function () {
-      var allowed = { today: 1, bosses: 1, tools: 1, clan: 1, planner: 1, notices: 1, settings: 1 };
+      var allowed = { today: 1, bosses: 1, tools: 1, clan: 1, planner: 1, notices: 1, settings: 1, feedback: 1 };
       var id = location.hash.slice(1);
       document.documentElement.setAttribute("data-section", allowed[id] ? id : "today");
     })();
@@ -107,6 +108,7 @@
       <a href="#planner">Planner</a>
       <a href="#notices">Notices</a>
       <a href="#settings">Settings</a>
+      <a href="#feedback">Feedback</a>
     </nav>
     <a class="cd-home-link" href="/">← playtechcorner.com</a>
   </aside>
@@ -189,6 +191,59 @@
             <div id="settings-mount"></div>
           </div>
         </section>
+        <section class="section cd-section" id="feedback">
+          <div class="wrap">
+            <h2>Feedback</h2>
+            <p>Report a wrong boss time, a bug, or an idea. It stays on this page until you send it.</p>
+            <form id="cd-feedback" class="cd-stack" novalidate>
+              <p class="cd-hp">
+                <label>Company <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+              </p>
+              <label class="cd-field">
+                <span>Type</span>
+                <select name="type" required>
+                  <option>General</option>
+                  <option>Wrong boss time</option>
+                  <option>Bug</option>
+                  <option>Idea</option>
+                </select>
+              </label>
+              <label class="cd-field">
+                <span>Boss name</span>
+                <input type="text" name="boss" maxlength="120" autocomplete="off">
+              </label>
+              <label class="cd-field">
+                <span>Time</span>
+                <input type="text" name="time" maxlength="160" autocomplete="off">
+              </label>
+              <label class="cd-field">
+                <span>Location</span>
+                <input type="text" name="location" maxlength="160" autocomplete="off">
+              </label>
+              <label class="cd-field">
+                <span>Server region</span>
+                <select name="region">
+                  <option value="">Not sure</option>
+                  <option>Asia</option>
+                  <option>INMENA</option>
+                  <option>EU</option>
+                  <option>SA</option>
+                  <option>NA</option>
+                </select>
+              </label>
+              <label class="cd-field">
+                <span>Message</span>
+                <textarea name="message" rows="5" maxlength="4000" required></textarea>
+              </label>
+              <label class="cd-field">
+                <span>Reply email, optional</span>
+                <input type="email" name="email" maxlength="160" autocomplete="email">
+              </label>
+              <p id="feedback-status" class="cd-status" role="status"></p>
+              <button type="submit" class="cd-btn">Send feedback</button>
+            </form>
+          </div>
+        </section>
         <section class="section faq">
           <div class="wrap">
             <h2>Questions</h2>
@@ -201,7 +256,7 @@
             <h3>Do the boss timers track live spawns?</h3>
             <p>No. Timers are schedule estimates from a table checked 4 Oct 2026. Boss presence is not tracked. A row is marked spawning soon 30 minutes before the scheduled time, and the live window is 10 minutes, or 5 minutes for Purgatory Quest Bosses.</p>
             <h3>How do I send feedback?</h3>
-            <p>Email playtechcorner@gmail.com. There is no third-party form.</p>
+            <p>Open Feedback in Crazy Dragon Control Center. It emails playtechcorner@gmail.com unless a form endpoint is configured.</p>
           </div>
         </section>
       </main>
