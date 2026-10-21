@@ -212,3 +212,5 @@ html[data-device="ios"] .pm-appstore {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+.pm-android [hidden] { display: none !important; }
