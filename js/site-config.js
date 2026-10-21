@@ -1,6 +1,7 @@
 /* Shared site settings. Leave a value empty until it is ready. */
 var CF_ANALYTICS_TOKEN = "";
 var FEEDBACK_ENDPOINT = "";
+var APP_STORE_URL = "";
 
 (function () {
   var token = typeof CF_ANALYTICS_TOKEN === "string" ? CF_ANALYTICS_TOKEN.trim() : "";
