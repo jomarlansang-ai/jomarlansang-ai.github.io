@@ -33,7 +33,7 @@
     h1{font-size:2.2rem;margin:0 0 .5rem}
     p.intro{color:#a9c4c0;line-height:1.55;margin:0 0 1.75rem}
     .icon{width:132px;height:132px;border-radius:30px;display:block;margin:0 auto 2rem;box-shadow:0 10px 40px rgba(20,184,166,.25)}
-    .btns{display:flex;flex-direction:column;gap:.8rem}
+    .btns{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;align-items:flex-start}.badge{display:inline-flex;flex-direction:column;align-items:center;text-decoration:none}.badge img{height:56px;width:auto;display:block}.badge.soon img{opacity:.45}.badge small{color:#7f9c98;font-size:.78rem;margin-top:.4rem}
     .btn{display:block;padding:1rem;border-radius:14px;font-weight:700;font-size:1.05rem;text-decoration:none}
     .play{background:#f97316;color:#111}
     .ios{border:1px solid #2a4a46;color:#e8f3f1}
@@ -41,6 +41,8 @@
     .ios small{display:block;font-weight:500;font-size:.8rem;margin-top:.2rem}
     .note{font-size:.8rem;color:#7f9c98;margin-top:1.5rem}
     .note a{color:#5eead4}
+      .btns a.badge{background:none!important;padding:0!important;border:0!important;box-shadow:none!important;min-height:0!important;border-radius:0!important}
+    .btns a.badge small{text-transform:none!important;letter-spacing:0!important;font-weight:500;color:#7f9c98!important}
   </style>
 </head>
 <body>
@@ -49,13 +51,13 @@
     <p class="intro">A free map of gas stations and fuel prices across the Philippines. Find stations near you, see prices shared by other drivers, and add your own.</p>
     <picture><source srcset="/pumpmap/get/assets/icon.webp" type="image/webp"><img class="icon" src="/pumpmap/get/assets/icon.png" alt="PumpMap PH app icon" width="132" height="132"></picture>
     <div class="btns">
-      <a class="btn play" href="https://play.google.com/store/apps/details?id=com.playtechcorner.pumpmap">Get it on Google Play</a>
-      <a class="btn ios soon" id="appstore" aria-disabled="true">App Store<small>iPhone version coming soon</small></a>
+      <a class="badge" href="https://play.google.com/store/apps/details?id=com.playtechcorner.pumpmap"><img src="/pumpmap/get/assets/google-play-badge.png" alt="Get it on Google Play" width="188" height="56"></a>
+      <a class="badge soon" id="appstore" aria-disabled="true"><img src="/pumpmap/get/assets/app-store-badge.svg" alt="Download on the App Store" width="168" height="56"><small id="soon">iPhone version coming soon</small></a>
     </div>
     <p class="note">In testing for now, so the Play link may only work for invited testers. <a href="/pumpmap/privacy.html">Privacy</a> · <a href="/support/">Support</a></p>
   </main>
   <script>
-    if (typeof APP_STORE_URL === "string" && APP_STORE_URL) { var a = document.getElementById("appstore"); a.href = APP_STORE_URL; a.className = "btn ios"; a.removeAttribute("aria-disabled"); a.textContent = "Download on the App Store"; }
+    if (typeof APP_STORE_URL === "string" && APP_STORE_URL) { var a = document.getElementById("appstore"); a.href = APP_STORE_URL; a.className = "badge"; a.removeAttribute("aria-disabled"); document.getElementById("soon").remove(); }
   </script>
 </body>
 </html>
