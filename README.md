@@ -19,3 +19,7 @@ In `js/site-config.js`, set `CF_ANALYTICS_TOKEN` to the site token from Cloudfla
 ## Feedback
 
 In `js/site-config.js`, set `FEEDBACK_ENDPOINT` to a Formspree form URL (`https://formspree.io/f/…`). An empty string keeps the `/mir4/` feedback form on a pre-filled email to playtechcorner@gmail.com.
+
+## PumpMap on iPhone
+
+In `js/site-config.js`, set `APP_STORE_URL` to the App Store listing URL. An empty string keeps `/pumpmap/get` on “iPhone version coming soon” and a notify-me email. The printed QR target stays `https://playtechcorner.com/pumpmap/get`.

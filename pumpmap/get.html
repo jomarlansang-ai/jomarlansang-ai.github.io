@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PumpMap PH — Gas stations and fuel prices across the Philippines</title>
+  <meta name="description" content="Get PumpMap PH, a free map of gas stations and fuel prices in the Philippines, with no ads. The Android app is in testing.">
+  <link rel="canonical" href="https://playtechcorner.com/pumpmap/get">
+  <meta name="theme-color" content="#071312">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PlayTechCorner">
+  <meta property="og:title" content="PumpMap PH — Gas stations and fuel prices across the Philippines">
+  <meta property="og:description" content="Get PumpMap PH, a free map of gas stations and fuel prices in the Philippines, with no ads. The Android app is in testing.">
+  <meta property="og:url" content="https://playtechcorner.com/pumpmap/get">
+  <meta property="og:image" content="https://playtechcorner.com/pumpmap/get/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PumpMap PH. Gas stations and fuel prices across the Philippines.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PumpMap PH — Gas stations and fuel prices across the Philippines">
+  <meta name="twitter:description" content="Get PumpMap PH, a free map of gas stations and fuel prices in the Philippines, with no ads. The Android app is in testing.">
+  <meta name="twitter:image" content="https://playtechcorner.com/pumpmap/get/assets/og.png">
+  <meta name="twitter:image:alt" content="PumpMap PH. Gas stations and fuel prices across the Philippines.">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/pumpmap/get/get.css">
+  <script>
+    (function () {
+      var ua = navigator.userAgent || "";
+      var touchMac = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+      var ios = /iPhone|iPad|iPod/.test(ua) || touchMac;
+      var android = /Android/i.test(ua) && !ios;
+      document.documentElement.setAttribute("data-device", ios ? "ios" : android ? "android" : "desktop");
+    })();
+  </script>
+  <noscript>
+    <style>.pm-ios, .pm-qr { display: block !important; }</style>
+  </noscript>
+  <script src="/js/site-config.js"></script>
+  <script>
+    (function () {
+      var url = (window.APP_STORE_URL || "").trim();
+      if (url) document.documentElement.setAttribute("data-store", "1");
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="pm-top">
+    <div class="topbar" aria-hidden="true"></div>
+    <div class="wrap header-inner">
+      <a class="brand" href="/">
+        <img src="/assets/logo.webp" alt="" width="640" height="586">
+        <span>PlayTechCorner</span>
+      </a>
+    </div>
+  </header>
+  <main id="main" class="pm-get-main">
+    <div class="wrap pm-hero-grid">
+      <div>
+        <picture>
+          <source srcset="/pumpmap/get/assets/icon.webp" type="image/webp">
+          <img class="pm-icon" src="/pumpmap/get/assets/icon.png" alt="PumpMap PH app icon" width="512" height="512" fetchpriority="high">
+        </picture>
+        <h1>PumpMap PH</h1>
+        <p class="pm-tagline">Gas stations and fuel prices across the Philippines</p>
+        <ul class="pm-badges">
+          <li>Free</li>
+          <li>No ads</li>
+          <li>Philippines only</li>
+        </ul>
+        <div class="pm-android">
+          <a class="button" id="pm-play" href="https://play.google.com/store/apps/details?id=com.playtechcorner.pumpmap">Get it on Google Play</a>
+          <p class="pm-count" id="pm-count" hidden aria-live="polite">Opening Google Play in <span id="pm-secs">4</span> seconds.</p>
+          <button type="button" class="button button-secondary pm-cancel" id="pm-cancel" hidden>Cancel</button>
+        </div>
+        <div class="pm-ios">
+          <div class="pm-soon">
+            <p>iPhone version coming soon</p>
+            <a class="button" href="mailto:playtechcorner@gmail.com?subject=PumpMap%20iPhone%20%E2%80%93%20notify%20me">Notify me</a>
+          </div>
+          <a class="button pm-appstore" id="pm-appstore">Download on the App Store</a>
+        </div>
+        <p class="pm-note">PumpMap PH is in testing. The Google Play link may only work for invited testers until the public launch.</p>
+      </div>
+      <div>
+        <div class="pm-phone">
+          <picture>
+            <source id="pm-source" srcset="/pumpmap/get/assets/map.webp" type="image/webp">
+            <img id="pm-shot" src="/pumpmap/get/assets/map.png" alt="The map in PumpMap PH" width="1080" height="2400" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="pm-shots">
+          <button type="button" id="pm-prev" aria-label="Previous screenshot">Prev</button>
+          <button type="button" id="pm-next" aria-label="Next screenshot">Next</button>
+        </div>
+        <p class="pm-caption" id="pm-caption">The map</p>
+      </div>
+    </div>
+    <section class="wrap">
+      <h2>What you can do</h2>
+      <div class="pm-features">
+        <article class="pm-feature">
+          <h3>Nearby stations on a map</h3>
+          <p>See gas stations around you on a map.</p>
+        </article>
+        <article class="pm-feature">
+          <h3>Community fuel prices</h3>
+          <p>Prices come from people who visit the station.</p>
+        </article>
+        <article class="pm-feature">
+          <h3>Save 1 or 2 prices per visit</h3>
+          <p>Record one or two fuel prices each time you stop.</p>
+        </article>
+        <article class="pm-feature">
+          <h3>Google-confirmed stations when online</h3>
+          <p>When you are online, a station can be confirmed with Google.</p>
+        </article>
+      </div>
+      <aside class="pm-qr" aria-label="Scan with your phone">
+        <h2>Scan with your phone</h2>
+        <div class="pm-qr-card">
+          <img src="/pumpmap/get/assets/qr.svg" alt="QR code for https://playtechcorner.com/pumpmap/get" width="180" height="180" loading="lazy" decoding="async">
+        </div>
+      </aside>
+      <nav class="pm-links" aria-label="PumpMap PH">
+        <a href="/pumpmap/privacy.html">Privacy</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </section>
+  </main>
+  <script>
+    (function () {
+      var play = "https://play.google.com/store/apps/details?id=com.playtechcorner.pumpmap";
+      var store = (window.APP_STORE_URL || "").trim();
+      var appStore = document.getElementById("pm-appstore");
+      if (store && appStore) appStore.href = store;
+
+      var shots = [
+        { src: "/pumpmap/get/assets/map.webp", png: "/pumpmap/get/assets/map.png", alt: "The map in PumpMap PH", caption: "The map" },
+        { src: "/pumpmap/get/assets/nearby.webp", png: "/pumpmap/get/assets/nearby.png", alt: "Stations nearby in PumpMap PH", caption: "Stations nearby" },
+        { src: "/pumpmap/get/assets/gas-list.webp", png: "/pumpmap/get/assets/gas-list.png", alt: "A list of gas stations in PumpMap PH", caption: "A list of stations" },
+        { src: "/pumpmap/get/assets/station.webp", png: "/pumpmap/get/assets/station.png", alt: "A gas station in PumpMap PH", caption: "A station" }
+      ];
+      var index = 0;
+      var img = document.getElementById("pm-shot");
+      var source = document.getElementById("pm-source");
+      var caption = document.getElementById("pm-caption");
+      function show(next) {
+        index = (next + shots.length) % shots.length;
+        var shot = shots[index];
+        source.srcset = shot.src;
+        img.src = shot.png;
+        img.alt = shot.alt;
+        caption.textContent = shot.caption;
+      }
+      document.getElementById("pm-prev").addEventListener("click", function () { show(index - 1); });
+      document.getElementById("pm-next").addEventListener("click", function () { show(index + 1); });
+
+      if (document.documentElement.getAttribute("data-device") !== "android") return;
+      var left = 4;
+      var secs = document.getElementById("pm-secs");
+      var count = document.getElementById("pm-count");
+      var cancel = document.getElementById("pm-cancel");
+      count.hidden = false;
+      cancel.hidden = false;
+      var timer = window.setInterval(function () {
+        left -= 1;
+        if (left <= 0) {
+          window.clearInterval(timer);
+          window.location.href = play;
+          return;
+        }
+        secs.textContent = String(left);
+      }, 1000);
+      cancel.addEventListener("click", function () {
+        window.clearInterval(timer);
+        count.hidden = true;
+        cancel.hidden = true;
+      });
+    })();
+  </script>
+</body>
+</html>
