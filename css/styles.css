@@ -1089,7 +1089,9 @@ html.js .nav-sections:not(.is-open) {
 
 #my-apps,
 #pumpmap,
-#testers {
+#testers,
+#get,
+#features {
   scroll-margin-top: 5.5rem;
 }
 
@@ -1472,6 +1474,26 @@ a.app-tile:hover {
   margin-top: 0.7rem;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.pm-app-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  flex: none;
+  object-fit: cover;
+}
+
+.pm-feature {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  border: 1px solid rgba(0, 229, 212, 0.28);
+}
+
+.pm-shots {
+  margin-top: 0.25rem;
 }
 
 .pm-note {
