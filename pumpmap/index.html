@@ -65,7 +65,7 @@
         </a>
         <a href="/pumpmap/" aria-current="page">
           <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
-          <span>PumpMap PH <span class="nav-note">(in development)</span></span>
+          <span>PumpMap PH</span>
         </a>
         <a href="/#testers">
           <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.2"/><path d="M4 19c.6-2.6 2.6-4 5-4s4.4 1.4 5 4"/><path d="M14 19c.3-1.6 1.4-2.8 3-3.2 1.2.3 2.1 1.2 2.5 3.2"/></svg>
@@ -106,25 +106,18 @@
               <p class="lede">Gas stations, EV chargers, and fuel prices across the Philippines, even offline.</p>
               <div class="get-actions">
                 <a class="button" href="https://play.google.com/store/apps/details?id=com.playtechcorner.pumpmap">Get it on Google Play</a>
-                <a class="button button-secondary" href="#planned">See what’s planned</a>
+                <a class="button button-secondary" href="#features">See what it does</a>
               </div>
               <p class="fineprint">Free for Android. <a href="/pumpmap/privacy.html">Privacy</a></p>
             </div>
-            <figure class="pm-art reveal" aria-labelledby="pm-art-caption">
-              <div class="pm-art-frame" aria-hidden="true">
-                <svg class="pm-art-grid" viewBox="0 0 320 240" preserveAspectRatio="xMidYMid slice">
-                  <g fill="none" stroke="#00E5D4" stroke-width="1" opacity="0.22">
-                    <path d="M0 60h320M0 120h320M0 180h320M80 0v240M160 0v240M240 0v240"/>
-                  </g>
-                  <g fill="none" stroke="#00E5D4" stroke-width="2" opacity="0.45" stroke-linecap="round">
-                    <path d="M20 210c40-30 70-40 110-90s90-70 170-90"/>
-                  </g>
-                </svg>
-                <span class="pm-glyph pm-glyph-lg">
-                  <svg viewBox="0 0 48 48" width="88" height="88" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 44s14-12.4 14-22a14 14 0 1 0-28 0c0 9.6 14 22 14 22z"/><path d="M24 12.5c3.6 4.6 5.4 7.6 5.4 10a5.4 5.4 0 0 1-10.8 0c0-2.4 1.8-5.4 5.4-10z"/></svg>
-                </span>
-              </div>
-              <figcaption id="pm-art-caption">Placeholder artwork. The app icon and screenshots are not ready yet.</figcaption>
+            <figure class="pm-art reveal">
+              <div class="pm-shots-head"><picture><source srcset="/pumpmap/get/assets/icon.webp" type="image/webp"><img class="pm-shot-icon" src="/pumpmap/get/assets/icon.png" alt="PumpMap PH app icon" width="256" height="256"></picture><span>App screenshots</span></div>
+              <ul class="pm-shots">
+                <li><picture><source srcset="/pumpmap/get/assets/map.webp" type="image/webp"><img src="/pumpmap/get/assets/map.png" alt="PumpMap PH map screen with EV charger pins near San Fernando" width="540" height="960"></picture></li>
+                <li><picture><source srcset="/pumpmap/get/assets/nearby.webp" type="image/webp"><img src="/pumpmap/get/assets/nearby.png" alt="Nearby list of EV charging stations sorted by distance" width="540" height="960"></picture></li>
+                <li><picture><source srcset="/pumpmap/get/assets/gas-list.webp" type="image/webp"><img src="/pumpmap/get/assets/gas-list.png" alt="Nearby list of gas stations sorted by distance" width="540" height="960"></picture></li>
+                <li><picture><source srcset="/pumpmap/get/assets/station.webp" type="image/webp"><img src="/pumpmap/get/assets/station.png" alt="Station details for a Shell station with fuel prices, Update station, and Google Maps and Waze buttons" width="540" height="960"></picture></li>
+              </ul>
             </figure>
           </div>
         </section>
@@ -146,27 +139,16 @@
           </div>
         </section>
 
-        <section class="section reveal" id="planned" aria-labelledby="planned-title">
+        <section class="section reveal" id="features" aria-labelledby="features-title">
           <div class="wrap">
-            <h2 id="planned-title">Planned for the first release</h2>
-            <p class="muted pm-note">In development. These features are not built yet.</p>
-            <ul class="pm-list">
-              <li class="pm-item">
-                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4z"/><path d="M9 4v14M15 6v14"/></svg></span>
-                <div><h3>Map of stations and chargers</h3><p>Gas stations and EV chargers across the Philippines on one map.</p></div>
-              </li>
-              <li class="pm-item">
-                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M5 12.8a10 10 0 0 1 4.2-2.5"/><path d="M14.8 10.3A10 10 0 0 1 19 12.8"/><path d="M2 9.3a15 15 0 0 1 4-2.4"/><path d="M11 5.1A15 15 0 0 1 22 9.3"/><circle cx="12" cy="20" r="0.8" fill="currentColor"/></svg></span>
-                <div><h3>Works offline</h3><p>Use the map without a signal.</p></div>
-              </li>
-              <li class="pm-item">
-                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16l-6 7.5V19l-4 1.5v-8L4 5z"/></svg></span>
-                <div><h3>Filters</h3><p>Filter by brand, 24-hour, expressway stations (NLEX, SLEX, TPLEX and others), and EV plug type.</p></div>
-              </li>
-              <li class="pm-item">
-                <span class="tile-mark"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 21.5 12 12 21.5 2.5 12 12 2.5z"/><path d="M9 14v-2.5a1.5 1.5 0 0 1 1.5-1.5H15"/><path d="m13 8 2 2-2 2"/></svg></span>
-                <div><h3>Directions</h3><p>Get directions through Google Maps or Waze.</p></div>
-              </li>
+            <h2 id="features-title">What it does</h2>
+            <ul>
+              <li>Shows nearby gas stations and EV chargers on a map.</li>
+              <li>Shows fuel prices reported by drivers.</li>
+              <li>Filters for EV chargers, next to Diesel.</li>
+              <li>Lets you report a missing gas station or EV charger from the “Add station” tab. An admin approves each report.</li>
+              <li>Groups map pins together when you zoom out.</li>
+              <li>Has a first-launch tour that explains each button.</li>
             </ul>
           </div>
         </section>
