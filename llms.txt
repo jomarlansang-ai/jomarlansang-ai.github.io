@@ -9,7 +9,7 @@ This is an unofficial fan site, not affiliated with Wemade. MIR4 is a trademark 
 - [Home](https://playtechcorner.com/): PlayTechCorner apps, including Crazy Dragon and PumpMap PH.
 - [Crazy Dragon](https://playtechcorner.com/crazy-dragon/): Fan-made MIR4 clan app for donations, members, and expeditions.
 - [Crazy Dragon web app](https://playtechcorner.com/app/): The clan tools in the browser. Data stays in the browser and does not sync with the phone app.
-- [PumpMap PH](https://playtechcorner.com/pumpmap/): Map of gas stations and EV chargers in the Philippines. In development, with a closed test.
+- [PumpMap PH](https://playtechcorner.com/pumpmap/): Map of gas stations and EV chargers in the Philippines. Available for Android on Google Play.
 - [Support](https://playtechcorner.com/support/): Email contact for PlayTechCorner.
 - [Crazy Dragon Control Center](https://playtechcorner.com/mir4/): Unofficial companion with a 53-boss schedule, daily checklist, expedition calculator, character compare, and a clan board stored in the browser.
 
