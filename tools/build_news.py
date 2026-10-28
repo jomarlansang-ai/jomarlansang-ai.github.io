@@ -3,6 +3,7 @@
 homepage latest-news block from POSTS below. Run: python3 tools/build_news.py
 Output is committed; GitHub Pages serves it as plain static files."""
 import html, os, re, datetime
+def esc(s): return html.escape(s, quote=True)
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://playtechcorner.com"
 CATS = [
@@ -12,98 +13,47 @@ CATS = [
   ("gaming", "Gaming", "Unofficial MIR4 notes and Crazy Dragon Control Center updates."),
 ]
 CATNAME = {c[0]: c[1] for c in CATS}
-TC = '<span class="to-confirm">to confirm</span>'
-def PH(t): return f'<p class="placeholder"><strong>Placeholder:</strong> {t}</p>'
+import json
+IMG = json.load(open(os.path.join(ROOT, "assets/news/images.json")))
+CAT_IMG = {"apps": "phone-browsing", "tech": "laptop-typing", "gadgets": "two-phones-table", "gaming": "game-controller"}
+REQUIRED = ("title", "date", "category", "summary", "image")
 
-POSTS = [
- dict(slug="pumpmap-ph-1-0-8-live-on-google-play", cat="apps", date="2026-10-26",
-  title="PumpMap PH 1.0.8 is live on Google Play",
-  desc="PumpMap PH 1.0.8 is now public on Google Play: a free, ad-free map of gas stations and fuel prices in the Philippines that works offline.",
-  body=f"""
-<p>PumpMap PH version 1.0.8 is now publicly available on Google Play. It was published on Oct 26, 2026. The app is free and has no ads.</p>
-<h2>What PumpMap PH does</h2>
-<ul>
-<li><strong>Google-confirmed gas stations</strong> shown on a map.</li>
-<li><strong>Fuel price pins</strong> so you can see prices on the map.</li>
-<li><strong>Offline price updates</strong>: you can update a price without signal and it syncs later.</li>
-<li><strong>Report missing stations</strong> from the app.</li>
-</ul>
-<h2>New in 1.0.8</h2>
-<p>From the PumpMap PH page: a first-launch tour that explains each button, an EV filter next to Diesel, an “Add station” tab for reporting a missing gas station or EV charger (an admin approves each report), map pins that group together when you zoom out, and a fix for a false “Offline” banner.</p>
-<h2>What's next</h2>
-<p>The PumpMap PH page lists weekly DOE fuel prices (planned, v2) and richer EV charger details (planned, v3). Release dates: {TC}.</p>
-<p><a class="button" href="https://playtechcorner.com/pumpmap/get">Get PumpMap PH</a> <a class="button button-secondary" href="/pumpmap/">About PumpMap PH</a></p>
-"""),
- dict(slug="crazy-dragon-app-features-and-1-0-7", cat="apps", date="2026-10-28",
-  title="Crazy Dragon: what the MIR4 clan app does, and what's planned for 1.0.7",
-  desc="A recap of Crazy Dragon, the free unofficial MIR4 clan manager by PlayTechCorner: donation and gold trackers, member lists, expeditions and reports.",
-  body=f"""
-<p>Crazy Dragon is an unofficial companion app for MIR4 players from PlayTechCorner. It is free on Google Play and contains ads. It is not affiliated with, endorsed by, or associated with Wemade.</p>
-<h2>Features</h2>
-<ul>
-<li><strong>Daily donation tracker</strong>: see who has and has not donated today, and copy a report for Discord or Messenger.</li>
-<li><strong>Gold donation tracker</strong>, kept separate from the daily list.</li>
-<li><strong>Clan member management</strong> by name, class and role, with search and filters. Scanning members from a photo is available in the Android app.</li>
-<li><strong>Expedition tracking</strong> with an expedition calculator.</li>
-<li><strong>No member login</strong>: records stay on the device, or in the browser for the <a href="/app/">web app</a>.</li>
-</ul>
-<h2>Version 1.0.7</h2>
-<p>The Crazy Dragon page describes features coming in version 1.0.7, including a “Today” view and a daily checklist. Version 1.0.7 is not confirmed live on Google Play. Release date: {TC}.</p>
-<p><a class="button" href="https://play.google.com/store/apps/details?id=com.playtechcorner.crazydragon">Get Crazy Dragon</a> <a class="button button-secondary" href="/crazy-dragon/">About Crazy Dragon</a></p>
-"""),
- dict(slug="crazy-dragon-control-center-mir4-companion", cat="gaming", date="2026-10-28",
-  title="Crazy Dragon Control Center: an unofficial MIR4 companion in your browser",
-  desc="Crazy Dragon Control Center is an unofficial MIR4 fan companion with today's bosses, a 53-boss schedule, a daily checklist and clan tools.",
-  body=f"""
-<p class="draft-note">Unofficial fan content. Not affiliated with Wemade. MIR4 is a trademark of Wemade.</p>
-<p><a href="/mir4/">Crazy Dragon Control Center</a> is an unofficial companion for MIR4 players on PlayTechCorner. It runs in the browser and does not take accounts.</p>
-<h2>What's inside</h2>
-<ul>
-<li>Today's bosses and a 53-boss schedule.</li>
-<li>A daily checklist.</li>
-<li>Character compare and an expedition calculator.</li>
-<li>A clan board.</li>
-</ul>
-<h2>About the timers</h2>
-<p>Boss timers are schedule estimates from a table checked 4 Oct 2026; boss presence is not tracked. A row is marked “spawning soon” 30 minutes before the scheduled time, and the live window is 10 minutes (5 minutes for Purgatory Quest Bosses).</p>
-<h2>Your data</h2>
-<p>Favorites, checklist ticks, clan records, expedition runs, planner notes and comparison entries stay in your browser. You can export or import them as JSON.</p>
-<p><a class="button" href="/mir4/">Open Control Center</a></p>
-"""),
- dict(slug="budget-phone-buying-guide-philippines-outline", cat="gadgets", date="2026-10-28",
-  title="Budget phone buying guide for the Philippines (outline)",
-  desc="Outline draft of a budget Android phone buying guide for shoppers in the Philippines. Prices and models still to be researched.",
-  body=f"""
-<p class="draft-note">Outline draft. Every model, price and spec below is a placeholder to research and confirm before publishing. No hands-on reviews yet.</p>
-<h2>1. Who this guide is for</h2>
-{PH("Budget bands in PHP (e.g. under ₱X, ₱X–₱Y). Amounts to confirm.")}
-<h2>2. What to check before buying</h2>
-<ul><li>Battery size and charging speed</li><li>Storage and RAM</li><li>Software update policy</li><li>Official PH warranty and service centers</li><li>Network bands for local carriers</li></ul>
-<h2>3. Picks by price band</h2>
-{PH("Model shortlist per band, with official PH prices and a link to each source.")}
-<h2>4. Comparison table</h2>
-{PH("Side-by-side specs table, filled in from official spec sheets.")}
-<h2>5. Where to buy</h2>
-{PH("Official stores and authorised resellers. Sources to confirm.")}
-"""),
- dict(slug="offline-first-apps-philippines-outline", cat="tech", date="2026-10-28",
-  title="Why offline-first apps matter in the Philippines (outline)",
-  desc="Outline draft of a tech explainer on offline-first mobile apps and patchy mobile data, using PumpMap PH's offline price updates as an example.",
-  body=f"""
-<p class="draft-note">Outline draft. Coverage numbers and outside sources are placeholders until verified.</p>
-<h2>1. The problem: patchy signal on the road</h2>
-{PH("Cite a verifiable source on mobile coverage in the Philippines. Source to confirm.")}
-<h2>2. What “offline-first” means</h2>
-<p>An offline-first app saves your changes on the phone and syncs them once you are back online.</p>
-<h2>3. Example: PumpMap PH</h2>
-<p>PumpMap PH lets drivers update fuel prices offline; the updates sync later. <a href="/news/pumpmap-ph-1-0-8-live-on-google-play/">Read the 1.0.8 post</a>.</p>
-<h2>4. Tips for users</h2>
-{PH("Practical tips (offline maps, data saver settings). To write and check.")}
-"""),
-]
+def load_post(fp):
+    raw = open(fp, encoding="utf-8").read()
+    m = re.match(r"---\n(.*?)\n---\n(.*)", raw, re.S)
+    if not m: raise SystemExit(f"{fp}: missing --- front matter")
+    meta, cur = {"sources": []}, None
+    for line in m.group(1).splitlines():
+        if re.match(r"\s+- ", line) and cur == "sources":
+            label, _, url = line.strip()[2:].partition("|")
+            meta["sources"].append((label.strip(), url.strip()))
+        elif ":" in line:
+            k, _, v = line.partition(":"); cur = k.strip(); v = v.strip()
+            if cur != "sources": meta[cur] = v
+    for k in REQUIRED:
+        if not meta.get(k): raise SystemExit(f"{fp}: missing '{k}'")
+    if meta["category"] not in CATNAME: raise SystemExit(f"{fp}: unknown category {meta['category']}")
+    if meta["image"] not in IMG: raise SystemExit(f"{fp}: image '{meta['image']}' not in assets/news/images.json")
+    datetime.date.fromisoformat(meta["date"])
+    return dict(slug=os.path.basename(fp)[:-5], cat=meta["category"], date=meta["date"], title=meta["title"],
+                desc=meta["summary"], image=meta["image"], author=meta.get("author", "PlayTechCorner"),
+                draft=meta.get("draft", "true").lower() != "false", sources=meta["sources"], body=m.group(2))
+
+POSTS = [load_post(os.path.join(ROOT, "tools/posts", f)) for f in sorted(os.listdir(os.path.join(ROOT, "tools/posts"))) if f.endswith(".html")]
+
+def credit(key):
+    i = IMG[key]
+    return (f'Photo: {esc(i["author"])} / <a href="{esc(i["source"])}">Wikimedia Commons</a>, '
+            + (f'<a href="{esc(i["license_url"])}">{esc(i["license"])}</a>' if i.get("license_url") else esc(i["license"])))
+
+def figure(key, cls="", eager=False, sizes="100vw"):
+    i = IMG[key]
+    load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
+    return (f'<figure class="photo {cls}"><img src="/assets/news/{key}.webp" alt="{esc(i["alt"])}"{(' style="object-position:' + i["pos"] + '"') if i.get("pos") else ""} width="{i["w"]}" height="{i["h"]}" {load}>'
+            f'<figcaption class="photo-credit">{credit(key)}</figcaption></figure>')
+
 POSTS.sort(key=lambda p: (p["date"], p["title"]), reverse=True)
 
-def esc(s): return html.escape(s, quote=True)
 def fdate(d): return datetime.date.fromisoformat(d).strftime("%b %-d, %Y")
 
 src = open(os.path.join(ROOT, "index.html")).read()
@@ -123,7 +73,7 @@ PROMO = '''      <aside class="promo-box" aria-label="Get our apps">
       </aside>
 '''
 
-def page(path, title, desc, body, noindex=False, ogtype="website", current="/news/"):
+def page(path, title, desc, body, noindex=False, ogtype="website", current="/news/", ogimage=SITE + "/assets/og.jpg"):
     url = SITE + path
     sb = SIDEBAR.replace(f'<a href="{current}">', f'<a href="{current}" aria-current="page">', 1)
     robots = '\n  <meta name="robots" content="noindex, follow">' if noindex else ''
@@ -141,11 +91,11 @@ def page(path, title, desc, body, noindex=False, ogtype="website", current="/new
   <meta property="og:title" content="{esc(title)}">
   <meta property="og:description" content="{esc(desc)}">
   <meta property="og:url" content="{url}">
-  <meta property="og:image" content="{SITE}/assets/og.jpg">
+  <meta property="og:image" content="{ogimage}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{esc(title)}">
   <meta name="twitter:description" content="{esc(desc)}">
-  <meta name="twitter:image" content="{SITE}/assets/og.jpg">
+  <meta name="twitter:image" content="{ogimage}">
   <link rel="alternate" type="application/rss+xml" title="PlayTechCorner News" href="/news/feed.xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="32x32">
@@ -182,10 +132,16 @@ def page(path, title, desc, body, noindex=False, ogtype="website", current="/new
 </html>
 '''
 
+NL_BLOCK = '''<section class="newsletter-box"><div><span class="kicker">Newsletter</span><h2>A weekly tech news roundup is coming</h2>
+<p>App updates, budget gadgets and gaming notes for the Philippines, once a week. No signup form yet.</p></div>
+<p><a class="button" href="/news/newsletter/">Learn more</a> <a class="button button-secondary" href="mailto:playtechcorner@gmail.com?subject=Newsletter%20signup">Email us</a></p></section>'''
+GALLERY = ["wireless-earbuds", "headphones-desk", "mechanical-keyboard", "gaming-headset", "gaming-pcs", "laptop-typing"]
+
 def card(p, tag="h2"):
     u = f"/news/{p['slug']}/"
-    return f'''<li class="news-card"><a class="kicker" href="/news/{p['cat']}/">{CATNAME[p['cat']]}</a>
-  <{tag}><a href="{u}">{esc(p['title'])}</a> <span class="draft-badge">DRAFT</span></{tag}>
+    badge = ' <span class="draft-badge">DRAFT</span>' if p["draft"] else ""
+    return f'''<li class="news-card">{figure(p["image"], "thumb")}<a class="kicker" href="/news/{p['cat']}/">{CATNAME[p['cat']]}</a>
+  <{tag}><a href="{u}">{esc(p['title'])}</a>{badge}</{tag}>
   <p>{esc(p['desc'])}</p><p class="news-meta"><time datetime="{p['date']}">{fdate(p['date'])}</time></p></li>'''
 
 def tabs(cur):
@@ -198,21 +154,42 @@ def write(rel, s):
 # news index
 write("news/index.html", page("/news/", "Tech News — Apps, Gadgets, Gaming | PlayTechCorner",
   "PlayTechCorner news: PumpMap PH and Crazy Dragon app updates, tech explainers, budget gadget guides for the Philippines, and unofficial MIR4 notes.",
-  f'''<section class="news-hero"><span class="kicker">PlayTechCorner</span><h1>News</h1>
+  f'''<section class="news-hero">{figure("laptop-desk", "hero", eager=True)}<span class="kicker">PlayTechCorner</span><h1>News</h1>
 <p>App updates, tech explainers, budget gadget guides for the Philippines, and unofficial MIR4 notes. <a href="/news/feed.xml">RSS feed</a></p>{tabs("/news/")}</section>
-<ul class="news-list">{"".join(card(p) for p in POSTS)}</ul>'''))
+<ul class="news-list">{"".join(card(p) for p in POSTS)}</ul>
+{NL_BLOCK}'''))
 for s, n, d in CATS:
     ps = [p for p in POSTS if p["cat"] == s]
     lst = "".join(card(p) for p in ps) or '<li class="news-card"><p>No posts yet.</p></li>'
     write(f"news/{s}/index.html", page(f"/news/{s}/", f"{n} News | PlayTechCorner", d,
-      f'''<section class="news-hero"><a class="kicker" href="/news/">News</a><h1>{n}</h1><p>{esc(d)}</p>{tabs(f"/news/{s}/")}</section>
+      f'''<section class="news-hero">{figure(CAT_IMG[s], "hero", eager=True)}<a class="kicker" href="/news/">News</a><h1>{n}</h1><p>{esc(d)}</p>{tabs(f"/news/{s}/")}</section>
 <ul class="news-list">{lst}</ul>'''))
+def sources_html(p):
+    if not p["sources"]:
+        return '<section class="sources"><h2>Sources</h2><p class="placeholder"><strong>Placeholder:</strong> sources to be added before publishing.</p></section>'
+    li = "".join(f'<li><a href="{esc(u)}">{esc(l)}</a></li>' if u else f"<li>{esc(l)}</li>" for l, u in p["sources"])
+    return f'<section class="sources"><h2>Sources</h2><ol>{li}</ol></section>'
+
 for p in POSTS:
-    write(f"news/{p['slug']}/index.html", page(f"/news/{p['slug']}/", f"[Draft] {p['title']} | PlayTechCorner", p["desc"],
-      f'''<article class="article"><a class="kicker" href="/news/{p['cat']}/">{CATNAME[p['cat']]}</a> <span class="draft-badge">DRAFT</span>
-<h1>{esc(p['title'])}</h1><p class="news-meta">By PlayTechCorner · <time datetime="{p['date']}">{fdate(p['date'])}</time></p>
+    badge = ' <span class="draft-badge">DRAFT</span>' if p["draft"] else ""
+    write(f"news/{p['slug']}/index.html", page(f"/news/{p['slug']}/", ("[Draft] " if p["draft"] else "") + f"{p['title']} | PlayTechCorner", p["desc"],
+      f'''<article class="article"><a class="kicker" href="/news/{p['cat']}/">{CATNAME[p['cat']]}</a>{badge}
+<h1>{esc(p['title'])}</h1><p class="news-meta">By {esc(p['author'])} · <time datetime="{p['date']}">{fdate(p['date'])}</time></p>
+{figure(p["image"], "hero", eager=True)}
 {p['body'].strip()}
-<p class="news-meta"><a href="/news/">← All news</a></p></article>''', noindex=True, ogtype="article"))
+{sources_html(p)}
+<p class="news-meta"><a href="/news/">← All news</a></p></article>''', noindex=p["draft"], ogtype="article", ogimage=f"{SITE}/assets/news/{p['image']}.webp"))
+
+write("news/newsletter/index.html", page("/news/newsletter/", "Newsletter: weekly tech news roundup (coming soon) | PlayTechCorner",
+  "A weekly PlayTechCorner tech news roundup for the Philippines is coming soon: app updates, gadgets and gaming news.",
+  f'''<section class="news-hero">{figure("phone-coffee", "hero", eager=True)}<a class="kicker" href="/news/">News</a><h1>Newsletter</h1>
+<p>A weekly tech news roundup is coming soon.</p></section>
+<article class="article">
+<p>Each week we plan to send a short roundup of tech news for the Philippines: PlayTechCorner app updates (PumpMap PH and Crazy Dragon), budget gadget picks, and gaming notes.</p>
+<p>There is no signup form yet. If you want the first issue, email us and we'll add you by hand when it launches.</p>
+<p><a class="button" href="mailto:playtechcorner@gmail.com?subject=Newsletter%20signup">Email playtechcorner@gmail.com</a></p>
+<p class="news-meta">Launch date: <span class="to-confirm">to confirm</span>. Until then, follow the <a href="/news/feed.xml">RSS feed</a>.</p>
+</article>'''))
 
 # RSS
 def rfc(d): return datetime.datetime.fromisoformat(d + "T09:00:00+08:00").strftime("%a, %d %b %Y %H:%M:%S +0800")
@@ -242,7 +219,7 @@ write("news/feed.xml", f'''<?xml version="1.0" encoding="UTF-8"?>
 sm = os.path.join(ROOT, "sitemap.xml"); s = open(sm).read()
 s = re.sub(r'\n  <url>\n    <loc>https://playtechcorner.com/news/[^<]*</loc>.*?</url>', '', s, flags=re.S)
 today = "2026-10-28"
-add = "".join(f"\n  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{today}</lastmod>\n  </url>" for u in ["/news/"] + [f"/news/{c[0]}/" for c in CATS])
+add = "".join(f"\n  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{today}</lastmod>\n  </url>" for u in ["/news/", "/news/newsletter/"] + [f"/news/{c[0]}/" for c in CATS] + [f"/news/{p['slug']}/" for p in POSTS if not p["draft"]])
 s = s.replace("\n</urlset>", add + "\n</urlset>"); open(sm, "w").write(s)
 
 # homepage latest-news block
@@ -252,6 +229,9 @@ block = f'''<!-- NEWS:START (generated by tools/build_news.py) -->
           <div class="wrap">
             <div class="section-head"><h2 id="latest-news-h">Latest news</h2><a href="/news/">All news →</a></div>
             <ul class="news-list">{"".join(card(p, "h3") for p in POSTS[:4])}</ul>
+            <div class="section-head"><h2>Gadgets, gear and gaming</h2><a href="/news/gadgets/">Gadget guides →</a></div>
+            <div class="gallery">{"".join(figure(k, "tile") for k in GALLERY)}</div>
+            {NL_BLOCK}
           </div>
         </section>
         <!-- NEWS:END -->'''
