@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PlayTechCorner News</title>
+    <link>https://playtechcorner.com/news/</link>
+    <atom:link href="https://playtechcorner.com/news/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>App updates, tech, budget gadgets and unofficial MIR4 notes from PlayTechCorner.</description>
+    <language>en-ph</language>
+    <lastBuildDate>Wed, 28 Oct 2026 09:00:00 +0800</lastBuildDate>
+    <item>
+      <title>[DRAFT] Why offline-first apps matter in the Philippines (outline)</title>
+      <link>https://playtechcorner.com/news/offline-first-apps-philippines-outline/</link>
+      <guid isPermaLink="true">https://playtechcorner.com/news/offline-first-apps-philippines-outline/</guid>
+      <pubDate>Wed, 28 Oct 2026 09:00:00 +0800</pubDate>
+      <category>Tech</category>
+      <description>Outline draft of a tech explainer on offline-first mobile apps and patchy mobile data, using PumpMap PH&#x27;s offline price updates as an example.</description>
+    </item>
+    <item>
+      <title>[DRAFT] Crazy Dragon: what the MIR4 clan app does, and what&#x27;s planned for 1.0.7</title>
+      <link>https://playtechcorner.com/news/crazy-dragon-app-features-and-1-0-7/</link>
+      <guid isPermaLink="true">https://playtechcorner.com/news/crazy-dragon-app-features-and-1-0-7/</guid>
+      <pubDate>Wed, 28 Oct 2026 09:00:00 +0800</pubDate>
+      <category>Apps</category>
+      <description>A recap of Crazy Dragon, the free unofficial MIR4 clan manager by PlayTechCorner: donation and gold trackers, member lists, expeditions and reports.</description>
+    </item>
+    <item>
+      <title>[DRAFT] Crazy Dragon Control Center: an unofficial MIR4 companion in your browser</title>
+      <link>https://playtechcorner.com/news/crazy-dragon-control-center-mir4-companion/</link>
+      <guid isPermaLink="true">https://playtechcorner.com/news/crazy-dragon-control-center-mir4-companion/</guid>
+      <pubDate>Wed, 28 Oct 2026 09:00:00 +0800</pubDate>
+      <category>Gaming</category>
+      <description>Crazy Dragon Control Center is an unofficial MIR4 fan companion with today&#x27;s bosses, a 53-boss schedule, a daily checklist and clan tools.</description>
+    </item>
+    <item>
+      <title>[DRAFT] Budget phone buying guide for the Philippines (outline)</title>
+      <link>https://playtechcorner.com/news/budget-phone-buying-guide-philippines-outline/</link>
+      <guid isPermaLink="true">https://playtechcorner.com/news/budget-phone-buying-guide-philippines-outline/</guid>
+      <pubDate>Wed, 28 Oct 2026 09:00:00 +0800</pubDate>
+      <category>Gadgets</category>
+      <description>Outline draft of a budget Android phone buying guide for shoppers in the Philippines. Prices and models still to be researched.</description>
+    </item>
+    <item>
+      <title>[DRAFT] PumpMap PH 1.0.8 is live on Google Play</title>
+      <link>https://playtechcorner.com/news/pumpmap-ph-1-0-8-live-on-google-play/</link>
+      <guid isPermaLink="true">https://playtechcorner.com/news/pumpmap-ph-1-0-8-live-on-google-play/</guid>
+      <pubDate>Mon, 26 Oct 2026 09:00:00 +0800</pubDate>
+      <category>Apps</category>
+      <description>PumpMap PH 1.0.8 is now public on Google Play: a free, ad-free map of gas stations and fuel prices in the Philippines that works offline.</description>
+    </item>
+  </channel>
+</rss>
