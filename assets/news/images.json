@@ -1,0 +1,121 @@
+{
+ "phone-in-hand": {
+  "alt": "A hand holding a black smartphone",
+  "w": 1200,
+  "h": 800,
+  "author": "Dennis Cort\u00e9s",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_smartphone_in_hand_(Unsplash).jpg"
+ },
+ "two-phones-table": {
+  "alt": "Two smartphones lying on a wooden table, seen from above",
+  "w": 533,
+  "h": 800,
+  "author": "Artem Beliaikin from Moscow, Russia",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Top_view_image_of_two_smartphone_on_a_wooden_table,_space_for_text,_ready_for_mockup._Empty_space._(47955056488).jpg",
+  "pos": "50% 88%"
+ },
+ "laptop-desk": {
+  "alt": "A white work desk with a laptop, a smartphone and notes",
+  "w": 1200,
+  "h": 800,
+  "author": "JESHOOTS.COM",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:White_work_table_with_notes,_smartphone_and_laptop_(Unsplash).jpg"
+ },
+ "laptop-typing": {
+  "alt": "Hands typing on a laptop keyboard",
+  "w": 1200,
+  "h": 800,
+  "author": "Simon Hattinga Verschure",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Typing_on_a_laptop_(Unsplash).jpg"
+ },
+ "phone-coffee": {
+  "alt": "Hands holding a smartphone next to a cup of coffee",
+  "w": 1200,
+  "h": 800,
+  "author": "www.Pixel.la Free Stock Photos",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Hands-coffee-smartphone-technology_(23698591814).jpg"
+ },
+ "phone-browsing": {
+  "alt": "A finger tapping a smartphone screen",
+  "w": 1200,
+  "h": 800,
+  "author": "Unknown author",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Smartphone-mobile-hand-technology-internet-finger.jpg"
+ },
+ "wireless-earbuds": {
+  "alt": "A pair of wireless earbuds with their charging case",
+  "w": 1067,
+  "h": 800,
+  "author": "WrS.tm.pl",
+  "license": "Public domain",
+  "license_url": "",
+  "source": "https://commons.wikimedia.org/wiki/File:ActiveSound_wireless_earbuds_by_Hykker_(POJM200483).jpg"
+ },
+ "headphones-desk": {
+  "alt": "Over-ear headphones resting on a desk",
+  "w": 1200,
+  "h": 679,
+  "author": "Lirazelf",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Headphones_on_desk.jpg"
+ },
+ "game-controller": {
+  "alt": "A video game controller",
+  "w": 600,
+  "h": 800,
+  "author": "InclusiveGameLab",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:InclusiveGameLab_2-Xbox-Controller_1_CC-BY-SA.jpg",
+  "pos": "50% 50%"
+ },
+ "gaming-headset": {
+  "alt": "A gaming headset on a desk under colourful ambient lighting",
+  "w": 359,
+  "h": 800,
+  "author": "SankalpSasnur",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:RGB_gaming_headset_on_desk_with_ambient_lighting.jpg"
+ },
+ "mechanical-keyboard": {
+  "alt": "A mechanical keyboard with colourful keycaps",
+  "w": 1067,
+  "h": 800,
+  "author": "Anirban Saha",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Mechanical_Keyboard.jpg"
+ },
+ "gaming-pcs": {
+  "alt": "Gaming computers with lit-up cases",
+  "w": 1200,
+  "h": 800,
+  "author": "Notdjey",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Gaming_computers_(1).jpg"
+ },
+ "gas-station-cebu": {
+  "alt": "A roadside gas station in Sibonga, Cebu, Philippines",
+  "w": 1200,
+  "h": 800,
+  "author": "Wide Awake!",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:RM_Gas_Station_in_Sibonga_(2025-04-20).jpg"
+ }
+}

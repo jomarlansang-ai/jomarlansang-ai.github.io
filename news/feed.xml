@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PlayTechCorner News</title>
+    <link>https://playtechcorner.com/news/</link>
+    <atom:link href="https://playtechcorner.com/news/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>App updates, tech, budget gadgets and unofficial MIR4 notes from PlayTechCorner.</description>
+    <language>en-ph</language>
+    <lastBuildDate>Wed, 28 Oct 2026 09:00:00 +0800</lastBuildDate>
+  </channel>
+</rss>
