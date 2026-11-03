@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Replaced by `flutter build web --base-href`, e.g. /pumpmap-ph/ or /pumpmap/app/. -->
+  <base href="/pumpmap/app/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Gas stations, fuel prices and EV chargers across the Philippines.">
+  <meta name="theme-color" content="#071917">
+
+  <!-- iOS "Add to Home Screen" -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="PumpMap">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>PumpMap PH</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    html, body { margin: 0; height: 100%; background: #071917; }
+    #pm-splash { position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; color: #fff;
+      font: 600 16px -apple-system, system-ui, sans-serif; }
+    #pm-splash img { width: 96px; height: 96px; border-radius: 22px; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <div id="pm-splash"><img src="icons/Icon-192.png" alt="">Loading PumpMap…</div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var s = document.getElementById('pm-splash'); if (s) s.remove();
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
