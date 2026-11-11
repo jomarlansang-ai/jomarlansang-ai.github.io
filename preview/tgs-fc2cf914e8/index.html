@@ -37,6 +37,7 @@
     </nav>
     </div>
   </header>
+  <div class="nav-backdrop" id="nav-backdrop" hidden></div>
 
   <main id="top">
     <section class="hero section" aria-labelledby="hero-title">
@@ -90,64 +91,58 @@
         <p class="kicker">Flavor menu</p>
         <span class="rule" aria-hidden="true"></span>
         <h2 id="menu-title">₱130 per cookie</h2>
-        <p class="lede">Seven names are written down in the source notes. The public bio says 25 flavors and counting, so the other slots stop at 25 and stay empty. Anything past 25 is also to confirm. Per-flavor availability is not confirmed on this page.</p>
-        <div class="butter-band">
-          <div class="feature">
+        <p class="lede">Six confirmed names are featured. The public bio says 25 flavors and counting, so the rest of the list, including empty slots, stays under See all flavors. Anything past 25 is also to confirm. Per-flavor availability is not confirmed on this page.</p>
+        <h3 class="featured-heading">Featured</h3>
+        <p class="hint" id="carousel-hint">Swipe or scroll sideways. The next card stays in view.</p>
+        <ul class="flavor-carousel" id="featured-flavors" tabindex="0" aria-labelledby="carousel-hint">
+          <li class="flavor-card" tabindex="0">
             <picture>
               <source srcset="assets/photos/mango-graham.webp" type="image/webp">
-              <img class="shot" src="assets/photos/mango-graham.jpg" width="1000" height="1250" alt="Mango Graham cookie poster on yellow: a graham-coated cookie with mango pieces and cream, and the line treat yourself with goodness.">
+              <img src="assets/photos/mango-graham.jpg" width="1000" height="1250" alt="Mango Graham cookie poster on yellow: a graham-coated cookie with mango pieces and cream.">
             </picture>
-            <div>
-              <p class="kicker">Limited</p>
-              <h3>Mango Graham</h3>
-              <p class="bundle-price">₱130</p>
-              <p>Named on their poster. Limited, from the source notes.</p>
-            </div>
-          </div>
-        </div>
-        <div class="feature feature-plain">
-          <picture>
-            <source srcset="assets/photos/sisig-bomb.webp" type="image/webp">
-            <img class="shot" src="assets/photos/sisig-bomb.jpg" width="912" height="640" alt="Sisig Bomb cookie broken open and held in two hands, topped with meat, chilies, and onion.">
-          </picture>
-          <div>
-            <p class="kicker">April 2026</p>
-            <h3>Sisig Bomb</h3>
-            <p class="bundle-price">₱130</p>
-            <p>Close-up from their posts. Noted April 2026.</p>
-          </div>
-        </div>
+            <p class="flavor-kicker">Featured</p>
+            <h3 class="flavor-card-name">Mango Graham</h3>
+            <p class="flavor-meta">Limited</p>
+            <p class="flavor-price">₱130</p>
+          </li>
+          <li class="flavor-card" tabindex="0">
+            <picture>
+              <source srcset="assets/photos/sisig-bomb.webp" type="image/webp">
+              <img src="assets/photos/sisig-bomb.jpg" width="912" height="640" alt="Sisig Bomb cookie broken open, topped with meat, chilies, and onion.">
+            </picture>
+            <p class="flavor-kicker">Featured</p>
+            <h3 class="flavor-card-name">Sisig Bomb</h3>
+            <p class="flavor-meta">April 2026</p>
+            <p class="flavor-price">₱130</p>
+          </li>
+          <li class="flavor-card" tabindex="0">
+            <p class="flavor-kicker">Featured</p>
+            <h3 class="flavor-card-name">Red Velvet Bomb</h3>
+            <p class="flavor-meta">Also written as Red Velvet</p>
+            <p class="flavor-price">₱130</p>
+          </li>
+          <li class="flavor-card" tabindex="0">
+            <p class="flavor-kicker">Featured</p>
+            <h3 class="flavor-card-name">Nutella Bomb</h3>
+            <p class="flavor-meta">Named in public listings</p>
+            <p class="flavor-price">₱130</p>
+          </li>
+          <li class="flavor-card" tabindex="0">
+            <p class="flavor-kicker">Featured</p>
+            <h3 class="flavor-card-name">Tokyo Matchadamia</h3>
+            <p class="flavor-meta">Also written as Tokyo Matcha</p>
+            <p class="flavor-price">₱130</p>
+          </li>
+          <li class="flavor-card" tabindex="0">
+            <p class="flavor-kicker">Featured</p>
+            <h3 class="flavor-card-name">Classic / Dark Chocolate DUO</h3>
+            <p class="flavor-meta">Named together as a duo. Some listings split Classic and Dark Chocolate.</p>
+            <p class="flavor-price">₱130</p>
+          </li>
+        </ul>
+        <p><button type="button" class="button button-plain" id="see-all-flavors" aria-expanded="false" aria-controls="all-flavors">See all flavors</button></p>
+        <div id="all-flavors" hidden>
         <ul class="flavor-list">
-          <li class="flavor">
-            <span class="flavor-name">Mango Graham</span>
-            <span class="flavor-meta">Limited</span>
-            <span class="flavor-price">₱130</span>
-          </li>
-          <li class="flavor">
-            <span class="flavor-name">Sisig Bomb</span>
-            <span class="flavor-meta">April 2026</span>
-            <span class="flavor-price">₱130</span>
-          </li>
-          <li class="flavor">
-            <span class="flavor-name">Red Velvet Bomb</span>
-            <span class="flavor-meta">Also written as Red Velvet</span>
-            <span class="flavor-price">₱130</span>
-          </li>
-          <li class="flavor">
-            <span class="flavor-name">Nutella Bomb</span>
-            <span class="flavor-meta">Named in public listings</span>
-            <span class="flavor-price">₱130</span>
-          </li>
-          <li class="flavor">
-            <span class="flavor-name">Tokyo Matchadamia</span>
-            <span class="flavor-meta">Also written as Tokyo Matcha</span>
-            <span class="flavor-price">₱130</span>
-          </li>
-          <li class="flavor">
-            <span class="flavor-name">Classic / Dark Chocolate DUO</span>
-            <span class="flavor-meta">Named together as a duo. Some listings split Classic and Dark Chocolate.</span>
-            <span class="flavor-price">₱130</span>
-          </li>
           <li class="flavor">
             <span class="flavor-name">Medium Haul Flight</span>
             <span class="flavor-meta">Named in public listings</span>
@@ -172,6 +167,7 @@
           <li class="flavor flavor-slot"><span class="flavor-name">Flavor slot: to confirm</span><span class="flavor-meta">Slot 24. Not in the source notes.</span><span class="flavor-price">—</span></li>
           <li class="flavor flavor-slot"><span class="flavor-name">Flavor slot: to confirm</span><span class="flavor-meta">Slot 25. Not in the source notes.</span><span class="flavor-price">—</span></li>
         </ul>
+        </div>
       </div>
     </section>
 
@@ -283,8 +279,8 @@
             <h3>GrabFood and foodpanda</h3>
             <p>Both list The Good Steward (TGS) for Monday to Friday, in Clark and Angeles. The foodpanda button opens that Clark restaurant page. No store-specific Grab link was in the source notes, so the GrabFood button opens Grab’s generic Philippines food page.</p>
             <div class="button-row">
-              <a class="button" href="https://www.foodpanda.ph/restaurant/rns6/the-good-steward-sm-city-clark" target="_blank" rel="noopener noreferrer">Order on foodpanda<span class="visually-hidden"> (opens in a new tab)</span></a>
-              <a class="button button-ghost" href="https://www.grab.com/ph/food/" target="_blank" rel="noopener noreferrer">GrabFood<span class="visually-hidden"> (opens Grab’s generic food page in a new tab)</span></a>
+              <a class="button button-plain" href="https://www.foodpanda.ph/restaurant/rns6/the-good-steward-sm-city-clark" target="_blank" rel="noopener noreferrer">foodpanda<span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a class="button button-plain" href="https://www.grab.com/ph/food/" target="_blank" rel="noopener noreferrer">GrabFood<span class="visually-hidden"> (opens Grab’s generic food page in a new tab)</span></a>
             </div>
             <h3>How the closed pre-order worked</h3>
             <dl class="fact-list">
@@ -327,44 +323,63 @@
             </p>
             <p><button class="button button-ghost" id="reset-counter" type="button">Reset demo counter</button></p>
             <form id="preorder-form" action="#order" method="post" novalidate onsubmit="return false;">
-              <div class="field">
-                <label for="preorder-name">Name</label>
-                <input id="preorder-name" name="name" type="text" autocomplete="name">
+              <ol class="steps" id="preorder-steps" aria-label="Pre-order steps">
+                <li class="step is-current" data-step="1" aria-current="step"><span class="step-index">1</span><span class="step-label">Pick box size</span></li>
+                <li class="step" data-step="2"><span class="step-index">2</span><span class="step-label">Choose flavors</span></li>
+                <li class="step" data-step="3"><span class="step-index">3</span><span class="step-label">Pickup date and details</span></li>
+                <li class="step" data-step="4"><span class="step-index">4</span><span class="step-label">Confirm</span></li>
+              </ol>
+              <div class="step-panel is-current" data-step-panel="1">
+                <fieldset>
+                  <legend>1. Pick box size</legend>
+                  <label class="choice"><input type="radio" name="box" value="6"> 6 cookies — ₱780 est.</label>
+                  <label class="choice"><input type="radio" name="box" value="12"> 12 cookies — ₱1,560 est.</label>
+                  <label class="choice"><input type="radio" name="box" value="18"> 18 cookies — ₱2,340 est.</label>
+                  <label class="choice"><input type="radio" name="box" value="24"> 24 cookies — ₱3,120 est.</label>
+                </fieldset>
+                <p class="hint" id="box-estimate">Select a box to see an est. total.</p>
               </div>
-              <fieldset>
-                <legend>Box size</legend>
-                <label class="choice"><input type="radio" name="box" value="6"> 6 cookies — ₱780 est.</label>
-                <label class="choice"><input type="radio" name="box" value="12"> 12 cookies — ₱1,560 est.</label>
-                <label class="choice"><input type="radio" name="box" value="18"> 18 cookies — ₱2,340 est.</label>
-                <label class="choice"><input type="radio" name="box" value="24"> 24 cookies — ₱3,120 est.</label>
-              </fieldset>
-              <p class="hint" id="box-estimate">Select a box to see an est. total.</p>
-              <fieldset>
-                <legend>Flavors</legend>
-                <label class="choice"><input type="checkbox" name="flavor" value="Mango Graham"> Mango Graham</label>
-                <label class="choice"><input type="checkbox" name="flavor" value="Sisig Bomb"> Sisig Bomb</label>
-                <label class="choice"><input type="checkbox" name="flavor" value="Red Velvet Bomb"> Red Velvet Bomb</label>
-                <label class="choice"><input type="checkbox" name="flavor" value="Nutella Bomb"> Nutella Bomb</label>
-                <label class="choice"><input type="checkbox" name="flavor" value="Tokyo Matchadamia"> Tokyo Matchadamia</label>
-                <label class="choice"><input type="checkbox" name="flavor" value="Classic / Dark Chocolate DUO"> Classic / Dark Chocolate DUO</label>
-                <label class="choice"><input type="checkbox" name="flavor" value="Medium Haul Flight"> Medium Haul Flight</label>
-                <label class="choice"><input type="checkbox" name="flavor" value="Flavor mix: to confirm"> Flavor mix: to confirm</label>
-              </fieldset>
-              <fieldset>
-                <legend>Pickup day</legend>
-                <label class="choice"><input type="radio" name="pickup" value="Thursday"> Thursday</label>
-                <label class="choice"><input type="radio" name="pickup" value="Friday"> Friday</label>
-                <p class="hint">The closed pre-order released cookies on Thursday and Friday. Pickup point to confirm. Production and pickup notes say Angeles City; the stall is at SM City Clark.</p>
-              </fieldset>
-              <div class="field">
-                <label for="gcash-note">GCash note</label>
-                <textarea id="gcash-note" name="gcash-note" autocomplete="off" aria-describedby="gcash-hint" placeholder="Demo only. Do not enter a real reference number."></textarea>
-                <p class="hint" id="gcash-hint">The closed pre-order was paid by GCash. This note is not saved and no payment is taken.</p>
+              <div class="step-panel" data-step-panel="2">
+                <fieldset>
+                  <legend>2. Choose flavors</legend>
+                  <label class="choice"><input type="checkbox" name="flavor" value="Mango Graham"> Mango Graham</label>
+                  <label class="choice"><input type="checkbox" name="flavor" value="Sisig Bomb"> Sisig Bomb</label>
+                  <label class="choice"><input type="checkbox" name="flavor" value="Red Velvet Bomb"> Red Velvet Bomb</label>
+                  <label class="choice"><input type="checkbox" name="flavor" value="Nutella Bomb"> Nutella Bomb</label>
+                  <label class="choice"><input type="checkbox" name="flavor" value="Tokyo Matchadamia"> Tokyo Matchadamia</label>
+                  <label class="choice"><input type="checkbox" name="flavor" value="Classic / Dark Chocolate DUO"> Classic / Dark Chocolate DUO</label>
+                  <label class="choice"><input type="checkbox" name="flavor" value="Medium Haul Flight"> Medium Haul Flight</label>
+                  <label class="choice"><input type="checkbox" name="flavor" value="Flavor mix: to confirm"> Flavor mix: to confirm</label>
+                </fieldset>
               </div>
-              <div class="form-actions">
-                <button class="button" type="submit">Submit demo pre-order</button>
+              <div class="step-panel" data-step-panel="3">
+                <fieldset>
+                  <legend>3. Pickup date and details</legend>
+                  <div class="field">
+                    <label for="preorder-name">Name</label>
+                    <input id="preorder-name" name="name" type="text" autocomplete="name">
+                  </div>
+                  <p class="hint">Pickup day</p>
+                  <label class="choice"><input type="radio" name="pickup" value="Thursday"> Thursday</label>
+                  <label class="choice"><input type="radio" name="pickup" value="Friday"> Friday</label>
+                  <p class="hint">The closed pre-order released cookies on Thursday and Friday. Pickup point to confirm. Production and pickup notes say Angeles City; the stall is at SM City Clark.</p>
+                  <div class="field">
+                    <label for="gcash-note">GCash note</label>
+                    <textarea id="gcash-note" name="gcash-note" autocomplete="off" aria-describedby="gcash-hint" placeholder="Demo only. Do not enter a real reference number."></textarea>
+                    <p class="hint" id="gcash-hint">The closed pre-order was paid by GCash. This note is not saved and no payment is taken.</p>
+                  </div>
+                </fieldset>
               </div>
-              <p class="form-status" id="preorder-status" role="status" aria-live="polite"></p>
+              <div class="step-panel" data-step-panel="4">
+                <fieldset>
+                  <legend>4. Confirm</legend>
+                  <p class="hint">This stays a demo. Nothing is sent to the bakery.</p>
+                  <div class="form-actions">
+                    <button class="button button-plain" type="submit">Submit demo pre-order</button>
+                  </div>
+                  <p class="form-status" id="preorder-status" role="status" aria-live="polite"></p>
+                </fieldset>
+              </div>
             </form>
           </div>
         </div>
