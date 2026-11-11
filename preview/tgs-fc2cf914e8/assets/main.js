@@ -13,6 +13,7 @@
   var estimate = document.getElementById("box-estimate");
   var navToggle = document.querySelector(".nav-toggle");
   var navLinks = document.getElementById("nav-links");
+  var navBackdrop = document.getElementById("nav-backdrop");
 
   function peso(amount) {
     return "₱" + String(amount).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -177,6 +178,10 @@
     }
     navToggle.setAttribute("aria-expanded", open ? "true" : "false");
     navLinks.classList.toggle("is-open", open);
+    if (navBackdrop) {
+      navBackdrop.hidden = !open;
+    }
+    document.body.style.overflow = open ? "hidden" : "";
   }
 
   if (navToggle && navLinks) {
@@ -190,11 +195,109 @@
       }
     });
 
+    if (navBackdrop) {
+      navBackdrop.addEventListener("click", function () {
+        setNavOpen(false);
+        navToggle.focus();
+      });
+    }
+
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
         setNavOpen(false);
         navToggle.focus();
       }
+    });
+  }
+
+  var seeAll = document.getElementById("see-all-flavors");
+  var allFlavors = document.getElementById("all-flavors");
+  if (seeAll && allFlavors) {
+    seeAll.addEventListener("click", function () {
+      var open = seeAll.getAttribute("aria-expanded") === "true";
+      seeAll.setAttribute("aria-expanded", open ? "false" : "true");
+      allFlavors.hidden = open;
+      seeAll.textContent = open ? "See all flavors" : "Hide flavors";
+    });
+  }
+
+  var carousel = document.getElementById("featured-flavors");
+  if (carousel) {
+    carousel.addEventListener("keydown", function (event) {
+      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") {
+        return;
+      }
+      var card = carousel.querySelector(".flavor-card");
+      var width = card ? card.getBoundingClientRect().width : 240;
+      var gap = 12;
+      var delta = event.key === "ArrowLeft" ? -(width + gap) : width + gap;
+      var motion = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+      carousel.scrollBy({ left: delta, behavior: motion });
+      event.preventDefault();
+    });
+  }
+
+  var stepItems = document.querySelectorAll("#preorder-steps .step");
+  var stepPanels = document.querySelectorAll("#preorder-form .step-panel");
+
+  function filledThrough() {
+    if (!preorderForm) {
+      return 1;
+    }
+    var box = checkedValue(preorderForm, "box");
+    var flavor = preorderForm.querySelector('input[name="flavor"]:checked');
+    var pickup = checkedValue(preorderForm, "pickup");
+    if (box && flavor && pickup) {
+      return 4;
+    }
+    if (box && flavor) {
+      return 3;
+    }
+    if (box) {
+      return 2;
+    }
+    return 1;
+  }
+
+  function paintSteps(current) {
+    var reached = filledThrough();
+    for (var i = 0; i < stepItems.length; i += 1) {
+      var item = stepItems[i];
+      var number = Number(item.getAttribute("data-step"));
+      var isCurrent = number === current;
+      item.classList.toggle("is-current", isCurrent);
+      item.classList.toggle("is-done", number < reached);
+      if (isCurrent) {
+        item.setAttribute("aria-current", "step");
+      } else {
+        item.removeAttribute("aria-current");
+      }
+    }
+    for (var j = 0; j < stepPanels.length; j += 1) {
+      var panel = stepPanels[j];
+      panel.classList.toggle("is-current", Number(panel.getAttribute("data-step-panel")) === current);
+    }
+  }
+
+  if (preorderForm && stepItems.length) {
+    paintSteps(1);
+    preorderForm.addEventListener("focusin", function (event) {
+      var panel = event.target.closest("[data-step-panel]");
+      if (!panel) {
+        return;
+      }
+      paintSteps(Number(panel.getAttribute("data-step-panel")));
+    });
+    preorderForm.addEventListener("change", function () {
+      var active = preorderForm.querySelector(".step-panel.is-current");
+      var focused = document.activeElement && document.activeElement.closest
+        ? document.activeElement.closest("[data-step-panel]")
+        : null;
+      if (focused && preorderForm.contains(focused)) {
+        paintSteps(Number(focused.getAttribute("data-step-panel")));
+        return;
+      }
+      paintSteps(active ? Number(active.getAttribute("data-step-panel")) : filledThrough());
     });
   }
 })();
