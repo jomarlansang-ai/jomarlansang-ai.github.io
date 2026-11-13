@@ -11,7 +11,10 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/motion.css">
+  <script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion-ok')</script>
   <script src="assets/main.js" defer></script>
+  <script src="assets/motion.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#top">Skip to content</a>
@@ -50,6 +53,11 @@
           <strong>₱130 per cookie</strong>
           <span>Posted price since February 28, 2026</span>
         </p>
+        <div class="hero-actions">
+          <a class="button" href="#menu">See the flavors</a>
+          <a class="button button-ghost" href="#stores">Find the stall</a>
+          <a class="button button-ghost" href="#order">Delivery &amp; pre-order</a>
+        </div>
       </div>
       <div class="wrap hero-photos">
         <figure class="hero-figure">
@@ -177,6 +185,13 @@
         <span class="rule" aria-hidden="true"></span>
         <h2 id="bundles-title">Boxes</h2>
         <p class="lede">The 6+1 box is a posted in-store price. Pre-order box totals are not printed in the source notes, so each one is ₱130 times the cookie count and marked est.</p>
+        <div class="compare-note" role="note">
+          <p class="compare-title">Same ₱780, different box</p>
+          <dl class="compare-grid">
+            <div><dt>6+1 box · in-store at SM Clark</dt><dd><strong>7 cookies</strong> for ₱780 (1 free)</dd></div>
+            <div><dt>Pre-order box of 6 · est.</dt><dd><strong>6 cookies</strong> for ₱780</dd></div>
+          </dl>
+        </div>
         <div class="bundle-layout">
           <article class="bundle-featured">
             <p class="kicker">In-store · SM City Clark only</p>
@@ -195,7 +210,7 @@
               <article class="card">
                 <h3>6 cookies</h3>
                 <p class="bundle-price">₱780 <span class="est-mark">est.</span></p>
-                <p>6 × ₱130. Not the 6+1 box.</p>
+                <p>6 × ₱130. No free cookie — that is the in-store 6+1.</p>
               </article>
               <article class="card">
                 <h3>12 cookies</h3>
@@ -233,10 +248,17 @@
               Manuel A. Roxas Highway, Clark Freeport<br>
               Barangay Malabanias, Angeles City, Pampanga
             </address>
-            <p><a class="contact-link" href="tel:09664469168">09664469168</a></p>
-            <p><a class="contact-link break" href="mailto:thegoodsteward@gmail.com">thegoodsteward@gmail.com</a></p>
+            <p><span class="contact-label">Phone</span><br><a class="contact-link" href="tel:09664469168">0966 446 9168</a></p>
+            <p><span class="contact-label">Shop email (SM listing)</span><br><a class="contact-link break" href="mailto:thegoodsteward@gmail.com">thegoodsteward@gmail.com</a></p>
             <p class="placeholder-flag">Hours to confirm</p>
-            <p>The SM Supermalls directory page, read November 10, 2026, showed Sunday 7:30 AM–7:30 PM and Monday–Saturday 9:00 AM–11:00 PM. The source notes say those times may be mall defaults, so this demo does not treat them as confirmed stall hours.</p>
+            <table class="hours">
+              <caption>Mall directory hours, read Nov 10, 2026</caption>
+              <tbody>
+                <tr><th scope="row">Mon–Sat</th><td>9:00 AM–11:00 PM</td></tr>
+                <tr><th scope="row">Sun</th><td>7:30 AM–7:30 PM</td></tr>
+              </tbody>
+            </table>
+            <p class="hint">These may be mall defaults, not the stall’s own hours. Call ahead to be sure.</p>
             <p><a href="https://www.smsupermalls.com/mall-directory/sm-city-clark/shops/the-good-steward">SM Supermalls directory listing</a></p>
           </article>
           <article class="store-card card">
@@ -280,7 +302,7 @@
             <p>Both list The Good Steward (TGS) for Monday to Friday, in Clark and Angeles. The foodpanda button opens that Clark restaurant page. No store-specific Grab link was in the source notes, so the GrabFood button opens Grab’s generic Philippines food page.</p>
             <div class="button-row">
               <a class="button button-plain" href="https://www.foodpanda.ph/restaurant/rns6/the-good-steward-sm-city-clark" target="_blank" rel="noopener noreferrer">foodpanda<span class="visually-hidden"> (opens in a new tab)</span></a>
-              <a class="button button-plain" href="https://www.grab.com/ph/food/" target="_blank" rel="noopener noreferrer">GrabFood<span class="visually-hidden"> (opens Grab’s generic food page in a new tab)</span></a>
+              <a class="button button-plain" href="https://www.grab.com/ph/food/" target="_blank" rel="noopener noreferrer">GrabFood · search “TGS”<span class="visually-hidden"> (opens Grab’s generic food page in a new tab)</span></a>
             </div>
             <h3>How the closed pre-order worked</h3>
             <dl class="fact-list">
@@ -332,7 +354,7 @@
               <div class="step-panel is-current" data-step-panel="1">
                 <fieldset>
                   <legend>1. Pick box size</legend>
-                  <label class="choice"><input type="radio" name="box" value="6"> 6 cookies — ₱780 est.</label>
+                  <label class="choice"><input type="radio" name="box" value="6"> 6 cookies — ₱780 est. (not the in-store 6+1)</label>
                   <label class="choice"><input type="radio" name="box" value="12"> 12 cookies — ₱1,560 est.</label>
                   <label class="choice"><input type="radio" name="box" value="18"> 18 cookies — ₱2,340 est.</label>
                   <label class="choice"><input type="radio" name="box" value="24"> 24 cookies — ₱3,120 est.</label>
@@ -434,16 +456,6 @@
         <ul class="event-list">
           <li class="event">
             <picture>
-              <source srcset="assets/photos/mimosa.webp" type="image/webp">
-              <img class="shot" src="assets/photos/mimosa.jpg" width="1000" height="1250" alt="Mimosa+ poster with a rainbow cookie stack. Filinvest Mimosa+ Leisure City, July 31 to August 2, 2026, 2:00 PM to 10:00 PM, The Flea Club.">
-            </picture>
-            <p class="past-flag">Past</p>
-            <h3>Mimosa+ Clark</h3>
-            <p class="event-when">July 31–August 2, 2026</p>
-            <p>Filinvest Mimosa+ Leisure City. The poster says 2:00 PM to 10:00 PM at The Flea Club.</p>
-          </li>
-          <li class="event">
-            <picture>
               <source srcset="assets/photos/focus-finds.webp" type="image/webp">
               <img class="shot" src="assets/photos/focus-finds.jpg" width="1200" height="1500" alt="focus_ finds poster for The Good Steward pop-up with KitchenAid, October 9 to 11, 10 AM to 7 PM, Upper Ground Floor, East Wing, Festival Mall, Alabang.">
             </picture>
@@ -451,6 +463,16 @@
             <h3>focus_ finds</h3>
             <p class="event-when">October 9–11, 2026</p>
             <p>KitchenAid × focus_. Upper Ground Floor, East Wing, Festival Mall, Alabang, Muntinlupa. The poster says 10:00 AM to 7:00 PM.</p>
+          </li>
+          <li class="event">
+            <picture>
+              <source srcset="assets/photos/mimosa.webp" type="image/webp">
+              <img class="shot" src="assets/photos/mimosa.jpg" width="1000" height="1250" alt="Mimosa+ poster with a rainbow cookie stack. Filinvest Mimosa+ Leisure City, July 31 to August 2, 2026, 2:00 PM to 10:00 PM, The Flea Club.">
+            </picture>
+            <p class="past-flag">Past</p>
+            <h3>Mimosa+ Clark</h3>
+            <p class="event-when">July 31–August 2, 2026</p>
+            <p>Filinvest Mimosa+ Leisure City. The poster says 2:00 PM to 10:00 PM at The Flea Club.</p>
           </li>
           <li class="event">
             <p class="past-flag">Past</p>
@@ -477,7 +499,7 @@
           <article class="career-card">
             <h3>Hiring email</h3>
             <p><a class="contact-link break" href="mailto:jobs@thegoodsteward-tgs.com">jobs@thegoodsteward-tgs.com</a></p>
-            <p>Also listed in the source notes: <a class="break" href="mailto:thegoodsteward.tgs@gmail.com">thegoodsteward.tgs@gmail.com</a></p>
+            <p class="hint">Also seen in the source notes: <a class="break" href="mailto:thegoodsteward.tgs@gmail.com">thegoodsteward.tgs@gmail.com</a>. Not confirmed as a hiring inbox. For shop questions, use thegoodsteward@gmail.com.</p>
           </article>
           <article class="career-card">
             <h3>Posts already dated</h3>
