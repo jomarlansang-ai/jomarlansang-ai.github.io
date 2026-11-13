@@ -1156,3 +1156,73 @@ fieldset {
     flex-basis: 31%;
   }
 }
+
+/* ---- Additions: hero actions, ₱780 comparison, hours table, contact labels ---- */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+.compare-note {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.1rem;
+  background: var(--paper);
+  border: 2px solid var(--chocolate);
+  border-radius: 0.85rem 1.2rem 0.7rem 1.05rem;
+  box-shadow: 4px 4px 0 var(--butter);
+}
+.compare-title {
+  margin: 0 0 0.6rem;
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.compare-grid {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+}
+.compare-grid div {
+  padding: 0.6rem 0.75rem;
+  background: var(--cream);
+}
+.compare-grid dt {
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.compare-grid dd {
+  margin: 0.2rem 0 0;
+  font-size: 1.05rem;
+}
+@media (min-width: 720px) {
+  .compare-grid { grid-template-columns: 1fr 1fr; }
+}
+.hours {
+  width: 100%;
+  margin: 0.4rem 0 0.5rem;
+  border-collapse: collapse;
+}
+.hours caption {
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 650;
+  padding-bottom: 0.3rem;
+}
+.hours th,
+.hours td {
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--line);
+  text-align: left;
+}
+.hours th { font-weight: 650; width: 40%; }
+.contact-label {
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}

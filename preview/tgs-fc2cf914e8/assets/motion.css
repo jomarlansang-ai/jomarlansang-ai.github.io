@@ -1,0 +1,438 @@
+/* ==========================================================
+   TGS motion layer
+   Load after styles.css. Everything here is keyed off the
+   .motion-ok class that motion.js puts on <html>, so the page
+   looks exactly as before with JavaScript off or with
+   "reduce motion" turned on.
+   ========================================================== */
+
+:root {
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur: 700ms;
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes tgs-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes tgs-letter {
+  0%   { opacity: 0; transform: translateY(0.45em) rotate(-8deg) scale(0.8); }
+  60%  { opacity: 1; transform: translateY(-0.06em) rotate(2deg) scale(1.04); }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes tgs-stamp {
+  0%   { opacity: 0; transform: scale(1.6) rotate(-10deg); }
+  55%  { opacity: 1; transform: scale(0.94) rotate(3deg); }
+  75%  { transform: scale(1.03) rotate(-2deg); }
+  100% { opacity: 1; transform: rotate(-2deg); }
+}
+
+@keyframes tgs-wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  25%      { transform: rotate(2.5deg) scale(1.03); }
+  50%      { transform: rotate(-3deg); }
+  75%      { transform: rotate(1.5deg); }
+}
+
+@keyframes tgs-photo-in-left {
+  from { opacity: 0; transform: translate(-40px, 30px) rotate(-6deg); }
+  to   { opacity: 1; transform: rotate(-1.5deg); }
+}
+
+@keyframes tgs-photo-in-right {
+  from { opacity: 0; transform: translate(40px, 40px) rotate(7deg); }
+  to   { opacity: 1; transform: rotate(1.5deg); }
+}
+
+@keyframes tgs-float {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -8px; }
+}
+
+@keyframes tgs-heart {
+  0%, 100% { transform: scale(1); }
+  15%      { transform: scale(1.25); }
+  30%      { transform: scale(0.95); }
+  45%      { transform: scale(1.15); }
+  60%      { transform: scale(1); }
+}
+
+@keyframes tgs-underline {
+  from { background-size: 0% 0.18em; }
+  to   { background-size: 100% 0.18em; }
+}
+
+@keyframes tgs-bump {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(1.18); color: var(--side); }
+  100% { transform: scale(1); }
+}
+
+@keyframes tgs-pop {
+  0%   { transform: scale(0.6); }
+  60%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes tgs-slide-down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes tgs-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes tgs-crumb {
+  0%   { opacity: 0; transform: translate(0, 0) scale(0.4) rotate(0); }
+  15%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1) rotate(var(--rot)); }
+}
+
+/* ---------- Hero entrance ---------- */
+
+.motion-ok .hero .kicker,
+.motion-ok .hero .wordmark-sub,
+.motion-ok .hero .tagline,
+.motion-ok .hero-note {
+  opacity: 0;
+  animation: tgs-rise var(--dur) var(--ease-out) forwards;
+}
+.motion-ok .hero .kicker       { animation-delay: 80ms; }
+.motion-ok .hero .wordmark-sub { animation-delay: 620ms; }
+.motion-ok .hero .tagline      { animation-delay: 760ms; }
+.motion-ok .hero-note          { animation-delay: 1250ms; }
+.motion-ok .hero-actions {
+  opacity: 0;
+  animation: tgs-rise var(--dur) var(--ease-out) 1150ms forwards;
+}
+
+/* Wordmark letters (spans added by motion.js) */
+.motion-ok .wordmark-hero .tgs-letter {
+  display: inline-block;
+  opacity: 0;
+  animation: tgs-letter 760ms var(--ease-out) forwards;
+  animation-delay: calc(180ms + var(--i) * 90ms);
+}
+
+/* "goodness" gets a butter underline that draws in */
+.motion-ok .tagline em {
+  background-image: linear-gradient(var(--butter), var(--butter));
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 0% 0.18em;
+  animation: tgs-underline 700ms var(--ease-out) 1300ms forwards;
+}
+
+.motion-ok .tagline .tgs-heart {
+  display: inline-block;
+  animation: tgs-heart 1.6s ease-in-out 2s infinite;
+  animation-play-state: var(--heart-state, running);
+}
+
+/* Price ticket stamps in, then wiggles on hover */
+.motion-ok .price-ticket {
+  opacity: 0;
+  transform-origin: 30% 60%;
+  animation: tgs-stamp 650ms var(--ease-spring) 950ms forwards;
+}
+.motion-ok .price-ticket.is-stamped {
+  animation: none;
+  opacity: 1;
+  transform: rotate(-2deg);
+  cursor: pointer;
+}
+.motion-ok .price-ticket.is-stamped:hover {
+  animation: tgs-wiggle 500ms ease-in-out;
+}
+
+/* Hero photos slide in, then float gently */
+.motion-ok .hero-figure {
+  opacity: 0;
+  animation: tgs-photo-in-left 900ms var(--ease-out) 450ms forwards;
+}
+.motion-ok .hero-figure-tall {
+  animation-name: tgs-photo-in-right;
+  animation-delay: 650ms;
+}
+.motion-ok .hero-figure picture {
+  display: block;
+  animation: tgs-float 6s ease-in-out 1.6s infinite;
+}
+.motion-ok .hero-figure-tall picture {
+  animation-duration: 7.5s;
+  animation-delay: 2.4s;
+}
+.motion-ok .hero-figure .shot {
+  transition: transform 500ms var(--ease-out), filter 500ms var(--ease-out);
+}
+.motion-ok .hero-figure:hover .shot {
+  transform: scale(1.025) rotate(0.5deg);
+  filter: drop-shadow(0 22px 28px rgba(74, 52, 38, 0.22));
+}
+
+/* Crumbs that burst from the price ticket on click */
+.tgs-crumb {
+  position: fixed;
+  z-index: 60;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 45% 55% 50% 40%;
+  background: var(--c);
+  pointer-events: none;
+  animation: tgs-crumb 900ms var(--ease-out) forwards;
+}
+
+/* ---------- Scroll reveals ---------- */
+
+.motion-ok [data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity var(--dur) var(--ease-out),
+    transform var(--dur) var(--ease-out);
+  transition-delay: calc(var(--stagger, 0) * 90ms);
+}
+.motion-ok [data-reveal="left"]  { transform: translateX(-30px); }
+.motion-ok [data-reveal="right"] { transform: translateX(30px); }
+.motion-ok [data-reveal="zoom"]  { transform: scale(0.94); }
+.motion-ok [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Butter rule under each kicker draws from the left */
+.motion-ok .rule {
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 800ms var(--ease-out) 150ms;
+}
+.motion-ok .rule.is-visible {
+  transform: scaleX(1);
+}
+
+/* ---------- Header ---------- */
+
+.motion-ok .nav-bar {
+  transition: box-shadow 300ms ease, background-color 300ms ease;
+}
+.motion-ok.is-scrolled .nav-bar {
+  box-shadow: 0 10px 24px rgba(74, 52, 38, 0.12);
+}
+.motion-ok .demo-banner {
+  transition: margin-top 300ms var(--ease-out);
+}
+
+/* Nav links: underline slides in; current section stays marked */
+.motion-ok .nav-links a {
+  position: relative;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.motion-ok .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  right: 0.15rem;
+  bottom: 0.45rem;
+  height: 2px;
+  background: var(--chocolate);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms var(--ease-out);
+}
+.motion-ok .nav-links a:hover::after,
+.motion-ok .nav-links a[aria-current="location"]::after {
+  transform: scaleX(1);
+}
+
+/* Mobile menu drops in */
+.motion-ok .nav-links.is-open {
+  animation: tgs-slide-down 280ms var(--ease-out);
+}
+.motion-ok .nav-links.is-open li {
+  opacity: 0;
+  animation: tgs-rise 380ms var(--ease-out) forwards;
+  animation-delay: calc(var(--i, 0) * 40ms + 60ms);
+}
+@media (min-width: 880px) {
+  .motion-ok .nav-links.is-open,
+  .motion-ok .nav-links.is-open li {
+    animation: none;
+    opacity: 1;
+  }
+}
+.motion-ok .nav-backdrop:not([hidden]) {
+  animation: tgs-fade 250ms ease;
+}
+
+/* ---------- Buttons ---------- */
+
+.motion-ok .button {
+  transition:
+    transform 180ms var(--ease-out),
+    box-shadow 180ms var(--ease-out),
+    background-color 180ms ease;
+}
+.motion-ok .button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--chocolate);
+}
+.motion-ok .button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 0 0 0 var(--chocolate);
+  transition-duration: 60ms;
+}
+
+/* ---------- Flavor carousel ---------- */
+
+.motion-ok .flavor-card:not([data-reveal]) {
+  transition:
+    transform 350ms var(--ease-out),
+    box-shadow 350ms var(--ease-out);
+}
+.motion-ok .flavor-card:hover,
+.motion-ok .flavor-card:focus-visible {
+  transform: translateY(-6px) rotate(-0.6deg);
+  box-shadow: 0 18px 32px rgba(74, 52, 38, 0.16);
+}
+.motion-ok .flavor-card picture {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 0.45rem;
+}
+.motion-ok .flavor-card picture img {
+  margin-bottom: 0;
+  transition: transform 700ms var(--ease-out);
+}
+.motion-ok .flavor-card:hover picture img {
+  transform: scale(1.08);
+}
+.motion-ok .flavor-card .flavor-price {
+  transition: transform 300ms var(--ease-spring);
+  transform-origin: left center;
+}
+.motion-ok .flavor-card:hover .flavor-price {
+  transform: scale(1.12);
+}
+
+/* "See all flavors" list cascades in */
+.motion-ok #all-flavors:not([hidden]) .flavor {
+  opacity: 0;
+  animation: tgs-rise 450ms var(--ease-out) forwards;
+  animation-delay: calc(var(--i, 0) * 35ms);
+}
+
+/* ---------- Bundles, stores, events, careers ---------- */
+
+.motion-ok .bundle-featured .shot,
+.motion-ok .store-card .shot,
+.motion-ok .event .shot {
+  transition: transform 600ms var(--ease-out);
+}
+.motion-ok .bundle-featured:hover .shot,
+.motion-ok .store-card:hover .shot,
+.motion-ok .event:hover .shot {
+  transform: scale(1.02) rotate(-0.4deg);
+}
+
+/* ---------- Order form ---------- */
+
+.motion-ok .capacity-num {
+  display: inline-block;
+}
+.motion-ok .capacity-num.is-bumping {
+  animation: tgs-bump 500ms var(--ease-spring);
+}
+
+.motion-ok .step-index {
+  transition: background-color 300ms ease, color 300ms ease, transform 300ms var(--ease-spring);
+}
+.motion-ok .step.is-current .step-index {
+  transform: scale(1.12);
+}
+.motion-ok .step.is-done .step-index {
+  animation: tgs-pop 400ms var(--ease-spring);
+}
+
+.motion-ok .step-panel {
+  transition: background-color 350ms ease, border-color 350ms ease, padding-left 350ms var(--ease-out);
+}
+.motion-ok .step-panel.is-current {
+  padding-left: 1rem;
+}
+
+.motion-ok .choice input {
+  transition: transform 200ms var(--ease-spring);
+}
+.motion-ok .choice input:checked {
+  transform: scale(1.15);
+}
+
+.motion-ok #box-estimate.is-updating,
+.motion-ok .form-status.is-updating {
+  animation: tgs-rise 400ms var(--ease-out);
+}
+
+.motion-ok input[type="text"],
+.motion-ok input[type="email"],
+.motion-ok select,
+.motion-ok textarea {
+  transition: box-shadow 200ms ease, border-color 200ms ease;
+}
+.motion-ok input[type="text"]:focus,
+.motion-ok input[type="email"]:focus,
+.motion-ok select:focus,
+.motion-ok textarea:focus {
+  box-shadow: 4px 4px 0 var(--butter);
+}
+
+/* ---------- Scroll progress bar ---------- */
+
+.tgs-progress {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 3px;
+  width: 100%;
+  background: var(--butter);
+  transform: scaleX(var(--progress, 0));
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+/* ---------- Reduced motion: hard stop ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-ok *,
+  .motion-ok *::before,
+  .motion-ok *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .motion-ok [data-reveal],
+  .motion-ok .hero *,
+  .motion-ok .hero-note {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .tgs-crumb,
+  .tgs-progress {
+    display: none;
+  }
+}
+
+/* Wordmark stays hidden until motion.js splits it into letters.
+   If the script never runs, it still fades in on its own. */
+.motion-ok .wordmark-hero:not(.is-split) {
+  opacity: 0;
+  animation: tgs-rise 600ms var(--ease-out) 900ms forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-ok .wordmark-hero:not(.is-split) { opacity: 1; }
+}
